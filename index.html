@@ -1,0 +1,790 @@
+n<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sawsan Abdulbari - Data Scientist & ML Engineer</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Language Selector -->
+    <div class="language-selector">
+        <button id="lang-fi" class="lang-btn active" onclick="switchLanguage('fi')">FI</button>
+        <button id="lang-en" class="lang-btn" onclick="switchLanguage('en')">EN</button>
+    </div>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span data-key="nav-name">S A</span>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#hero" class="nav-link" data-key="nav-home">Koti</a>
+                <a href="#skills" class="nav-link" data-key="nav-skills">Taidot</a>
+                <a href="#education" class="nav-link" data-key="nav-education">Koulutus</a>
+                <a href="#experience" class="nav-link" data-key="nav-experience">Kokemus</a>
+                <a href="#projects" class="nav-link" data-key="nav-projects">Projektit</a>
+                <a href="#contact" class="nav-link" data-key="nav-contact">Yhteystiedot</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-background"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span data-key="hero-name">S A</span>
+                    </h1>
+                    <span class="hero-subtitle" data-key="hero-title">
+                        Junior Data Scientist & Koneoppimisen Insinööri
+                    </span>
+                    <div class="hero-highlights">
+                        <div class="highlight-item">
+                            <i class="fas fa-globe"></i>
+                            <span data-key="hero-global">80+ maata</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-users"></i>
+                            <span data-key="hero-team">15+ tiedemiestä</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-rocket"></i>
+                            <span data-key="hero-experience">3+ vuotta kokemusta</span>
+                        </div>
+                    </div>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary" data-key="hero-contact">Ota yhteyttä</a>
+                        <a href="#projects" class="btn btn-secondary" data-key="hero-projects">Katso projektit</a>
+                        <a href="#" onclick="downloadCV()" class="btn btn-download" data-key="hero-download-cv">
+                            <i class="fas fa-download"></i>
+                            <span data-key="hero-download-text">Lataa CV</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title" data-key="about-title">Tiivistelmä</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p data-key="about-description">
+                        Data Scientist & ML Engineer, jolla on 2+ vuoden todistettu asiantuntemus tekoälyratkaisujen rakentamisessa, joilla on positiivinen liiketoimintavaikutus ja jotka voidaan skaalata liiketoiminnan kasvun mukana. Johti 15+ globaalia datatiedemiestä ja osallistui projekteihin osana suuria tiimejä yli 80 maassa, toimittaen tuotantovalmiita ML-malleja, jotka ratkaisevat haasteita terveydenhuollon, kestävyyden ja teknologia-aloilla.
+                    </p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">15+</div>
+                        <div class="stat-label" data-key="stat-scientists">Tiedemiestä johdettu</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">80+</div>
+                        <div class="stat-label" data-key="stat-countries">Maata</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">7</div>
+                        <div class="stat-label" data-key="stat-years">Vuotta yrittäjyyttä</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">3</div>
+                        <div class="stat-label" data-key="stat-languages">Kieltä</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title" data-key="skills-title">Ydinosaamiset</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <div class="skill-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 data-key="skills-ml">Koneoppiminen</h3>
+                    <ul>
+                        <li data-key="skill-predictive">Ennustava mallinnus</li>
+                        <li data-key="skill-timeseries">Aikasarja-analyysi</li>
+                        <li data-key="skill-rag">RAG-arkkitehtuuri</li>
+                        <li data-key="skill-deployment">Mallin käyttöönotto</li>
+                        <li data-key="skill-prompt">Prompt Engineering</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3 data-key="skills-data">Data Science</h3>
+                    <ul>
+                        <li data-key="skill-mining">Tiedonlouhinta & Analytiikka</li>
+                        <li data-key="skill-eda">EDA & Visualisointi</li>
+                        <li data-key="skill-feature">Feature Engineering</li>
+                        <li data-key="skill-statistical">Tilastollinen analyysi</li>
+                        <li data-key="skill-dashboard">Dashboard-luominen</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 data-key="skills-leadership">Johtajuus</h3>
+                    <ul>
+                        <li data-key="skill-team">Tiimin johtaminen (15+ henkeä)</li>
+                        <li data-key="skill-cultural">Kulttuurienvälinen yhteistyö</li>
+                        <li data-key="skill-mentoring">Mentorointi & Koulutus</li>
+                        <li data-key="skill-project">Projektinhallinta</li>
+                        <li data-key="skill-stakeholder">Sidosryhmäviestintä</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3 data-key="skills-business">Liiketoiminta</h3>
+                    <ul>
+                        <li data-key="skill-strategic">Strateginen suunnittelu</li>
+                        <li data-key="skill-process">Prosessien optimointi</li>
+                        <li data-key="skill-financial">Taloudenhallinta</li>
+                        <li data-key="skill-development">Liiketoiminnan kehittäminen</li>
+                        <li data-key="skill-operations">Toimintojen hallinta</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education">
+        <div class="container">
+            <h2 class="section-title" data-key="education-title">Koulutus</h2>
+            <div class="education-timeline">
+                <div class="education-item">
+                    <div class="education-date">
+                        <span>2023 - 2026</span>
+                    </div>
+                    <div class="education-content">
+                        <h3 data-key="edu1-degree">Bachelor of Business Information Technology (Data Science)</h3>
+                        <h4 data-key="edu1-school">Häme University of Applied Sciences (HAMK), Finland</h4>
+                        <p data-key="edu1-description">
+                            Specialization in Data Science and Business Intelligence. Focus on machine learning, data analytics, and business applications.
+                        </p>
+                    </div>
+                </div>
+                <div class="education-item">
+                    <div class="education-date">
+                        <span>2020 - 2022</span>
+                    </div>
+                    <div class="education-content">
+                        <h3 data-key="edu2-degree">Vocational Qualification in Business (Business Administration)</h3>
+                        <h4 data-key="edu2-school">Tampere Vocational College (Tredu), Finland</h4>
+                        <p data-key="edu2-description">
+                            Business administration and management fundamentals. Project management and organizational skills.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title" data-key="experience-title">Työkokemus</h2>
+            <div class="experience-timeline">
+                <div class="experience-item">
+                    <div class="experience-date">
+                        <span data-key="exp1-date">2024 - Nykyinen</span>
+                    </div>
+                    <div class="experience-content">
+                        <h3 data-key="exp1-title">Machine Learning Engineer</h3>
+                        <h4 data-key="exp1-company">Omdena | Palo Alto, CA (Etätyö)</h4>
+                        <p data-key="exp1-description">
+                            Johdin tekoälyinnovaatiota globaalissa yhteistyöympäristössä ammattilaisten kanssa yli 80 maasta. Tutkin ja toteutin RAG-arkkitehtuuria yrityssovelluksille.
+                        </p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">RAG Architecture</span>
+                            <span class="tech-tag">Machine Learning</span>
+                            <span class="tech-tag">AI Research</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="experience-item">
+                    <div class="experience-date">
+                        <span>2024 - 2025</span>
+                    </div>
+                    <div class="experience-content">
+                        <h3 data-key="exp2-title">Opiskelijaassistentti</h3>
+                        <h4 data-key="exp2-company">Hämeen ammattikorkeakoulu (HAMK) | Suomi</h4>
+                        <p data-key="exp2-description">
+                            Paransin koulutustuloksia 50+ opiskelijalle ja kehitin opetussuunnitelmaa. Tarjosin henkilökohtaista ohjausta ja teknistä mentorointia.
+                        </p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Opetus</span>
+                            <span class="tech-tag">Opetussuunnitelma</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="experience-item">
+                    <div class="experience-date">
+                        <span>2024</span>
+                    </div>
+                    <div class="experience-content">
+                        <h3 data-key="exp3-title">Lead Machine Learning Engineer</h3>
+                        <h4 data-key="exp3-company">Omdena Kitwe, Sambia | Etätyö</h4>
+                        <p data-key="exp3-description">
+                            Toimitin kriittisen COVID-19 ennustejärjestelmän kehitysmaiden terveydenhuollon infrastruktuurille. Johdin 15+ globaalia datatiedemiestä.
+                        </p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Team Leadership</span>
+                            <span class="tech-tag">Time Series Analysis</span>
+                            <span class="tech-tag">Healthcare AI</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="experience-item">
+                    <div class="experience-date">
+                        <span>2023 - 2024</span>
+                    </div>
+                    <div class="experience-content">
+                        <h3 data-key="exp4-title">Data Science / Machine Learning</h3>
+                        <h4 data-key="exp4-company">Raqameyyah Digital Consultancy | Egypt (Etätyö)</h4>
+                        <p data-key="exp4-description">
+                            Rakensin ja käytin käyttöön ML-malleja käyttäen edistyneitä tekniikoita. Kehitin chatbotteja edistyneillä prompt engineering -tekniikoilla ja loi front-end sovelluksia parantaakseni asiakasulottuvuutta.
+                        </p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Machine Learning</span>
+                            <span class="tech-tag">Feature Engineering</span>
+                            <span class="tech-tag">Application Deployment</span>
+                            <span class="tech-tag">Python</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="experience-item">
+                    <div class="experience-date">
+                        <span>2023                        </span>
+                    </div>
+                    <div class="experience-content">
+                        <h3 data-key="exp5-title">Data Analyst Trainee</h3>
+                        <h4 data-key="exp5-company">Raqameyyah Digital Consultancy | Egypt (Etätyö)</h4>
+                        <p data-key="exp5-description">
+                            Puhdistin ja esikäsittelin suuria tietojoukkoja analyysiä varten. Kehitin sovelluksia tietojen suodattamiseen ja tarkasteluun sekä loi automatisoituja tietojenkäsittelyputkia.
+                        </p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Data Analysis</span>
+                            <span class="tech-tag">Dashboards</span>
+                            <span class="tech-tag">Streamlit</span>
+                            <span class="tech-tag">EDA</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="experience-item">
+                    <div class="experience-date">
+                        <span>2022                        </span>
+                    </div>
+                    <div class="experience-content">
+                        <h3 data-key="exp6-title">Accounting Intern</h3>
+                        <h4 data-key="exp6-company">foodora Finland | Tampere</h4>
+                        <p data-key="exp6-description">
+                            Hankin kokemusta talouskirjanpidosta ja toimitusoperaatioista. Työskentelin Microsoft Excelin kanssa tietojen hallinnassa ja osallistuin talousraportointiprosesseihin.
+                        </p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Supply Operations</span>
+                            <span class="tech-tag">Financial Accounting</span>
+                            <span class="tech-tag">Microsoft Excel</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="experience-item">
+                    <div class="experience-date">
+                        <span>2022                        </span>
+                    </div>
+                    <div class="experience-content">
+                        <h3 data-key="exp7-title">Social Media Representative</h3>
+                        <h4 data-key="exp7-company">Foody Allen | Tampere</h4>
+                        <p data-key="exp7-description">
+                            Toimin pääsisältöluojana ruokatuottaja Njunno:lle Block-festivaali-viikonloppuna. Keskityin pääasiassa luomaan valokuvaus- ja videosisältöä tapahtumasta markkinointi- ja jälkimarkkinointitarkoituksiin.
+                        </p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Multi-Channel Marketing</span>
+                            <span class="tech-tag">Graphic Design</span>
+                            <span class="tech-tag">Event Photography</span>
+                            <span class="tech-tag">Video Editing</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="experience-item">
+                    <div class="experience-date">
+                        <span>2022                        </span>
+                    </div>
+                    <div class="experience-content">
+                        <h3 data-key="exp8-title">Marketing Communications and Content Production</h3>
+                        <h4 data-key="exp8-company">BSB Fashion | Paphos, Cyprus</h4>
+                        <p data-key="exp8-description">
+                            Kehitin markkinointistrategioita ja sisältötuotantoa. Hallinnoin verkkokauppa-alustoja ja monikanavaisia markkinointia sekä loin graafisia suunnitteluja ja videosisältöä.
+                        </p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Sales</span>
+                            <span class="tech-tag">E-Commerce</span>
+                            <span class="tech-tag">Multi-Channel Marketing</span>
+                            <span class="tech-tag">Graphic Design</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="experience-item">
+                    <div class="experience-date">
+                        <span>2021 - 2022                        </span>
+                    </div>
+                    <div class="experience-content">
+                        <h3 data-key="exp9-title">Sales Associate</h3>
+                        <h4 data-key="exp9-company">Keinuipuiston kukka Oy | Tampere, Finland</h4>
+                        <p data-key="exp9-description">
+                            Päävastuuni oli asiakaspalvelu ja myynti. Hallinnoin kaupan verkkokauppaa ja toimitusalustoja Foodora ja Wolt sekä kehitin yritysten välistä liiketoimintaa.
+                        </p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Business-to-Business (B2B)</span>
+                            <span class="tech-tag">Sales</span>
+                            <span class="tech-tag">E-Commerce</span>
+                            <span class="tech-tag">Multi-channel Retail</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="experience-item">
+                    <div class="experience-date">
+                        <span>2007 - 2014                        </span>
+                    </div>
+                    <div class="experience-content">
+                        <h3 data-key="exp10-title">Founder</h3>
+                        <h4 data-key="exp10-company">Plastic Recycling for Sustainable Solutions | Hybrid</h4>
+                        <p data-key="exp10-description">
+                            Perustin ja hallinnoin muovin kierrätystehdasta, joka keskittyi ympäristönsuojeluun. Kehitin liiketoimintastrategioita ja toimintamenetelmiä sekä hallinnoin työntekijöitä ja tuotantoprosesseja. Toimin ympäristönsuojelun edistämisessä muuttamalla muovijätteestä arvokkaita resursseja.
+                        </p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Business-to-Business (B2B)</span>
+                            <span class="tech-tag">New Business Development</span>
+                            <span class="tech-tag">Supply Operations</span>
+                            <span class="tech-tag">Environmental Sustainability</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title" data-key="projects-title">Merkittävät projektit</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/kiva_dashboard.png" alt="Kiva Loan EDA Dashboard">
+                    </div>
+                    <div class="project-content">
+                        <h3 data-key="project1-title">🏦 Kiva Loan EDA Dashboard</h3>
+                        <p data-key="project1-description">
+                            Interactive dashboard analyzing Kiva microloan data with comprehensive EDA features. Includes loan distribution analysis, country-wise insights, and borrower demographics.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Pandas</span>
+                            <span class="tag">Plotly</span>
+                            <span class="tag">Streamlit</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/SawsanAbdulbari/Kiva_Loan_Dashboard.git" target="_blank" class="project-link repo-link" data-key="project-repo">
+                                <i class="fab fa-github"></i>
+                                <span data-key="project-repo-text">Repository</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/covid_prediction.png" alt="COVID-19 Case Prediction System">
+                    </div>
+                    <div class="project-content">
+                        <h3 data-key="project2-title">🦠 COVID-19 Case Prediction System</h3>
+                        <p data-key="project2-description">
+                            Advanced prediction system for COVID-19 cases and fatalities using time series analysis. Developed for developing countries with limited data infrastructure.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Scikit-learn</span>
+                            <span class="tag">TensorFlow</span>
+                            <span class="tag">Streamlit</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://omdenakitwecovid19.streamlit.app/" target="_blank" class="project-link demo-link" data-key="project-demo">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span data-key="project-demo-text">Demo</span>
+                            </a>
+                            <a href="https://github.com/SawsanAbdulbari/Omdena_KitweChapter_ForecastingCOVID19Dynamics.git" target="_blank" class="project-link repo-link" data-key="project-repo">
+                                <i class="fab fa-github"></i>
+                                <span data-key="project-repo-text">Repository</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/housing_predictor.png" alt="California Housing Price Predictor">
+                    </div>
+                    <div class="project-content">
+                        <h3 data-key="project3-title">🏠 California Housing Price Predictor</h3>
+                        <p data-key="project3-description">
+                            Machine learning model predicting California housing prices using regression algorithms. Features data preprocessing, feature engineering, and model comparison.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Scikit-learn</span>
+                            <span class="tag">Pandas</span>
+                            <span class="tag">Streamlit</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/SawsanAbdulbari/california_housing_price_predictor.git" target="_blank" class="project-link repo-link" data-key="project-repo">
+                                <i class="fab fa-github"></i>
+                                <span data-key="project-repo-text">Repository</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/customer_segmentation.png" alt="Customer Segmentation Dashboard">
+                    </div>
+                    <div class="project-content">
+                        <h3 data-key="project4-title">👥 Customer Segmentation Dashboard</h3>
+                        <p data-key="project4-description">
+                            Advanced customer segmentation using K-means clustering and RFM analysis. Interactive dashboard for business insights with actionable recommendations.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Scikit-learn</span>
+                            <span class="tag">Plotly</span>
+                            <span class="tag">Streamlit</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://customer-segmentation-dashboard.streamlit.app/" target="_blank" class="project-link demo-link" data-key="project-demo">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span data-key="project-demo-text">Demo</span>
+                            </a>
+                            <a href="https://github.com/SawsanAbdulbari/Customer-Segmentation-Dashboard" target="_blank" class="project-link repo-link" data-key="project-repo">
+                                <i class="fab fa-github"></i>
+                                <span data-key="project-repo-text">Repository</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/taxi_duration.png" alt="NYC Taxi Trip Duration Prediction">
+                    </div>
+                    <div class="project-content">
+                        <h3 data-key="project5-title">🚕 NYC Taxi Trip Duration Prediction</h3>
+                        <p data-key="project5-description">
+                            Predicts taxi trip duration in NYC using machine learning algorithms. Incorporates geospatial features, weather data, and traffic patterns.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">XGBoost</span>
+                            <span class="tag">Folium</span>
+                            <span class="tag">Streamlit</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://nyctaxi.streamlit.app/" target="_blank" class="project-link demo-link" data-key="project-demo">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span data-key="project-demo-text">Demo</span>
+                            </a>
+                            <a href="https://github.com/SawsanAbdulbari/nyc_taxi_trip_duration" target="_blank" class="project-link repo-link" data-key="project-repo">
+                                <i class="fab fa-github"></i>
+                                <span data-key="project-repo-text">Repository</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/banknote_auth.png" alt="Bank Note Authentication">
+                    </div>
+                    <div class="project-content">
+                        <h3 data-key="project6-title">💵 Bank Note Authentication</h3>
+                        <p data-key="project6-description">
+                            Machine learning classifier for detecting counterfeit banknotes using image features. Implements multiple algorithms with high accuracy for financial security.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Random Forest</span>
+                            <span class="tag">OpenCV</span>
+                            <span class="tag">Streamlit</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://banknote.streamlit.app/" target="_blank" class="project-link demo-link" data-key="project-demo">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span data-key="project-demo-text">Demo</span>
+                            </a>
+                            <a href="https://github.com/SawsanAbdulbari/SVM" target="_blank" class="project-link repo-link" data-key="project-repo">
+                                <i class="fab fa-github"></i>
+                                <span data-key="project-repo-text">Repository</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/shopping_dashboard.png" alt="E-commerce Analytics Dashboard">
+                    </div>
+                    <div class="project-content">
+                        <h3 data-key="project7-title">🛒 E-commerce Analytics Dashboard</h3>
+                        <p data-key="project7-description">
+                            Comprehensive e-commerce analytics dashboard providing insights into sales performance, customer behavior, and product trends with interactive visualizations.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Pandas</span>
+                            <span class="tag">Plotly</span>
+                            <span class="tag">Streamlit</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://shopping-dashboard.streamlit.app/Overview" target="_blank" class="project-link demo-link" data-key="project-demo">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span data-key="project-demo-text">Demo</span>
+                            </a>
+                            <a href="https://github.com/SawsanAbdulbari/Customer-Segmentation-Dashboard" target="_blank" class="project-link repo-link" data-key="project-repo">
+                                <i class="fab fa-github"></i>
+                                <span data-key="project-repo-text">Repository</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/chatbot_rag.png" alt="Smart AI Document Chatbot with RAG">
+                    </div>
+                    <div class="project-content">
+                        <h3 data-key="project8-title">🤖 Smart AI Document Chatbot with RAG</h3>
+                        <p data-key="project8-description">
+                            Intelligent chatbot powered by Retrieval-Augmented Generation (RAG) for enhanced question answering with context-aware responses.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">OpenAI</span>
+                            <span class="tag">LangChain</span>
+                            <span class="tag">Streamlit</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://huggingface.co/spaces/SA7/smart-ai-rag" target="_blank" class="project-link demo-link" data-key="project-demo">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span data-key="project-demo-text">Demo</span>
+                            </a>
+                            <a href="https://github.com/SawsanAbdulbari/smart-ai-rag" target="_blank" class="project-link repo-link" data-key="project-repo">
+                                <i class="fab fa-github"></i>
+                                <span data-key="project-repo-text">Repository</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/news_analysis_dashboard.png" alt="News Sentiment & Keyword Analysis Dashboard">
+                    </div>
+                    <div class="project-content">
+                        <h3 data-key="project9-title">📰 News Sentiment & Keyword Analysis Dashboard</h3>
+                        <p data-key="project9-description">
+                            Comprehensive dashboard for analyzing news sentiment and extracting key insights from articles using NLTK VADER sentiment analysis and advanced NLP techniques.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">NLTK</span>
+                            <span class="tag">Pandas</span>
+                            <span class="tag">Streamlit</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://newssentimentkeyword.streamlit.app/" target="_blank" class="project-link demo-link" data-key="project-demo">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span data-key="project-demo-text">Demo</span>
+                            </a>
+                            <a href="https://github.com/SawsanAbdulbari/news_app" target="_blank" class="project-link repo-link" data-key="project-repo">
+                                <i class="fab fa-github"></i>
+                                <span data-key="project-repo-text">Repository</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/ml_pipeline.png" alt="Emotion Recognition Project">
+                    </div>
+                    <div class="project-content">
+                        <h3 data-key="project10-title">😊 Emotion Recognition Project</h3>
+                        <p data-key="project10-description">
+                            Advanced emotion recognition system using EfficientNet-B0 with comprehensive model optimization pipeline. Features multi-phase development including model selection on FER-2013 dataset, fine-tuning on RAF-DB dataset, and dynamic INT8 quantization for mobile deployment.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">PyTorch</span>
+                            <span class="tag">EfficientNet</span>
+                            <span class="tag">OpenCV</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/SawsanAbdulbari/emotion_recognition_mobile_app" target="_blank" class="project-link repo-link" data-key="project-repo">
+                                <i class="fab fa-github"></i>
+                                <span data-key="project-repo-text">Repository</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/carbon_fraud.png" alt="Carbon Fraud Detection Network">
+                    </div>
+                    <div class="project-content">
+                        <h3 data-key="project11-title">🌱 Carbon Fraud Detection Network</h3>
+                        <p data-key="project11-description">
+                            Advanced AI-powered system for detecting carbon fraud using personality-based consensus agents and multi-source data integration. Features real-time fraud detection, adversarial AI agents, and comprehensive emission validation through CLIMATIQ API, OpenWeather, and satellite data integration.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">FastAPI</span>
+                            <span class="tag">Google Cloud</span>
+                            <span class="tag">Vertex AI</span>
+                            <span class="tag">PostgreSQL</span>
+                            <span class="tag">Redis</span>
+                        </div>
+                        <div class="project-links">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Personal Interests Section -->
+    <section id="interests" class="interests">
+        <div class="container">
+            <h2 class="section-title" data-key="interests-title">Henkilökohtaiset kiinnostuksen kohteet</h2>
+            <div class="interests-grid">
+                <div class="interest-item">
+                    <div class="interest-icon">
+                        <i class="fas fa-hiking"></i>
+                    </div>
+                    <h3 data-key="interest1-title">Vaeltaminen</h3>
+                    <p data-key="interest1-description">Luonnon tutkiminen, ulkoilutoiminta</p>
+                </div>
+                <div class="interest-item">
+                    <div class="interest-icon">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <h3 data-key="interest2-title">Kuntoilu</h3>
+                    <p data-key="interest2-description">Terveys ja hyvinvointi, fyysinen aktiivisuus</p>
+                </div>
+                <div class="interest-item">
+                    <div class="interest-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3 data-key="interest3-title">Ruokien tutkiminen</h3>
+                    <p data-key="interest3-description">Kulinaristiset kokemukset, kulttuurinen keittiö</p>
+                </div>
+                <div class="interest-item">
+                    <div class="interest-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 data-key="interest4-title">Jatkuva oppiminen</h3>
+                    <p data-key="interest4-description">Teknologiatrendit, ammatillinen kehitys</p>
+                </div>
+                <div class="interest-item">
+                    <div class="interest-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3 data-key="interest5-title">Ympäristönsuojelu</h3>
+                    <p data-key="interest5-description">Vihreät aloitteet, ympäristöystävälliset käytännöt</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title" data-key="contact-title">Ota yhteyttä</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4 data-key="contact-email-label">Sähköposti</h4>
+                            <a href="mailto:sawsan.abdulbari@gmail.com">sawsan.abdulbari@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4 data-key="contact-phone-label">Puhelin</h4>
+                            <a href="tel:+3584051105012">+358 40 5110 5012</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin"></i>
+                        <div>
+                            <h4 data-key="contact-linkedin-label">LinkedIn</h4>
+                            <a href="https://linkedin.com/in/sawsanabdulbari" target="_blank">linkedin.com/in/sawsanabdulbari</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-github"></i>
+                        <div>
+                            <h4 data-key="contact-github-label">GitHub</h4>
+                            <a href="https://github.com/sawsanabdulbari" target="_blank">github.com/sawsanabdulbari</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4 data-key="contact-location-label">Sijainti</h4>
+                            <span data-key="contact-location">Suomi</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-cta">
+                    <h3 data-key="contact-cta-title">Valmis ajamaan innovaatiota</h3>
+                    <p data-key="contact-cta-description">
+                        Ota yhteyttä ja tutkitaan, miten asiantuntemukseni voi edistää tiimisi menestystä.
+                    </p>
+                    <a href="mailto:sawsan.abdulbari@gmail.com" class="btn btn-primary" data-key="contact-cta-button">Lähetä viesti</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p data-key="footer-text">&copy; 2025 Sawsan Abdulbari. Kaikki oikeudet pidätetään.</p>
+                <div class="footer-links">
+                    <a href="#hero" data-key="footer-top">Takaisin ylös</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/translations.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
+

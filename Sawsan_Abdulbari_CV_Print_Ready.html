@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sawsan Abdulbari - CV</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 0.75in;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.4;
+            color: #333;
+            font-size: 11px;
+            background: white;
+        }
+        
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+        }
+        
+        .header {
+            text-align: center;
+            border-bottom: 3px solid #2c3e50;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .name {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+        
+        .title {
+            font-size: 14px;
+            color: #f39c12;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .contact-info {
+            font-size: 10px;
+            color: #666;
+            line-height: 1.3;
+        }
+        
+        .section {
+            margin-bottom: 18px;
+            page-break-inside: avoid;
+        }
+        
+        .section-title {
+            font-size: 13px;
+            color: #2c3e50;
+            border-bottom: 2px solid #f39c12;
+            padding-bottom: 3px;
+            margin-bottom: 10px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .summary {
+            font-size: 11px;
+            line-height: 1.4;
+            margin-bottom: 8px;
+        }
+        
+        .summary strong {
+            color: #2c3e50;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 10px;
+        }
+        
+        .skill-category {
+            background: #f8f9fa;
+            padding: 8px;
+            border-left: 3px solid #f39c12;
+        }
+        
+        .skill-category h4 {
+            color: #2c3e50;
+            margin-bottom: 5px;
+            font-size: 10px;
+            font-weight: bold;
+        }
+        
+        .skill-category ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .skill-category li {
+            margin-bottom: 2px;
+            padding-left: 10px;
+            position: relative;
+            font-size: 9px;
+            color: #555;
+        }
+        
+        .skill-category li::before {
+            content: "•";
+            color: #f39c12;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        
+        .experience-item {
+            margin-bottom: 12px;
+            page-break-inside: avoid;
+        }
+        
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 5px;
+        }
+        
+        .job-title {
+            font-weight: bold;
+            color: #2c3e50;
+            font-size: 11px;
+        }
+        
+        .company {
+            color: #f39c12;
+            font-weight: bold;
+            font-size: 10px;
+        }
+        
+        .date {
+            color: #666;
+            font-style: italic;
+            font-size: 9px;
+            white-space: nowrap;
+        }
+        
+        .job-description {
+            font-size: 10px;
+            line-height: 1.3;
+            margin-bottom: 5px;
+        }
+        
+        .achievements {
+            margin-left: 15px;
+            font-size: 9px;
+        }
+        
+        .achievements li {
+            margin-bottom: 2px;
+            line-height: 1.3;
+        }
+        
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3px;
+            margin-top: 5px;
+        }
+        
+        .tech-tag {
+            background: #e8f4fd;
+            color: #2c3e50;
+            padding: 2px 6px;
+            border-radius: 8px;
+            font-size: 8px;
+            font-weight: 500;
+            border: 1px solid #bdc3c7;
+        }
+        
+        .education-item {
+            margin-bottom: 10px;
+            padding: 8px;
+            background: #f8f9fa;
+            border-left: 3px solid #2c3e50;
+        }
+        
+        .degree {
+            font-weight: bold;
+            color: #2c3e50;
+            font-size: 10px;
+        }
+        
+        .university {
+            color: #f39c12;
+            font-weight: bold;
+            font-size: 9px;
+        }
+        
+        .education-date {
+            color: #666;
+            font-style: italic;
+            font-size: 8px;
+        }
+        
+        .education-description {
+            color: #555;
+            font-size: 9px;
+            line-height: 1.3;
+            margin-top: 3px;
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+        
+        .project {
+            background: #f8f9fa;
+            padding: 8px;
+            border: 1px solid #e9ecef;
+            border-radius: 3px;
+            page-break-inside: avoid;
+        }
+        
+        .project-title {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 3px;
+            font-size: 10px;
+        }
+        
+        .project-tech {
+            color: #f39c12;
+            font-size: 8px;
+            margin-bottom: 5px;
+        }
+        
+        .project-description {
+            color: #666;
+            font-size: 8px;
+            line-height: 1.3;
+        }
+        
+        .languages {
+            display: flex;
+            gap: 20px;
+            font-size: 10px;
+        }
+        
+        .language-item {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .language-name {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        
+        .language-level {
+            color: #666;
+            font-size: 9px;
+        }
+        
+        .certifications {
+            font-size: 9px;
+        }
+        
+        .certifications li {
+            margin-bottom: 3px;
+            line-height: 1.3;
+        }
+        
+        .interests {
+            font-size: 9px;
+        }
+        
+        .interests li {
+            margin-bottom: 2px;
+            line-height: 1.3;
+        }
+        
+        /* Print optimizations */
+        @media print {
+            body {
+                font-size: 10px;
+            }
+            .name {
+                font-size: 22px;
+            }
+            .section-title {
+                font-size: 12px;
+            }
+            .section {
+                margin-bottom: 15px;
+            }
+        }
+        
+        /* Page break management */
+        .page-break {
+            page-break-before: always;
+        }
+        
+        .no-break {
+            page-break-inside: avoid;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="name">SAWSAN ABDULBARI</div>
+            <div class="title">Junior Data Scientist & Machine Learning Engineer | AI Innovation Leader</div>
+            <div class="contact-info">
+                📧 sawsan.abdulbari@gmail.com | 💼 linkedin.com/in/sawsanabdulbari | 💻 github.com/sawsanabdulbari<br>
+                📍 Finland | 📱 +358 40 5110 5012 | 🌐 Available for Relocation
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Executive Summary</div>
+            <div class="summary">
+                <strong>Data Scientist & ML Engineer</strong> with <strong>3+ years of proven expertise</strong> in building AI solutions that have positive business impact and can be scaled with business growth. <strong>Led 15+ global data scientists</strong> and participated in projects as part of large teams across 80+ countries, delivering <strong>production-ready ML models</strong> that solve challenges in healthcare, sustainability, and technology sectors. <strong>Trilingual professional</strong> (Arabic, English, Finnish) with <strong>entrepreneurial background</strong> and <strong>passion for climate change solutions</strong>.
+            </div>
+            <div class="summary">
+                <strong>Key Differentiators:</strong> Global Leadership (80+ countries), Production Expertise (deployed ML models), Business Knowledge (7-year entrepreneurial experience), Climate Focus (environmental sustainability advocate), Academic Excellence (student mentor & curriculum developer).
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Core Competencies</div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4>Machine Learning</h4>
+                    <ul>
+                        <li>Predictive Modeling</li>
+                        <li>Time Series Analysis</li>
+                        <li>RAG Architecture</li>
+                        <li>Model Deployment</li>
+                        <li>Prompt Engineering</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h4>Data Science</h4>
+                    <ul>
+                        <li>Data Mining & Analytics</li>
+                        <li>EDA & Visualization</li>
+                        <li>Feature Engineering</li>
+                        <li>Statistical Analysis</li>
+                        <li>Dashboard Creation</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h4>Leadership</h4>
+                    <ul>
+                        <li>Team Leadership (15+ people)</li>
+                        <li>Cross-cultural Collaboration</li>
+                        <li>Mentoring & Training</li>
+                        <li>Project Management</li>
+                        <li>Stakeholder Communication</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h4>Business</h4>
+                    <ul>
+                        <li>Strategic Planning</li>
+                        <li>Process Optimization</li>
+                        <li>Financial Management</li>
+                        <li>Business Development</li>
+                        <li>Operations Management</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Professional Experience</div>
+            
+            <div class="experience-item">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Machine Learning Engineer</div>
+                        <div class="company">Omdena | Palo Alto, CA (Remote)</div>
+                    </div>
+                    <div class="date">2024 - Present</div>
+                </div>
+                <div class="job-description">
+                    Leading AI innovation in global collaborative environment with professionals from 80+ countries. Researching and implementing RAG architecture for enterprise applications.
+                </div>
+                <div class="tech-tags">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">RAG Architecture</span>
+                    <span class="tech-tag">Machine Learning</span>
+                    <span class="tech-tag">AI Research</span>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Student Assistant</div>
+                        <div class="company">Häme University of Applied Sciences (HAMK) | Finland</div>
+                    </div>
+                    <div class="date">2024 - 2025</div>
+                </div>
+                <div class="job-description">
+                    Improved educational outcomes for 50+ students and developed curriculum. Provided personalized guidance and technical mentoring.
+                </div>
+                <div class="tech-tags">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Teaching</span>
+                    <span class="tech-tag">Curriculum Development</span>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Lead Machine Learning Engineer</div>
+                        <div class="company">Omdena Kitwe, Zambia | Remote</div>
+                    </div>
+                    <div class="date">2024</div>
+                </div>
+                <div class="job-description">
+                    Delivered critical COVID-19 prediction system for developing countries' healthcare infrastructure. Led 15+ global data scientists.
+                </div>
+                <div class="tech-tags">
+                    <span class="tech-tag">Team Leadership</span>
+                    <span class="tech-tag">Time Series Analysis</span>
+                    <span class="tech-tag">Healthcare AI</span>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Data Science / Machine Learning</div>
+                        <div class="company">Raqameyyah Digital Consultancy | Egypt (Remote)</div>
+                    </div>
+                    <div class="date">2023 - 2024</div>
+                </div>
+                <div class="job-description">
+                    Built and deployed ML models using advanced techniques. Developed chatbots with advanced prompt engineering and created front-end applications to enhance customer experience.
+                </div>
+                <div class="tech-tags">
+                    <span class="tech-tag">Machine Learning</span>
+                    <span class="tech-tag">Feature Engineering</span>
+                    <span class="tech-tag">Application Deployment</span>
+                    <span class="tech-tag">Python</span>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Data Analyst Trainee</div>
+                        <div class="company">Raqameyyah Digital Consultancy | Egypt (Remote)</div>
+                    </div>
+                    <div class="date">2023</div>
+                </div>
+                <div class="job-description">
+                    Cleaned and preprocessed large datasets for analysis. Developed applications for data filtering and visualization and created automated data processing pipelines.
+                </div>
+                <div class="tech-tags">
+                    <span class="tech-tag">Data Analysis</span>
+                    <span class="tech-tag">Dashboards</span>
+                    <span class="tech-tag">Streamlit</span>
+                    <span class="tech-tag">EDA</span>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Accounting Intern</div>
+                        <div class="company">foodora Finland | Tampere</div>
+                    </div>
+                    <div class="date">2022</div>
+                </div>
+                <div class="job-description">
+                    Gained experience in financial accounting and supply operations. Worked with Microsoft Excel for data management and participated in financial reporting processes.
+                </div>
+                <div class="tech-tags">
+                    <span class="tech-tag">Supply Operations</span>
+                    <span class="tech-tag">Financial Accounting</span>
+                    <span class="tech-tag">Microsoft Excel</span>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Social Media Representative</div>
+                        <div class="company">Foody Allen | Tampere</div>
+                    </div>
+                    <div class="date">2022</div>
+                </div>
+                <div class="job-description">
+                    Acted as main content creator for food producer Njunno during Block festival weekend. Focused primarily on creating photography and video content from the event for marketing and post-marketing purposes.
+                </div>
+                <div class="tech-tags">
+                    <span class="tech-tag">Multi-Channel Marketing</span>
+                    <span class="tech-tag">Graphic Design</span>
+                    <span class="tech-tag">Event Photography</span>
+                    <span class="tech-tag">Video Editing</span>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Marketing Communications and Content Production</div>
+                        <div class="company">BSB Fashion | Paphos, Cyprus</div>
+                    </div>
+                    <div class="date">2022</div>
+                </div>
+                <div class="job-description">
+                    Developed marketing strategies and content production. Managed e-commerce platforms and multi-channel marketing and created graphic designs and video content.
+                </div>
+                <div class="tech-tags">
+                    <span class="tech-tag">Sales</span>
+                    <span class="tech-tag">E-Commerce</span>
+                    <span class="tech-tag">Multi-Channel Marketing</span>
+                    <span class="tech-tag">Graphic Design</span>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Sales Associate</div>
+                        <div class="company">Keinuipuiston kukka Oy | Tampere, Finland</div>
+                    </div>
+                    <div class="date">2021 - 2022</div>
+                </div>
+                <div class="job-description">
+                    Main responsibility was customer service and sales. Managed the store's e-commerce and delivery platforms Foodora and Wolt and developed business-to-business relationships.
+                </div>
+                <div class="tech-tags">
+                    <span class="tech-tag">Business-to-Business (B2B)</span>
+                    <span class="tech-tag">Sales</span>
+                    <span class="tech-tag">E-Commerce</span>
+                    <span class="tech-tag">Multi-channel Retail</span>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Founder</div>
+                        <div class="company">Plastic Recycling for Sustainable Solutions | Hybrid</div>
+                    </div>
+                    <div class="date">2007 - 2014</div>
+                </div>
+                <div class="job-description">
+                    Founded and managed a plastic recycling factory focused on environmental protection. Developed business strategies and operational methods and managed employees and production processes. Promoted environmental protection by transforming plastic waste into valuable resources.
+                </div>
+                <div class="tech-tags">
+                    <span class="tech-tag">Business-to-Business (B2B)</span>
+                    <span class="tech-tag">New Business Development</span>
+                    <span class="tech-tag">Supply Operations</span>
+                    <span class="tech-tag">Environmental Sustainability</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Education</div>
+            
+            <div class="education-item">
+                <div class="degree">Bachelor of Business Information Technology (Data Science)</div>
+                <div class="university">Häme University of Applied Sciences (HAMK), Finland</div>
+                <div class="education-date">2023 - 2026</div>
+                <div class="education-description">Specialization in Data Science and Business Intelligence. Focus on machine learning, data analytics, and business applications.</div>
+            </div>
+            
+            <div class="education-item">
+                <div class="degree">Vocational Qualification in Business (Business Administration)</div>
+                <div class="university">Tampere Vocational College (Tredu), Finland</div>
+                <div class="education-date">2020 - 2022</div>
+                <div class="education-description">Business administration and management fundamentals. Project management and organizational skills.</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Key Projects</div>
+            <div class="projects-grid">
+                <div class="project">
+                    <div class="project-title">🏦 Kiva Loan EDA Dashboard</div>
+                    <div class="project-tech">Python, Pandas, Plotly, Streamlit</div>
+                    <div class="project-description">Interactive dashboard analyzing Kiva microloan data with comprehensive EDA features. Includes loan distribution analysis, country-wise insights, and borrower demographics.</div>
+                </div>
+                
+                <div class="project">
+                    <div class="project-title">🦠 COVID-19 Case Prediction System</div>
+                    <div class="project-tech">Python, Scikit-learn, TensorFlow, Streamlit</div>
+                    <div class="project-description">Advanced prediction system for COVID-19 cases and fatalities using time series analysis. Developed for developing countries with limited data infrastructure.</div>
+                </div>
+                
+                <div class="project">
+                    <div class="project-title">🏠 California Housing Price Predictor</div>
+                    <div class="project-tech">Python, Scikit-learn, Pandas, Streamlit</div>
+                    <div class="project-description">Machine learning model predicting California housing prices using regression algorithms. Features data preprocessing, feature engineering, and model comparison.</div>
+                </div>
+                
+                <div class="project">
+                    <div class="project-title">👥 Customer Segmentation Dashboard</div>
+                    <div class="project-tech">Python, Scikit-learn, Plotly, Streamlit</div>
+                    <div class="project-description">Advanced customer segmentation using K-means clustering and RFM analysis. Interactive dashboard for business insights with actionable recommendations.</div>
+                </div>
+                
+                <div class="project">
+                    <div class="project-title">🚕 NYC Taxi Trip Duration Prediction</div>
+                    <div class="project-tech">Python, XGBoost, Folium, Streamlit</div>
+                    <div class="project-description">Predicts taxi trip duration in NYC using machine learning algorithms. Incorporates geospatial features, weather data, and traffic patterns.</div>
+                </div>
+                
+                <div class="project">
+                    <div class="project-title">💵 Bank Note Authentication</div>
+                    <div class="project-tech">Python, Random Forest, OpenCV, Streamlit</div>
+                    <div class="project-description">Machine learning classifier for detecting counterfeit banknotes using image features. Implements multiple algorithms with high accuracy for financial security.</div>
+                </div>
+                
+                <div class="project">
+                    <div class="project-title">🛒 E-commerce Analytics Dashboard</div>
+                    <div class="project-tech">Python, Pandas, Plotly, Streamlit</div>
+                    <div class="project-description">Comprehensive e-commerce analytics dashboard providing insights into sales performance, customer behavior, and product trends with interactive visualizations.</div>
+                </div>
+                
+                <div class="project">
+                    <div class="project-title">🤖 Smart AI Document Chatbot with RAG</div>
+                    <div class="project-tech">Python, OpenAI, LangChain, Streamlit</div>
+                    <div class="project-description">Intelligent chatbot powered by Retrieval-Augmented Generation (RAG) for enhanced question answering with context-aware responses.</div>
+                </div>
+                
+                <div class="project">
+                    <div class="project-title">📰 News Sentiment & Keyword Analysis Dashboard</div>
+                    <div class="project-tech">Python, NLTK, Pandas, Streamlit</div>
+                    <div class="project-description">Comprehensive dashboard for analyzing news sentiment and extracting key insights from articles using NLTK VADER sentiment analysis and advanced NLP techniques.</div>
+                </div>
+                
+                <div class="project">
+                    <div class="project-title">😊 Emotion Recognition Project</div>
+                    <div class="project-tech">Python, PyTorch, EfficientNet, OpenCV</div>
+                    <div class="project-description">Advanced emotion recognition system using EfficientNet-B0 with comprehensive model optimization pipeline. Features multi-phase development including model selection on FER-2013 dataset, fine-tuning on RAF-DB dataset, and dynamic INT8 quantization for mobile deployment.</div>
+                </div>
+                
+                <div class="project">
+                    <div class="project-title">🌱 Carbon Fraud Detection Network</div>
+                    <div class="project-tech">Python, FastAPI, Google Cloud, Vertex AI, PostgreSQL, Redis</div>
+                    <div class="project-description">Advanced AI-powered system for detecting carbon fraud using personality-based consensus agents and multi-source data integration. Features real-time fraud detection, adversarial AI agents, and comprehensive emission validation through CLIMATIQ API, OpenWeather, and satellite data integration.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Languages</div>
+            <div class="languages">
+                <div class="language-item">
+                    <div class="language-name">Arabic</div>
+                    <div class="language-level">Native</div>
+                </div>
+                <div class="language-item">
+                    <div class="language-name">English</div>
+                    <div class="language-level">Fluent</div>
+                </div>
+                <div class="language-item">
+                    <div class="language-name">Finnish</div>
+                    <div class="language-level">Fluent</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Personal Interests</div>
+            <ul class="interests">
+                <li>🥾 <strong>Hiking</strong> - Nature exploration, outdoor activities</li>
+                <li>💪 <strong>Fitness</strong> - Health and wellness, physical activity</li>
+                <li>🍽️ <strong>Food Exploration</strong> - Culinary experiences, cultural cuisine</li>
+                <li>🎓 <strong>Continuous Learning</strong> - Technology trends, professional development</li>
+                <li>🌱 <strong>Environmental Protection</strong> - Green initiatives, environmentally friendly practices</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

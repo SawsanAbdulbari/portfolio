@@ -579,6 +579,30 @@ section.hero,
     }
 }
 
+/* Narrow viewports: IntersectionObserver + negative rootMargin often misses on iOS Safari,
+   leaving sections/cards at opacity:0; grid minmax(350px) can overflow and clip with body overflow-x:hidden */
+@media (max-width: 768px) {
+    section {
+        opacity: 1;
+        transform: none;
+    }
+
+    .skill-category,
+    .project-card {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .projects-grid {
+        grid-template-columns: minmax(0, 1fr);
+        min-width: 0;
+    }
+
+    .project-card {
+        min-width: 0;
+    }
+}
+
 .section-title {
     font-size: clamp(2rem, 4vw, 3rem);
     font-weight: 800;
@@ -1071,8 +1095,9 @@ html[dir="rtl"] .skills-expertise-legend-row {
 /* Projects Section */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
     gap: 2rem;
+    min-width: 0;
 }
 
 .project-card {
@@ -1410,25 +1435,41 @@ html[dir="rtl"] .skills-expertise-legend-row {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    /* Off-canvas menu: logical inset so LTR/RTL both slide from the correct edge */
     .nav-menu {
         position: fixed;
-        left: -100%;
         top: 70px;
+        inset-inline-start: -100%;
         flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: stretch;
+        gap: 0;
         background-color: rgba(var(--neutral-50-rgb), 0.98);
         width: 100%;
+        max-width: 100vw;
         text-align: center;
-        transition: 0.3s;
+        transition: inset-inline-start 0.3s ease, transform 0.3s ease;
         box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
         padding: 2rem 0;
+        z-index: 1002;
+        max-height: calc(100vh - 70px);
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
     }
 
     .nav-menu.active {
-        left: 0;
+        inset-inline-start: 0;
     }
 
     .nav-toggle {
         display: flex;
+    }
+
+    .nav-link {
+        display: block;
+        padding: 0.85rem 1.25rem;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .hero-content {
@@ -2680,8 +2721,11 @@ html[dir="rtl"] .nav-container {
     flex-direction: row-reverse;
 }
 
-html[dir="rtl"] .nav-menu {
-    flex-direction: row-reverse;
+/* Desktop only: reverse link order for RTL. On mobile the menu is a column drawer — do not apply row-reverse there. */
+@media (min-width: 769px) {
+    html[dir="rtl"] .nav-menu {
+        flex-direction: row-reverse;
+    }
 }
 
 /* Arabic nav labels (الرئيسية، عنّي، …): explicit RTL + font on links */

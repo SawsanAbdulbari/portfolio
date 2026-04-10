@@ -474,11 +474,14 @@ function initializeNavbarScroll() {
 
 // Animate elements on scroll with enhanced effects
 function initializeScrollAnimations() {
+    const narrow =
+        typeof window.matchMedia === 'function' && window.matchMedia('(max-width: 768px)').matches;
+    // iOS Safari often fails to intersect with negative bottom rootMargin; keep desktop-only shrink
     const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
+        threshold: narrow ? 0.05 : 0.1,
+        rootMargin: narrow ? '0px 0px 0px 0px' : '0px 0px -50px 0px'
     };
-    
+
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {

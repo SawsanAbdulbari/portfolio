@@ -99,3 +99,6 @@ temp/
 
 .scripts/
 .docs/
+
+# Local thesis drafts (Word); published artifact is BITCA-Thesis-Sawsan.pdf at repo root
+docs/*.docx

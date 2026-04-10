@@ -1,73 +1,156 @@
-n<!DOCTYPE html>
-<html lang="fi">
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sawsan Abdulbari - Data Scientist & ML Engineer</title>
+    <title data-key="page-title">Sawsan Abdulbari - Data Scientist & Machine Learning Engineer</title>
+    <meta name="description" content="Portfolio of Sawsan Abdulbari - Data Scientist & Machine Learning Engineer based in Finland. Expert in predictive modeling, RAG architecture, and global AI leadership.">
+    <meta name="keywords" content="Data Scientist, ML Engineer, Machine Learning, AI, Python, RAG, Finland, Omdena, Sawsan Abdulbari">
+    <meta name="author" content="Sawsan Abdulbari">
+    <link rel="canonical" href="https://sawsanabdulbari.github.io/portfolio/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sawsanabdulbari.github.io/portfolio/">
+    <meta property="og:title" content="Sawsan Abdulbari - Data Scientist & ML Engineer">
+    <meta property="og:description" content="Portfolio of Sawsan Abdulbari. Led 15+ global data scientists. Delivering production-ready ML models for healthcare and sustainability.">
+    <meta property="og:image" content="https://sawsanabdulbari.github.io/portfolio/images/tech_background.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://sawsanabdulbari.github.io/portfolio/">
+    <meta property="twitter:title" content="Sawsan Abdulbari - Data Scientist & ML Engineer">
+    <meta property="twitter:description" content="Portfolio of Sawsan Abdulbari. Led 15+ global data scientists. Delivering production-ready ML models for healthcare and sustainability.">
+    <meta property="twitter:image" content="https://sawsanabdulbari.github.io/portfolio/images/tech_background.png">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "Person",
+      "name": "Sawsan Abdulbari",
+      "jobTitle": "Data Scientist & Machine Learning Engineer",
+      "url": "https://sawsanabdulbari.github.io/portfolio/",
+      "image": "https://sawsanabdulbari.github.io/portfolio/images/tech_background.png",
+      "sameAs": [
+        "https://www.linkedin.com/in/sawsanabdulbari",
+        "https://github.com/sawsanabdulbari"
+      ],
+      "knowsAbout": ["Machine Learning", "Data Science", "Python", "RAG Architecture", "Predictive Modeling"],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Helsinki",
+        "addressCountry": "Finland"
+      }
+    }
+    </script>
+    <script>
+    (function () {
+        try {
+            var s = localStorage.getItem('theme');
+            if (s === 'light') document.documentElement.removeAttribute('data-theme');
+            else document.documentElement.setAttribute('data-theme', 'dark');
+        } catch (e) {}
+    })();
+    </script>
     <link rel="stylesheet" href="css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+Arabic:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- tsParticles -->
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles-confetti@2.12.0/tsparticles.confetti.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/preset-links@2.12.0/tsparticles.preset.links.bundle.min.js"></script>
 </head>
 <body>
-    <!-- Language Selector -->
-    <div class="language-selector">
-        <button id="lang-fi" class="lang-btn active" onclick="switchLanguage('fi')">FI</button>
-        <button id="lang-en" class="lang-btn" onclick="switchLanguage('en')">EN</button>
-    </div>
     <!-- Navigation -->
     <nav class="navbar">
+        <div class="scroll-progress-bar" id="scroll-progress"></div>
         <div class="nav-container">
             <div class="nav-logo">
                 <span data-key="nav-name">S A</span>
             </div>
             <div class="nav-menu" id="nav-menu">
-                <a href="#hero" class="nav-link" data-key="nav-home">Koti</a>
-                <a href="#skills" class="nav-link" data-key="nav-skills">Taidot</a>
-                <a href="#education" class="nav-link" data-key="nav-education">Koulutus</a>
-                <a href="#experience" class="nav-link" data-key="nav-experience">Kokemus</a>
-                <a href="#projects" class="nav-link" data-key="nav-projects">Projektit</a>
-                <a href="#contact" class="nav-link" data-key="nav-contact">Yhteystiedot</a>
+                <a href="#hero" class="nav-link" data-key="nav-home">Home</a>
+                <a href="#about" class="nav-link" data-key="nav-about">About</a>
+                <a href="#skills" class="nav-link" data-key="nav-skills">Skills</a>
+                <a href="#education" class="nav-link" data-key="nav-education">Education</a>
+                <a href="#experience" class="nav-link" data-key="nav-experience">Experience</a>
+                <a href="#projects" class="nav-link" data-key="nav-projects">Projects</a>
+                <a href="#interests" class="nav-link" data-key="nav-interests">Interests</a>
+                <a href="#contact" class="nav-link" data-key="nav-contact">Contact</a>
             </div>
-            <div class="nav-toggle" id="nav-toggle">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+            
+            <div class="nav-actions">
+                <!-- Language and Theme Selector -->
+                <div class="language-selector-nav">
+                    <button id="theme-toggle" class="lang-btn" type="button" aria-label="Switch to light mode">
+                        <i class="fas fa-sun"></i>
+                    </button>
+                    <div class="lang-dropdown" id="lang-dropdown">
+                        <button type="button" id="lang-dropdown-toggle" class="lang-btn lang-dropdown-toggle active" aria-expanded="false" aria-haspopup="listbox" aria-controls="lang-menu" aria-label="Language">
+                            <span id="lang-current-label">EN</span>
+                            <i class="fas fa-chevron-down lang-dropdown-chevron" aria-hidden="true"></i>
+                        </button>
+                        <ul id="lang-menu" class="lang-menu" role="listbox" hidden>
+                            <li role="presentation">
+                                <button type="button" class="lang-option" role="option" data-lang="fi" id="lang-opt-fi">Suomi</button>
+                            </li>
+                            <li role="presentation">
+                                <button type="button" class="lang-option" role="option" data-lang="en" id="lang-opt-en">English</button>
+                            </li>
+                            <li role="presentation">
+                                <button type="button" class="lang-option" role="option" data-lang="ar" id="lang-opt-ar">العربية</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="nav-toggle" id="nav-toggle" role="button" tabindex="0" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
             </div>
         </div>
     </nav>
+    <main id="main-content">
     <!-- Hero Section -->
     <section id="hero" class="hero">
-        <div class="hero-background"></div>
+        <div class="hero-background" id="hero-particles"></div>
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
                     <h1 class="hero-title">
-                        <span data-key="hero-name">S A</span>
+                        <span data-key="hero-name">Sawsan Abdulbari</span>
                     </h1>
                     <span class="hero-subtitle" data-key="hero-title">
-                        Junior Data Scientist & Koneoppimisen Insinööri
+                        Junior Data Scientist & Machine Learning Engineer
                     </span>
                     <div class="hero-highlights">
                         <div class="highlight-item">
                             <i class="fas fa-globe"></i>
-                            <span data-key="hero-global">80+ maata</span>
+                            <span data-key="hero-global">80+ countries</span>
                         </div>
                         <div class="highlight-item">
                             <i class="fas fa-users"></i>
-                            <span data-key="hero-team">15+ tiedemiestä</span>
+                            <span data-key="hero-team">15+ data scientists</span>
                         </div>
                         <div class="highlight-item">
                             <i class="fas fa-rocket"></i>
-                            <span data-key="hero-experience">3+ vuotta kokemusta</span>
+                            <span data-key="hero-experience">3+ years of experience</span>
                         </div>
                     </div>
                     <div class="hero-buttons">
-                        <a href="#contact" class="btn btn-primary" data-key="hero-contact">Ota yhteyttä</a>
-                        <a href="#projects" class="btn btn-secondary" data-key="hero-projects">Katso projektit</a>
-                        <a href="#" onclick="downloadCV()" class="btn btn-download" data-key="hero-download-cv">
-                            <i class="fas fa-download"></i>
-                            <span data-key="hero-download-text">Lataa CV</span>
-                        </a>
+                        <a href="#contact" class="btn btn-primary" data-key="hero-contact">Get in touch</a>
+                        <a href="#projects" class="btn btn-secondary" data-key="hero-projects">View projects</a>
+                        <div class="hero-download-group">
+                            <a href="#" onclick="downloadCV(); return false;" class="btn btn-download" data-key="hero-download-cv">
+                                <i class="fas fa-download" aria-hidden="true"></i>
+                                <span data-key="hero-download-text">Download CV</span>
+                            </a>
+                            <a href="CV_PDF_Generator.html" class="hero-pdf-help" target="_blank" rel="noopener noreferrer" data-key="hero-pdf-help">How to save as PDF</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -77,29 +160,29 @@ n<!DOCTYPE html>
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <h2 class="section-title" data-key="about-title">Tiivistelmä</h2>
+            <h2 class="section-title" data-key="about-title">Executive Summary</h2>
             <div class="about-content">
                 <div class="about-text">
                     <p data-key="about-description">
-                        Data Scientist & ML Engineer, jolla on 2+ vuoden todistettu asiantuntemus tekoälyratkaisujen rakentamisessa, joilla on positiivinen liiketoimintavaikutus ja jotka voidaan skaalata liiketoiminnan kasvun mukana. Johti 15+ globaalia datatiedemiestä ja osallistui projekteihin osana suuria tiimejä yli 80 maassa, toimittaen tuotantovalmiita ML-malleja, jotka ratkaisevat haasteita terveydenhuollon, kestävyyden ja teknologia-aloilla.
+                        Data Scientist & ML Engineer with 3+ years of proven expertise in building AI solutions that have positive business impact and can be scaled with the growth of the business. Led 15+ global data scientists, and took part in projects as part of big teams across 80+ countries, delivering ML models ready for production that solve challenges in healthcare, sustainability, and technology sectors.
                     </p>
                 </div>
                 <div class="about-stats">
                     <div class="stat-item">
-                        <div class="stat-number">15+</div>
-                        <div class="stat-label" data-key="stat-scientists">Tiedemiestä johdettu</div>
+                        <div class="stat-number" data-target="15">0</div>
+                        <div class="stat-label" data-key="stat-scientists">Scientists led</div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-number">80+</div>
-                        <div class="stat-label" data-key="stat-countries">Maata</div>
+                        <div class="stat-number" data-target="80">0</div>
+                        <div class="stat-label" data-key="stat-countries">Countries</div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-number">7</div>
-                        <div class="stat-label" data-key="stat-years">Vuotta yrittäjyyttä</div>
+                        <div class="stat-number" data-target="7">0</div>
+                        <div class="stat-label" data-key="stat-years">Years entrepreneurship</div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-number">3</div>
-                        <div class="stat-label" data-key="stat-languages">Kieltä</div>
+                        <div class="stat-number" data-target="3">0</div>
+                        <div class="stat-label" data-key="stat-languages">Languages</div>
                     </div>
                 </div>
             </div>
@@ -109,18 +192,18 @@ n<!DOCTYPE html>
     <!-- Skills Section -->
     <section id="skills" class="skills">
         <div class="container">
-            <h2 class="section-title" data-key="skills-title">Ydinosaamiset</h2>
+            <h2 class="section-title" data-key="skills-title">Core Competencies</h2>
             <div class="skills-grid">
                 <div class="skill-category">
                     <div class="skill-icon">
                         <i class="fas fa-brain"></i>
                     </div>
-                    <h3 data-key="skills-ml">Koneoppiminen</h3>
+                    <h3 data-key="skills-ml">Machine Learning</h3>
                     <ul>
-                        <li data-key="skill-predictive">Ennustava mallinnus</li>
-                        <li data-key="skill-timeseries">Aikasarja-analyysi</li>
-                        <li data-key="skill-rag">RAG-arkkitehtuuri</li>
-                        <li data-key="skill-deployment">Mallin käyttöönotto</li>
+                        <li data-key="skill-predictive">Predictive Modeling</li>
+                        <li data-key="skill-timeseries">Time Series Analysis</li>
+                        <li data-key="skill-rag">RAG Architecture</li>
+                        <li data-key="skill-deployment">Model Deployment</li>
                         <li data-key="skill-prompt">Prompt Engineering</li>
                     </ul>
                 </div>
@@ -130,38 +213,71 @@ n<!DOCTYPE html>
                     </div>
                     <h3 data-key="skills-data">Data Science</h3>
                     <ul>
-                        <li data-key="skill-mining">Tiedonlouhinta & Analytiikka</li>
-                        <li data-key="skill-eda">EDA & Visualisointi</li>
+                        <li data-key="skill-mining">Data Mining & Analytics</li>
+                        <li data-key="skill-eda">EDA & Visualization</li>
                         <li data-key="skill-feature">Feature Engineering</li>
-                        <li data-key="skill-statistical">Tilastollinen analyysi</li>
-                        <li data-key="skill-dashboard">Dashboard-luominen</li>
+                        <li data-key="skill-statistical">Statistical Analysis</li>
+                        <li data-key="skill-dashboard">Dashboard Creation</li>
                     </ul>
                 </div>
                 <div class="skill-category">
                     <div class="skill-icon">
                         <i class="fas fa-users"></i>
                     </div>
-                    <h3 data-key="skills-leadership">Johtajuus</h3>
+                    <h3 data-key="skills-leadership">Leadership</h3>
                     <ul>
-                        <li data-key="skill-team">Tiimin johtaminen (15+ henkeä)</li>
-                        <li data-key="skill-cultural">Kulttuurienvälinen yhteistyö</li>
-                        <li data-key="skill-mentoring">Mentorointi & Koulutus</li>
-                        <li data-key="skill-project">Projektinhallinta</li>
-                        <li data-key="skill-stakeholder">Sidosryhmäviestintä</li>
+                        <li data-key="skill-team">Team Leadership (15+ people)</li>
+                        <li data-key="skill-cultural">Cross-cultural Collaboration</li>
+                        <li data-key="skill-mentoring">Mentoring & Training</li>
+                        <li data-key="skill-project">Project Management</li>
+                        <li data-key="skill-stakeholder">Stakeholder Communication</li>
                     </ul>
                 </div>
                 <div class="skill-category">
                     <div class="skill-icon">
                         <i class="fas fa-briefcase"></i>
                     </div>
-                    <h3 data-key="skills-business">Liiketoiminta</h3>
+                    <h3 data-key="skills-business">Business</h3>
                     <ul>
-                        <li data-key="skill-strategic">Strateginen suunnittelu</li>
-                        <li data-key="skill-process">Prosessien optimointi</li>
-                        <li data-key="skill-financial">Taloudenhallinta</li>
-                        <li data-key="skill-development">Liiketoiminnan kehittäminen</li>
-                        <li data-key="skill-operations">Toimintojen hallinta</li>
+                        <li data-key="skill-strategic">Strategic Planning</li>
+                        <li data-key="skill-data-analysis">Data Analysis</li>
+                        <li data-key="skill-process">Process Optimization</li>
+                        <li data-key="skill-financial">Financial Management</li>
+                        <li data-key="skill-development">Business Development</li>
+                        <li data-key="skill-operations">Operations Management</li>
                     </ul>
+                </div>
+            </div>
+            <div class="skills-viz">
+                <h3 class="viz-title" data-key="skills-viz-title">Expertise Mapping</h3>
+                <div class="skills-viz-inner">
+                    <div class="skills-viz-chart-wrap">
+                        <div class="chart-container">
+                            <canvas id="skillsChart" data-aria-key="skills-chart-aria" role="img"></canvas>
+                        </div>
+                    </div>
+                    <aside class="skills-expertise-legend-wrap" aria-labelledby="skills-viz-legend-heading">
+                        <p id="skills-viz-legend-heading" class="skills-expertise-legend-heading visually-hidden" data-key="skills-legend-heading">Expertise levels</p>
+                        <ul class="skills-expertise-legend" role="list">
+                            <li class="skills-expertise-legend-row">
+                                <span data-key="skills-ml">Machine Learning</span>
+                                <span class="skills-legend-pct">80%</span>
+                            </li>
+                            <li class="skills-expertise-legend-row">
+                                <span data-key="skills-data">Data Science</span>
+                                <span class="skills-legend-pct">85%</span>
+                            </li>
+                            <li class="skills-expertise-legend-row">
+                                <span data-key="skills-leadership">Leadership</span>
+                                <span class="skills-legend-pct">80%</span>
+                            </li>
+                            <li class="skills-expertise-legend-row">
+                                <span data-key="skills-business">Business</span>
+                                <span class="skills-legend-pct">90%</span>
+                            </li>
+                        </ul>
+                        <p class="skills-expertise-note" data-key="skills-legend-note">Relative scale aligned with portfolio skills visualization (self-assessment).</p>
+                    </aside>
                 </div>
             </div>
         </div>
@@ -170,17 +286,32 @@ n<!DOCTYPE html>
     <!-- Education Section -->
     <section id="education" class="education">
         <div class="container">
-            <h2 class="section-title" data-key="education-title">Koulutus</h2>
+            <h2 class="section-title" data-key="education-title">Education</h2>
             <div class="education-timeline">
                 <div class="education-item">
                     <div class="education-date">
-                        <span>2023 - 2026</span>
+                        <span data-key="edu0-dates">2023 - 2026</span>
                     </div>
                     <div class="education-content">
-                        <h3 data-key="edu1-degree">Bachelor of Business Information Technology (Data Science)</h3>
-                        <h4 data-key="edu1-school">Häme University of Applied Sciences (HAMK), Finland</h4>
+                        <h3 data-key="edu0-degree">Bachelor of Business Information Technology (Data Science) — Grade 4.7</h3>
+                        <h4 data-key="edu0-school">Häme University of Applied Sciences (HAMK), Finland</h4>
+                        <p data-key="edu0-description">
+                            Specialization in Data Science, artificial intelligence and Business Intelligence. Focus on machine learning, data analytics, and business applications.
+                        </p>
+                        <p class="education-thesis">
+                            <a href="BITCA-Thesis-Sawsan.pdf" class="education-thesis-link" download="BITCA-Thesis-Sawsan.pdf" data-key="edu0-thesis-link" data-aria-key="edu0-thesis-aria">Download BITCA thesis (PDF)</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="education-item">
+                    <div class="education-date">
+                        <span data-key="edu1-dates">2024</span>
+                    </div>
+                    <div class="education-content">
+                        <h3 data-key="edu1-degree">Climate Change AI (CCAI) Summer School</h3>
+                        <h4 data-key="edu1-school">Climate Change AI (CCAI)</h4>
                         <p data-key="edu1-description">
-                            Specialization in Data Science and Business Intelligence. Focus on machine learning, data analytics, and business applications.
+                            Intensive program on machine learning and AI for climate change mitigation, adaptation, and environmental decision-making.
                         </p>
                     </div>
                 </div>
@@ -203,17 +334,17 @@ n<!DOCTYPE html>
     <!-- Experience Section -->
     <section id="experience" class="experience">
         <div class="container">
-            <h2 class="section-title" data-key="experience-title">Työkokemus</h2>
+            <h2 class="section-title" data-key="experience-title">Professional Experience</h2>
             <div class="experience-timeline">
                 <div class="experience-item">
                     <div class="experience-date">
-                        <span data-key="exp1-date">2024 - Nykyinen</span>
+                        <span data-key="exp1-date">2024 - Current</span>
                     </div>
                     <div class="experience-content">
                         <h3 data-key="exp1-title">Machine Learning Engineer</h3>
-                        <h4 data-key="exp1-company">Omdena | Palo Alto, CA (Etätyö)</h4>
+                        <h4 data-key="exp1-company">Omdena | Palo Alto, CA (Remote)</h4>
                         <p data-key="exp1-description">
-                            Johdin tekoälyinnovaatiota globaalissa yhteistyöympäristössä ammattilaisten kanssa yli 80 maasta. Tutkin ja toteutin RAG-arkkitehtuuria yrityssovelluksille.
+                            Leading AI innovation in global collaborative environment with professionals from 80+ countries. Researched and implemented RAG architecture for enterprise applications.
                         </p>
                         <div class="tech-tags">
                             <span class="tech-tag">Python</span>
@@ -228,15 +359,15 @@ n<!DOCTYPE html>
                         <span>2024 - 2025</span>
                     </div>
                     <div class="experience-content">
-                        <h3 data-key="exp2-title">Opiskelijaassistentti</h3>
-                        <h4 data-key="exp2-company">Hämeen ammattikorkeakoulu (HAMK) | Suomi</h4>
+                        <h3 data-key="exp2-title">Student Assistant</h3>
+                        <h4 data-key="exp2-company">Häme University of Applied Sciences (HAMK) | Finland</h4>
                         <p data-key="exp2-description">
-                            Paransin koulutustuloksia 50+ opiskelijalle ja kehitin opetussuunnitelmaa. Tarjosin henkilökohtaista ohjausta ja teknistä mentorointia.
+                            Enhanced educational outcomes for 50+ students while driving curriculum innovation. Provided personalized guidance and technical mentoring.
                         </p>
                         <div class="tech-tags">
                             <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Opetus</span>
-                            <span class="tech-tag">Opetussuunnitelma</span>
+                            <span class="tech-tag">Teaching</span>
+                            <span class="tech-tag">Curriculum</span>
                         </div>
                     </div>
                 </div>
@@ -246,9 +377,9 @@ n<!DOCTYPE html>
                     </div>
                     <div class="experience-content">
                         <h3 data-key="exp3-title">Lead Machine Learning Engineer</h3>
-                        <h4 data-key="exp3-company">Omdena Kitwe, Sambia | Etätyö</h4>
+                        <h4 data-key="exp3-company">Omdena Kitwe, Zambia | Remote</h4>
                         <p data-key="exp3-description">
-                            Toimitin kriittisen COVID-19 ennustejärjestelmän kehitysmaiden terveydenhuollon infrastruktuurille. Johdin 15+ globaalia datatiedemiestä.
+                            Delivered critical COVID-19 prediction system for developing countries' healthcare infrastructure. Led 15+ global data scientists.
                         </p>
                         <div class="tech-tags">
                             <span class="tech-tag">Team Leadership</span>
@@ -263,9 +394,9 @@ n<!DOCTYPE html>
                     </div>
                     <div class="experience-content">
                         <h3 data-key="exp4-title">Data Science / Machine Learning</h3>
-                        <h4 data-key="exp4-company">Raqameyyah Digital Consultancy | Egypt (Etätyö)</h4>
+                        <h4 data-key="exp4-company">Raqameyyah Digital Consultancy | Egypt (Remote)</h4>
                         <p data-key="exp4-description">
-                            Rakensin ja käytin käyttöön ML-malleja käyttäen edistyneitä tekniikoita. Kehitin chatbotteja edistyneillä prompt engineering -tekniikoilla ja loi front-end sovelluksia parantaakseni asiakasulottuvuutta.
+                            Built and deployed ML models using advanced techniques. Developed chatbots with advanced prompt engineering techniques and created front-end applications for improved customer reach.
                         </p>
                         <div class="tech-tags">
                             <span class="tech-tag">Machine Learning</span>
@@ -283,7 +414,7 @@ n<!DOCTYPE html>
                         <h3 data-key="exp5-title">Data Analyst Trainee</h3>
                         <h4 data-key="exp5-company">Raqameyyah Digital Consultancy | Egypt (Etätyö)</h4>
                         <p data-key="exp5-description">
-                            Puhdistin ja esikäsittelin suuria tietojoukkoja analyysiä varten. Kehitin sovelluksia tietojen suodattamiseen ja tarkasteluun sekä loi automatisoituja tietojenkäsittelyputkia.
+                            Cleaned and preprocessed large datasets for analysis. Developed applications for data filtering and inspection and created automated data processing pipelines.
                         </p>
                         <div class="tech-tags">
                             <span class="tech-tag">Data Analysis</span>
@@ -301,7 +432,7 @@ n<!DOCTYPE html>
                         <h3 data-key="exp6-title">Accounting Intern</h3>
                         <h4 data-key="exp6-company">foodora Finland | Tampere</h4>
                         <p data-key="exp6-description">
-                            Hankin kokemusta talouskirjanpidosta ja toimitusoperaatioista. Työskentelin Microsoft Excelin kanssa tietojen hallinnassa ja osallistuin talousraportointiprosesseihin.
+                            Gained experience in financial accounting and supply operations. Worked with Microsoft Excel for data management and contributed to financial reporting processes.
                         </p>
                         <div class="tech-tags">
                             <span class="tech-tag">Supply Operations</span>
@@ -318,7 +449,7 @@ n<!DOCTYPE html>
                         <h3 data-key="exp7-title">Social Media Representative</h3>
                         <h4 data-key="exp7-company">Foody Allen | Tampere</h4>
                         <p data-key="exp7-description">
-                            Toimin pääsisältöluojana ruokatuottaja Njunno:lle Block-festivaali-viikonloppuna. Keskityin pääasiassa luomaan valokuvaus- ja videosisältöä tapahtumasta markkinointi- ja jälkimarkkinointitarkoituksiin.
+                            Lead content creator for food producer Njunno during Block-festival weekend. Concentrated mainly on creating photo- and videography content from the event for marketing and after-marketing purposes.
                         </p>
                         <div class="tech-tags">
                             <span class="tech-tag">Multi-Channel Marketing</span>
@@ -336,7 +467,7 @@ n<!DOCTYPE html>
                         <h3 data-key="exp8-title">Marketing Communications and Content Production</h3>
                         <h4 data-key="exp8-company">BSB Fashion | Paphos, Cyprus</h4>
                         <p data-key="exp8-description">
-                            Kehitin markkinointistrategioita ja sisältötuotantoa. Hallinnoin verkkokauppa-alustoja ja monikanavaisia markkinointia sekä loin graafisia suunnitteluja ja videosisältöä.
+                            Developed marketing strategies and content production. Managed e-commerce platforms and multi-channel marketing and created graphic designs and video content.
                         </p>
                         <div class="tech-tags">
                             <span class="tech-tag">Sales</span>
@@ -354,7 +485,7 @@ n<!DOCTYPE html>
                         <h3 data-key="exp9-title">Sales Associate</h3>
                         <h4 data-key="exp9-company">Keinuipuiston kukka Oy | Tampere, Finland</h4>
                         <p data-key="exp9-description">
-                            Päävastuuni oli asiakaspalvelu ja myynti. Hallinnoin kaupan verkkokauppaa ja toimitusalustoja Foodora ja Wolt sekä kehitin yritysten välistä liiketoimintaa.
+                            Main responsibilities were customer service and sales. Managed the store's online shop and delivering platforms Foodora and Wolt and developed business-to-business relationships.
                         </p>
                         <div class="tech-tags">
                             <span class="tech-tag">Business-to-Business (B2B)</span>
@@ -372,7 +503,7 @@ n<!DOCTYPE html>
                         <h3 data-key="exp10-title">Founder</h3>
                         <h4 data-key="exp10-company">Plastic Recycling for Sustainable Solutions | Hybrid</h4>
                         <p data-key="exp10-description">
-                            Perustin ja hallinnoin muovin kierrätystehdasta, joka keskittyi ympäristönsuojeluun. Kehitin liiketoimintastrategioita ja toimintamenetelmiä sekä hallinnoin työntekijöitä ja tuotantoprosesseja. Toimin ympäristönsuojelun edistämisessä muuttamalla muovijätteestä arvokkaita resursseja.
+                            Founded and managed a plastic recycling factory focused on environmental sustainability. Developed business strategies and operational procedures and managed team of employees and production processes. Contributed to environmental sustainability by transforming plastic waste into valuable resources.
                         </p>
                         <div class="tech-tags">
                             <span class="tech-tag">Business-to-Business (B2B)</span>
@@ -389,11 +520,18 @@ n<!DOCTYPE html>
     <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
-            <h2 class="section-title" data-key="projects-title">Merkittävät projektit</h2>
+            <h2 class="section-title" data-key="projects-title">Notable Projects</h2>
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all" data-key="filter-all">All</button>
+                <button class="filter-btn" data-filter="ml" data-key="filter-ml">Machine Learning</button>
+                <button class="filter-btn" data-filter="data" data-key="filter-data">Data Science</button>
+                <button class="filter-btn" data-filter="nlp" data-key="filter-nlp">NLP & Chatbots</button>
+                <button class="filter-btn" data-filter="vision" data-key="filter-vision">Computer Vision</button>
+            </div>
             <div class="projects-grid">
-                <div class="project-card">
+                <div class="project-card" data-category="data">
                     <div class="project-image">
-                        <img src="images/kiva_dashboard.png" alt="Kiva Loan EDA Dashboard">
+                        <img loading="lazy" src="images/kiva_dashboard.png" alt="Kiva Loan EDA Dashboard">
                     </div>
                     <div class="project-content">
                         <h3 data-key="project1-title">🏦 Kiva Loan EDA Dashboard</h3>
@@ -407,16 +545,20 @@ n<!DOCTYPE html>
                             <span class="tag">Streamlit</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/SawsanAbdulbari/Kiva_Loan_Dashboard.git" target="_blank" class="project-link repo-link" data-key="project-repo">
+                            <button class="project-link details-link" data-project="project1">
+                                <i class="fas fa-info-circle"></i>
+                                <span data-key="project-details-text">View Details</span>
+                            </button>
+                            <a href="https://github.com/SawsanAbdulbari/Kiva_Loan_Dashboard.git" target="_blank" rel="noopener noreferrer" class="project-link repo-link" data-key="project-repo">
                                 <i class="fab fa-github"></i>
                                 <span data-key="project-repo-text">Repository</span>
                             </a>
                         </div>
                     </div>
                 </div>
-                <div class="project-card">
+                <div class="project-card" data-category="ml">
                     <div class="project-image">
-                        <img src="images/covid_prediction.png" alt="COVID-19 Case Prediction System">
+                        <img loading="lazy" src="images/covid_prediction.png" alt="COVID-19 Case Prediction System">
                     </div>
                     <div class="project-content">
                         <h3 data-key="project2-title">🦠 COVID-19 Case Prediction System</h3>
@@ -430,20 +572,24 @@ n<!DOCTYPE html>
                             <span class="tag">Streamlit</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://omdenakitwecovid19.streamlit.app/" target="_blank" class="project-link demo-link" data-key="project-demo">
+                            <button class="project-link details-link" data-project="project2">
+                                <i class="fas fa-info-circle"></i>
+                                <span data-key="project-details-text">View Details</span>
+                            </button>
+                            <a href="https://omdenakitwecovid19.streamlit.app/" target="_blank" rel="noopener noreferrer" class="project-link demo-link" data-key="project-demo">
                                 <i class="fas fa-external-link-alt"></i>
                                 <span data-key="project-demo-text">Demo</span>
                             </a>
-                            <a href="https://github.com/SawsanAbdulbari/Omdena_KitweChapter_ForecastingCOVID19Dynamics.git" target="_blank" class="project-link repo-link" data-key="project-repo">
+                            <a href="https://github.com/SawsanAbdulbari/Omdena_KitweChapter_ForecastingCOVID19Dynamics.git" target="_blank" rel="noopener noreferrer" class="project-link repo-link" data-key="project-repo">
                                 <i class="fab fa-github"></i>
                                 <span data-key="project-repo-text">Repository</span>
                             </a>
                         </div>
                     </div>
                 </div>
-                <div class="project-card">
+                <div class="project-card" data-category="ml">
                     <div class="project-image">
-                        <img src="images/housing_predictor.png" alt="California Housing Price Predictor">
+                        <img loading="lazy" src="images/housing_predictor.png" alt="California Housing Price Predictor">
                     </div>
                     <div class="project-content">
                         <h3 data-key="project3-title">🏠 California Housing Price Predictor</h3>
@@ -457,16 +603,20 @@ n<!DOCTYPE html>
                             <span class="tag">Streamlit</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/SawsanAbdulbari/california_housing_price_predictor.git" target="_blank" class="project-link repo-link" data-key="project-repo">
+                            <button class="project-link details-link" data-project="project3">
+                                <i class="fas fa-info-circle"></i>
+                                <span data-key="project-details-text">View Details</span>
+                            </button>
+                            <a href="https://github.com/SawsanAbdulbari/california_housing_price_predictor.git" target="_blank" rel="noopener noreferrer" class="project-link repo-link" data-key="project-repo">
                                 <i class="fab fa-github"></i>
                                 <span data-key="project-repo-text">Repository</span>
                             </a>
                         </div>
                     </div>
                 </div>
-                <div class="project-card">
+                <div class="project-card" data-category="data">
                     <div class="project-image">
-                        <img src="images/customer_segmentation.png" alt="Customer Segmentation Dashboard">
+                        <img loading="lazy" src="images/customer_segmentation.png" alt="Customer Segmentation Dashboard">
                     </div>
                     <div class="project-content">
                         <h3 data-key="project4-title">👥 Customer Segmentation Dashboard</h3>
@@ -480,20 +630,24 @@ n<!DOCTYPE html>
                             <span class="tag">Streamlit</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://customer-segmentation-dashboard.streamlit.app/" target="_blank" class="project-link demo-link" data-key="project-demo">
+                            <button class="project-link details-link" data-project="project4">
+                                <i class="fas fa-info-circle"></i>
+                                <span data-key="project-details-text">View Details</span>
+                            </button>
+                            <a href="https://customer-segmentation-dashboard.streamlit.app/" target="_blank" rel="noopener noreferrer" class="project-link demo-link" data-key="project-demo">
                                 <i class="fas fa-external-link-alt"></i>
                                 <span data-key="project-demo-text">Demo</span>
                             </a>
-                            <a href="https://github.com/SawsanAbdulbari/Customer-Segmentation-Dashboard" target="_blank" class="project-link repo-link" data-key="project-repo">
+                            <a href="https://github.com/SawsanAbdulbari/Customer-Segmentation-Dashboard" target="_blank" rel="noopener noreferrer" class="project-link repo-link" data-key="project-repo">
                                 <i class="fab fa-github"></i>
                                 <span data-key="project-repo-text">Repository</span>
                             </a>
                         </div>
                     </div>
                 </div>
-                <div class="project-card">
+                <div class="project-card" data-category="ml">
                     <div class="project-image">
-                        <img src="images/taxi_duration.png" alt="NYC Taxi Trip Duration Prediction">
+                        <img loading="lazy" src="images/taxi_duration.png" alt="NYC Taxi Trip Duration Prediction">
                     </div>
                     <div class="project-content">
                         <h3 data-key="project5-title">🚕 NYC Taxi Trip Duration Prediction</h3>
@@ -507,20 +661,24 @@ n<!DOCTYPE html>
                             <span class="tag">Streamlit</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://nyctaxi.streamlit.app/" target="_blank" class="project-link demo-link" data-key="project-demo">
+                            <button class="project-link details-link" data-project="project5">
+                                <i class="fas fa-info-circle"></i>
+                                <span data-key="project-details-text">View Details</span>
+                            </button>
+                            <a href="https://nyctaxi.streamlit.app/" target="_blank" rel="noopener noreferrer" class="project-link demo-link" data-key="project-demo">
                                 <i class="fas fa-external-link-alt"></i>
                                 <span data-key="project-demo-text">Demo</span>
                             </a>
-                            <a href="https://github.com/SawsanAbdulbari/nyc_taxi_trip_duration" target="_blank" class="project-link repo-link" data-key="project-repo">
+                            <a href="https://github.com/SawsanAbdulbari/nyc_taxi_trip_duration" target="_blank" rel="noopener noreferrer" class="project-link repo-link" data-key="project-repo">
                                 <i class="fab fa-github"></i>
                                 <span data-key="project-repo-text">Repository</span>
                             </a>
                         </div>
                     </div>
                 </div>
-                <div class="project-card">
+                <div class="project-card" data-category="ml vision">
                     <div class="project-image">
-                        <img src="images/banknote_auth.png" alt="Bank Note Authentication">
+                        <img loading="lazy" src="images/banknote_auth.png" alt="Bank Note Authentication">
                     </div>
                     <div class="project-content">
                         <h3 data-key="project6-title">💵 Bank Note Authentication</h3>
@@ -534,20 +692,24 @@ n<!DOCTYPE html>
                             <span class="tag">Streamlit</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://banknote.streamlit.app/" target="_blank" class="project-link demo-link" data-key="project-demo">
+                            <button class="project-link details-link" data-project="project6">
+                                <i class="fas fa-info-circle"></i>
+                                <span data-key="project-details-text">View Details</span>
+                            </button>
+                            <a href="https://banknote.streamlit.app/" target="_blank" rel="noopener noreferrer" class="project-link demo-link" data-key="project-demo">
                                 <i class="fas fa-external-link-alt"></i>
                                 <span data-key="project-demo-text">Demo</span>
                             </a>
-                            <a href="https://github.com/SawsanAbdulbari/SVM" target="_blank" class="project-link repo-link" data-key="project-repo">
+                            <a href="https://github.com/SawsanAbdulbari/SVM" target="_blank" rel="noopener noreferrer" class="project-link repo-link" data-key="project-repo">
                                 <i class="fab fa-github"></i>
                                 <span data-key="project-repo-text">Repository</span>
                             </a>
                         </div>
                     </div>
                 </div>
-                <div class="project-card">
+                <div class="project-card" data-category="data">
                     <div class="project-image">
-                        <img src="images/shopping_dashboard.png" alt="E-commerce Analytics Dashboard">
+                        <img loading="lazy" src="images/shopping_dashboard.png" alt="E-commerce Analytics Dashboard">
                     </div>
                     <div class="project-content">
                         <h3 data-key="project7-title">🛒 E-commerce Analytics Dashboard</h3>
@@ -561,20 +723,24 @@ n<!DOCTYPE html>
                             <span class="tag">Streamlit</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://shopping-dashboard.streamlit.app/Overview" target="_blank" class="project-link demo-link" data-key="project-demo">
+                            <button class="project-link details-link" data-project="project7">
+                                <i class="fas fa-info-circle"></i>
+                                <span data-key="project-details-text">View Details</span>
+                            </button>
+                            <a href="https://shopping-dashboard.streamlit.app/Overview" target="_blank" rel="noopener noreferrer" class="project-link demo-link" data-key="project-demo">
                                 <i class="fas fa-external-link-alt"></i>
                                 <span data-key="project-demo-text">Demo</span>
                             </a>
-                            <a href="https://github.com/SawsanAbdulbari/Customer-Segmentation-Dashboard" target="_blank" class="project-link repo-link" data-key="project-repo">
+                            <a href="https://github.com/SawsanAbdulbari/Customer-Segmentation-Dashboard" target="_blank" rel="noopener noreferrer" class="project-link repo-link" data-key="project-repo">
                                 <i class="fab fa-github"></i>
                                 <span data-key="project-repo-text">Repository</span>
                             </a>
                         </div>
                     </div>
                 </div>
-                <div class="project-card">
+                <div class="project-card" data-category="nlp">
                     <div class="project-image">
-                        <img src="images/chatbot_rag.png" alt="Smart AI Document Chatbot with RAG">
+                        <img loading="lazy" src="images/chatbot_rag.png" alt="Smart AI Document Chatbot with RAG">
                     </div>
                     <div class="project-content">
                         <h3 data-key="project8-title">🤖 Smart AI Document Chatbot with RAG</h3>
@@ -588,20 +754,56 @@ n<!DOCTYPE html>
                             <span class="tag">Streamlit</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://huggingface.co/spaces/SA7/smart-ai-rag" target="_blank" class="project-link demo-link" data-key="project-demo">
+                            <button class="project-link details-link" data-project="project8">
+                                <i class="fas fa-info-circle"></i>
+                                <span data-key="project-details-text">View Details</span>
+                            </button>
+                            <a href="https://huggingface.co/spaces/SA7/smart-ai-rag" target="_blank" rel="noopener noreferrer" class="project-link demo-link" data-key="project-demo">
                                 <i class="fas fa-external-link-alt"></i>
                                 <span data-key="project-demo-text">Demo</span>
                             </a>
-                            <a href="https://github.com/SawsanAbdulbari/smart-ai-rag" target="_blank" class="project-link repo-link" data-key="project-repo">
+                            <a href="https://github.com/SawsanAbdulbari/smart-ai-rag" target="_blank" rel="noopener noreferrer" class="project-link repo-link" data-key="project-repo">
                                 <i class="fab fa-github"></i>
                                 <span data-key="project-repo-text">Repository</span>
                             </a>
                         </div>
                     </div>
                 </div>
-                <div class="project-card">
+                <div class="project-card" data-category="nlp">
                     <div class="project-image">
-                        <img src="images/news_analysis_dashboard.png" alt="News Sentiment & Keyword Analysis Dashboard">
+                        <img loading="lazy" src="images/recipe_finder.png" alt="AI Recipe Finder">
+                    </div>
+                    <div class="project-content">
+                        <h3 data-key="project12-title">🍳 AI Recipe Finder</h3>
+                        <p data-key="project12-description">
+                            Voice-powered recipe app: say ingredients aloud and get AI-generated recipes. Uses Whisper for speech-to-text and Groq (or local FLAN-T5) for generation, built with Gradio and deployed on Hugging Face Spaces.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Gradio</span>
+                            <span class="tag">Whisper</span>
+                            <span class="tag">Groq</span>
+                            <span class="tag">Hugging Face</span>
+                        </div>
+                        <div class="project-links">
+                            <button class="project-link details-link" data-project="project12">
+                                <i class="fas fa-info-circle"></i>
+                                <span data-key="project-details-text">View Details</span>
+                            </button>
+                            <a href="https://huggingface.co/spaces/SA7/ai-recipe-finder" target="_blank" rel="noopener noreferrer" class="project-link demo-link" data-key="project-demo">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span data-key="project-demo-text">Demo</span>
+                            </a>
+                            <a href="https://github.com/SawsanAbdulbari/recipe_finder" target="_blank" rel="noopener noreferrer" class="project-link repo-link" data-key="project-repo">
+                                <i class="fab fa-github"></i>
+                                <span data-key="project-repo-text">Repository</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="data nlp">
+                    <div class="project-image">
+                        <img loading="lazy" src="images/news_analysis_dashboard.png" alt="News Sentiment & Keyword Analysis Dashboard">
                     </div>
                     <div class="project-content">
                         <h3 data-key="project9-title">📰 News Sentiment & Keyword Analysis Dashboard</h3>
@@ -615,20 +817,24 @@ n<!DOCTYPE html>
                             <span class="tag">Streamlit</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://newssentimentkeyword.streamlit.app/" target="_blank" class="project-link demo-link" data-key="project-demo">
+                            <button class="project-link details-link" data-project="project9">
+                                <i class="fas fa-info-circle"></i>
+                                <span data-key="project-details-text">View Details</span>
+                            </button>
+                            <a href="https://newssentimentkeyword.streamlit.app/" target="_blank" rel="noopener noreferrer" class="project-link demo-link" data-key="project-demo">
                                 <i class="fas fa-external-link-alt"></i>
                                 <span data-key="project-demo-text">Demo</span>
                             </a>
-                            <a href="https://github.com/SawsanAbdulbari/news_app" target="_blank" class="project-link repo-link" data-key="project-repo">
+                            <a href="https://github.com/SawsanAbdulbari/news_app" target="_blank" rel="noopener noreferrer" class="project-link repo-link" data-key="project-repo">
                                 <i class="fab fa-github"></i>
                                 <span data-key="project-repo-text">Repository</span>
                             </a>
                         </div>
                     </div>
                 </div>
-                <div class="project-card">
+                <div class="project-card" data-category="ml vision">
                     <div class="project-image">
-                        <img src="images/ml_pipeline.png" alt="Emotion Recognition Project">
+                        <img loading="lazy" src="images/ml_pipeline.png" alt="Emotion Recognition Project">
                     </div>
                     <div class="project-content">
                         <h3 data-key="project10-title">😊 Emotion Recognition Project</h3>
@@ -642,16 +848,20 @@ n<!DOCTYPE html>
                             <span class="tag">OpenCV</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/SawsanAbdulbari/emotion_recognition_mobile_app" target="_blank" class="project-link repo-link" data-key="project-repo">
+                            <button class="project-link details-link" data-project="project10">
+                                <i class="fas fa-info-circle"></i>
+                                <span data-key="project-details-text">View Details</span>
+                            </button>
+                            <a href="https://github.com/SawsanAbdulbari/emotion_recognition_mobile_app" target="_blank" rel="noopener noreferrer" class="project-link repo-link" data-key="project-repo">
                                 <i class="fab fa-github"></i>
                                 <span data-key="project-repo-text">Repository</span>
                             </a>
                         </div>
                     </div>
                 </div>
-                <div class="project-card">
+                <div class="project-card" data-category="ml">
                     <div class="project-image">
-                        <img src="images/carbon_fraud.png" alt="Carbon Fraud Detection Network">
+                        <img loading="lazy" src="images/carbon_fraud.png" alt="Carbon Fraud Detection Network">
                     </div>
                     <div class="project-content">
                         <h3 data-key="project11-title">🌱 Carbon Fraud Detection Network</h3>
@@ -667,6 +877,65 @@ n<!DOCTYPE html>
                             <span class="tag">Redis</span>
                         </div>
                         <div class="project-links">
+                            <button class="project-link details-link" data-project="project11">
+                                <i class="fas fa-info-circle"></i>
+                                <span data-key="project-details-text">View Details</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="data">
+                    <div class="project-image">
+                        <img loading="lazy" src="images/pirha_ict_guide.png" alt="PIRHA Pre-Procedure Rehabilitation Guide">
+                    </div>
+                    <div class="project-content">
+                        <h3 data-key="project13-title">🏥 PIRHA Pre-Procedure Rehabilitation Guide</h3>
+                        <p data-key="project13-description">
+                            Web guide for pre-procedure rehabilitation for the Pirkanmaa wellbeing region (PIRHA). Supports patients and families before medical procedures. Deployed on Vercel.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Vercel</span>
+                            <span class="tag">Web</span>
+                            <span class="tag">Healthcare</span>
+                            <span class="tag">Accessibility</span>
+                        </div>
+                        <div class="project-links">
+                            <button class="project-link details-link" data-project="project13">
+                                <i class="fas fa-info-circle"></i>
+                                <span data-key="project-details-text">View Details</span>
+                            </button>
+                            <a href="https://ict-project-pirha.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-link demo-link" data-key="project-demo">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span data-key="project-demo-text">Demo</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="ml">
+                    <div class="project-image">
+                        <img loading="lazy" src="images/tree_classifier.png" alt="Tree Classifier web and mobile app">
+                    </div>
+                    <div class="project-content">
+                        <h3 data-key="project14-title">🌳 Tree Classifier</h3>
+                        <p data-key="project14-description">
+                            Interactive web and mobile app for tree species classification using machine learning. Deployed on Vercel.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Machine Learning</span>
+                            <span class="tag">Vercel</span>
+                            <span class="tag">Web</span>
+                            <span class="tag">Mobile</span>
+                        </div>
+                        <div class="project-links">
+                            <button class="project-link details-link" data-project="project14">
+                                <i class="fas fa-info-circle"></i>
+                                <span data-key="project-details-text">View Details</span>
+                            </button>
+                            <a href="https://tree-classifier-rh9k1vmsu-sawsanabdulbaris-projects.vercel.app" target="_blank" rel="noopener noreferrer" class="project-link demo-link" data-key="project-demo">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span data-key="project-demo-text">Demo</span>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -677,42 +946,42 @@ n<!DOCTYPE html>
     <!-- Personal Interests Section -->
     <section id="interests" class="interests">
         <div class="container">
-            <h2 class="section-title" data-key="interests-title">Henkilökohtaiset kiinnostuksen kohteet</h2>
+            <h2 class="section-title" data-key="interests-title">Personal Interests</h2>
             <div class="interests-grid">
                 <div class="interest-item">
                     <div class="interest-icon">
                         <i class="fas fa-hiking"></i>
                     </div>
-                    <h3 data-key="interest1-title">Vaeltaminen</h3>
-                    <p data-key="interest1-description">Luonnon tutkiminen, ulkoilutoiminta</p>
+                    <h3 data-key="interest1-title">Hiking</h3>
+                    <p data-key="interest1-description">Nature exploration, Outdoor activities</p>
                 </div>
                 <div class="interest-item">
                     <div class="interest-icon">
                         <i class="fas fa-dumbbell"></i>
                     </div>
-                    <h3 data-key="interest2-title">Kuntoilu</h3>
-                    <p data-key="interest2-description">Terveys ja hyvinvointi, fyysinen aktiivisuus</p>
+                    <h3 data-key="interest2-title">Fitness Training</h3>
+                    <p data-key="interest2-description">Health and wellness, Physical activity</p>
                 </div>
                 <div class="interest-item">
                     <div class="interest-icon">
                         <i class="fas fa-utensils"></i>
                     </div>
-                    <h3 data-key="interest3-title">Ruokien tutkiminen</h3>
-                    <p data-key="interest3-description">Kulinaristiset kokemukset, kulttuurinen keittiö</p>
+                    <h3 data-key="interest3-title">Food Exploration</h3>
+                    <p data-key="interest3-description">Culinary experiences, Cultural cuisine</p>
                 </div>
                 <div class="interest-item">
                     <div class="interest-icon">
                         <i class="fas fa-graduation-cap"></i>
                     </div>
-                    <h3 data-key="interest4-title">Jatkuva oppiminen</h3>
-                    <p data-key="interest4-description">Teknologiatrendit, ammatillinen kehitys</p>
+                    <h3 data-key="interest4-title">Continuous Learning</h3>
+                    <p data-key="interest4-description">Technology trends, Professional development</p>
                 </div>
                 <div class="interest-item">
                     <div class="interest-icon">
                         <i class="fas fa-leaf"></i>
                     </div>
-                    <h3 data-key="interest5-title">Ympäristönsuojelu</h3>
-                    <p data-key="interest5-description">Vihreät aloitteet, ympäristöystävälliset käytännöt</p>
+                    <h3 data-key="interest5-title">Environmental Sustainability</h3>
+                    <p data-key="interest5-description">Green initiatives, Eco-friendly practices</p>
                 </div>
             </div>
         </div>
@@ -721,20 +990,20 @@ n<!DOCTYPE html>
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title" data-key="contact-title">Ota yhteyttä</h2>
+            <h2 class="section-title" data-key="contact-title">Get In Touch</h2>
             <div class="contact-content">
                 <div class="contact-info">
                     <div class="contact-item">
                         <i class="fas fa-envelope"></i>
                         <div>
-                            <h4 data-key="contact-email-label">Sähköposti</h4>
+                            <h4 data-key="contact-email-label">Email</h4>
                             <a href="mailto:sawsan.abdulbari@gmail.com">sawsan.abdulbari@gmail.com</a>
                         </div>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-phone"></i>
                         <div>
-                            <h4 data-key="contact-phone-label">Puhelin</h4>
+                            <h4 data-key="contact-phone-label">Phone</h4>
                             <a href="tel:+3584051105012">+358 40 5110 5012</a>
                         </div>
                     </div>
@@ -742,48 +1011,120 @@ n<!DOCTYPE html>
                         <i class="fab fa-linkedin"></i>
                         <div>
                             <h4 data-key="contact-linkedin-label">LinkedIn</h4>
-                            <a href="https://linkedin.com/in/sawsanabdulbari" target="_blank">linkedin.com/in/sawsanabdulbari</a>
+                            <a href="https://www.linkedin.com/in/sawsanabdulbari" target="_blank" rel="noopener noreferrer">linkedin.com/in/sawsanabdulbari</a>
                         </div>
                     </div>
                     <div class="contact-item">
                         <i class="fab fa-github"></i>
                         <div>
                             <h4 data-key="contact-github-label">GitHub</h4>
-                            <a href="https://github.com/sawsanabdulbari" target="_blank">github.com/sawsanabdulbari</a>
+                            <a href="https://github.com/sawsanabdulbari" target="_blank" rel="noopener noreferrer">github.com/sawsanabdulbari</a>
                         </div>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-map-marker-alt"></i>
                         <div>
-                            <h4 data-key="contact-location-label">Sijainti</h4>
-                            <span data-key="contact-location">Suomi</span>
+                            <h4 data-key="contact-location-label">Location</h4>
+                            <span data-key="contact-location">Helsinki, Finland</span>
                         </div>
                     </div>
                 </div>
                 <div class="contact-cta">
-                    <h3 data-key="contact-cta-title">Valmis ajamaan innovaatiota</h3>
+                    <h3 data-key="contact-cta-title">Ready to drive innovation</h3>
                     <p data-key="contact-cta-description">
-                        Ota yhteyttä ja tutkitaan, miten asiantuntemukseni voi edistää tiimisi menestystä.
+                        Let's connect and explore how my expertise can contribute to your team's success.
                     </p>
-                    <a href="mailto:sawsan.abdulbari@gmail.com" class="btn btn-primary" data-key="contact-cta-button">Lähetä viesti</a>
+                    <!--
+                      Contact backend: set the key in js/contact-config.js (Web3Forms) and/or data-formspree below.
+                      Web3Forms: https://web3forms.com — add domain sawsanabdulbari.github.io in the dashboard.
+                      Formspree: https://formspree.io — set the form ID in data-formspree.
+                      If both are empty, the site falls back to mailto (less reliable on some devices).
+                    -->
+                    <form id="contact-form" class="contact-form" data-web3forms-access-key="" data-formspree="" data-contact-email="sawsan.abdulbari@gmail.com">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" data-key="form-name" placeholder="Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" data-key="form-email" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" data-key="form-message" placeholder="Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" data-key="contact-cta-button">Send message</button>
+                    </form>
+                    <div id="form-status" class="form-status"></div>
                 </div>
             </div>
         </div>
     </section>
 
+    </main>
+
+    <!-- Project Modal -->
+    <div id="project-modal" class="modal-overlay" aria-hidden="true">
+        <div class="modal-content" role="dialog" aria-labelledby="modal-title">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <div id="modal-body">
+                <!-- Content will be injected by JS -->
+            </div>
+        </div>
+    </div>
+
+    <button type="button" id="back-to-top" class="back-to-top" data-aria-key="footer-top" aria-label="Back to top">
+        <i class="fas fa-chevron-up" aria-hidden="true"></i>
+    </button>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <p data-key="footer-text">&copy; 2025 Sawsan Abdulbari. Kaikki oikeudet pidätetään.</p>
-                <div class="footer-links">
-                    <a href="#hero" data-key="footer-top">Takaisin ylös</a>
-                </div>
+                <p data-key="footer-text">&copy; 2026 Sawsan Abdulbari. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
+    <!-- Chat Widget -->
+    <div class="chat-widget" id="chat-widget">
+        <button type="button" class="chat-toggle" id="chat-toggle" data-aria-key="chat-toggle-aria" aria-label="Open chat">
+            <i class="fas fa-comment-dots" aria-hidden="true"></i>
+        </button>
+        <div class="chat-window" id="chat-window" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="chat-heading">
+            <div class="chat-header">
+                <div class="chat-bot-info">
+                    <div class="chat-bot-avatar" aria-hidden="true">SA</div>
+                    <div class="chat-bot-status">
+                        <span id="chat-heading" data-key="chat-bot-name">Sawsan's Assistant</span>
+                        <small data-key="chat-bot-online">Online</small>
+                    </div>
+                </div>
+                <div class="chat-header-actions">
+                    <button type="button" class="chat-clear-btn" id="chat-clear" data-key="chat-clear" data-aria-key="chat-clear-aria" aria-label="Clear conversation">Clear</button>
+                    <button type="button" class="chat-close" id="chat-close" data-aria-key="chat-close-aria" aria-label="Close chat">&times;</button>
+                </div>
+            </div>
+            <div class="chat-suggestions" id="chat-suggestions" aria-label="Suggested questions">
+                <button type="button" class="chat-chip" data-intent="skills" data-key="chat-chip-skills">Skills</button>
+                <button type="button" class="chat-chip" data-intent="experience" data-key="chat-chip-experience">Experience</button>
+                <button type="button" class="chat-chip" data-intent="education" data-key="chat-chip-education">Education</button>
+                <button type="button" class="chat-chip" data-intent="languages" data-key="chat-chip-languages">Languages</button>
+                <button type="button" class="chat-chip" data-intent="projects" data-key="chat-chip-projects">Projects</button>
+                <button type="button" class="chat-chip" data-intent="contact" data-key="chat-chip-contact">Contact</button>
+            </div>
+            <div class="chat-messages" id="chat-messages" role="log" aria-live="polite" aria-relevant="additions">
+                <div class="message bot">
+                    <p data-key="chat-greeting">Hi! I'm Sawsan's AI assistant. You can ask me about her experience, skills, or projects.</p>
+                </div>
+            </div>
+            <div class="chat-input-area">
+                <textarea id="chat-input" data-key="chat-placeholder" data-aria-key="chat-input-aria" placeholder="Ask something..." rows="2" maxlength="2000"></textarea>
+                <button type="button" id="chat-send" data-aria-key="chat-send-aria" aria-label="Send message"><i class="fas fa-paper-plane" aria-hidden="true"></i></button>
+            </div>
+        </div>
+    </div>
+
     <script src="js/translations.js"></script>
+    <script src="js/translations-ar.js"></script>
+    <script src="js/contact-config.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

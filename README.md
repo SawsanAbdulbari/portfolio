@@ -4,7 +4,7 @@ A modern, responsive portfolio website showcasing my expertise as a Data Scienti
 
 ## 🚀 Live Demo
 
-Visit the live website: [Link](https://sawsanabdulbari.github.io/portfolio/)]
+Visit the live website: [Link](https://sawsanabdulbari.github.io/portfolio/)
 
 ## 📋 About
 

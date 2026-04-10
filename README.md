@@ -11,11 +11,16 @@ Visit the live website: [Link](https://sawsanabdulbari.github.io/portfolio/)
 This portfolio website features:
 
 - **Responsive Design**: Optimized for all devices
-- **Bilingual Support**: Finnish and English language switching
+- **Multilingual UI**: Finnish, English, and Arabic (RTL) with localStorage persistence
 - **Modern UI/UX**: Clean, professional design with smooth animations
-- **ATS-Optimized CV**: Downloadable PDF resume
+- **PDF CV**: Downloadable resume (print to PDF)
 - **Interactive Elements**: Smooth scrolling, hover effects, and animations
 - **SEO Optimized**: Proper meta tags and semantic HTML
+- **Theme**: Dark mode by default; light/dark toggle with persistence
+
+### Polish & performance
+
+The hero uses **tsParticles** (linked nodes preset) for a subtle, interactive network-style background—particle colors follow the dark/light theme, with hover interaction. Navbar scroll, back-to-top visibility, and hero parallax use **requestAnimationFrame** throttling to avoid excessive work per scroll event. On small screens, primary controls use at least **~44px** tap height where styled together; the chat panel uses **95vw × 70vh** on very narrow viewports. The site chat is a **rule-based assistant** (keywords and fixed replies, plus project modal shortcuts), not an LLM. The portfolio lists **14** projects with detail modals.
 
 ## 🛠️ Technologies Used
 
@@ -34,7 +39,9 @@ portfolio/
 │   └── styles.css          # Main stylesheet
 ├── js/
 │   ├── script.js           # Main JavaScript functionality
-│   └── translations.js     # Language translations
+│   ├── contact-config.js   # Web3Forms access key (see README)
+│   ├── translations.js     # Finnish & English strings
+│   └── translations-ar.js  # Arabic locale (extends translations)
 ├── images/                 # Project images and assets
 ├── docs/                   # Documentation and CV files
 ├── index.html              # Main HTML file
@@ -44,10 +51,9 @@ portfolio/
 
 ## 🎨 Features
 
-### 🌐 Language Support
-- Finnish (Default)
-- English
-- Smooth language switching with localStorage persistence
+### 🌐 Language & theme defaults
+- **Default language**: English (first visit). Finnish and Arabic available from the language menu; choice is saved in `localStorage` under `preferred-language`.
+- **Default theme**: Dark. Toggle saves `theme` as `dark` or `light` in `localStorage`.
 
 ### 📱 Responsive Design
 - Mobile-first approach
@@ -66,7 +72,7 @@ portfolio/
 
 ### ⚡ Performance Features
 - Optimized images
-- Minified CSS and JavaScript
+- Single CSS and JavaScript files (no build step; optional minification if needed)
 - Fast loading times
 - Smooth animations and transitions
 
@@ -85,7 +91,7 @@ portfolio/
    ```
 
 2. **Open in browser**
-   - Simply open `index.html` in your web browser
+   - Open `index.html` in a browser
    - Or use a local server:
      ```bash
      # Using Python
@@ -102,6 +108,24 @@ portfolio/
    - Edit `index.html` for content changes
    - Modify `css/styles.css` for styling
    - Update `js/translations.js` for language content
+
+## ✉️ Contact form and social previews
+
+### Web3Forms (recommended)
+
+1. Create a free access key at [web3forms.com](https://web3forms.com).
+2. In the Web3Forms dashboard, add the deployed domain (for example `sawsanabdulbari.github.io`).
+3. Set the key in `js/contact-config.js` as `window.__WEB3FORMS_ACCESS_KEY__ = '…';` and deploy.
+
+The `data-web3forms-access-key` attribute on `#contact-form` in `index.html`, if non-empty, overrides `contact-config.js`.
+
+### Formspree (alternative)
+
+Set `data-formspree` on the contact form to the Formspree form id. If Web3Forms and Formspree are both unset, the site falls back to mailto (less reliable on some devices).
+
+### Link previews (Open Graph / X)
+
+`og:image` and `twitter:image` in `index.html` use **absolute** URLs under `https://sawsanabdulbari.github.io/portfolio/` so previews resolve on LinkedIn, X, Slack, and similar apps.
 
 ## 📝 Customization
 
@@ -128,11 +152,7 @@ The website uses CSS custom properties for easy color customization:
 
 ## 📄 CV/Resume
 
-The website includes an ATS-optimized PDF resume:
-- **File**: `Sawsan_Abdulbari_CV.pdf`
-- **Format**: ATS-friendly, clean layout
-- **Content**: Complete professional information
-- **Download**: Available via download button
+The site opens a print-optimized HTML CV (`Sawsan_Abdulbari_CV_Print_Ready.html`) from the **Download CV** control; use the browser print dialog and **Save as PDF** to produce `Sawsan_Abdulbari_CV.pdf` (see `docs/PDF_INSTRUCTIONS.md`).
 
 ## 🌐 Deployment
 

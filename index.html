@@ -3,6 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Correct relative URLs on GitHub Pages (/repo/) and Live Server; must run before any relative href/src -->
+    <script>
+    (function () {
+        try {
+            var path = window.location.pathname;
+            var baseHref;
+            if (path.endsWith('/')) {
+                baseHref = window.location.origin + path;
+            } else if (/\.html$/i.test(path)) {
+                baseHref = window.location.origin + path.replace(/[^/]+$/, '');
+            } else {
+                baseHref = window.location.origin + path + '/';
+            }
+            var b = document.createElement('base');
+            b.href = baseHref;
+            document.head.insertBefore(b, document.head.firstChild);
+        } catch (e) {}
+    })();
+    </script>
     <title data-key="page-title">Sawsan Abdulbari - Data Scientist & Machine Learning Engineer</title>
     <meta name="description" content="Portfolio of Sawsan Abdulbari - Data Scientist & Machine Learning Engineer based in Finland. Expert in predictive modeling, RAG architecture, and global AI leadership.">
     <meta name="keywords" content="Data Scientist, ML Engineer, Machine Learning, AI, Python, RAG, Finland, Omdena, Sawsan Abdulbari">

@@ -2,7 +2,7 @@
 
 ## 🚀 Quick PDF Generation
 
-The CV is now optimized for PDF generation with proper formatting and content alignment.
+The CV is formatted for PDF generation with proper formatting and content alignment.
 
 ### Method 1: Using the Download Button
 1. Click the "Download CV" button on the main website
@@ -12,18 +12,18 @@ The CV is now optimized for PDF generation with proper formatting and content al
 5. Save as `Sawsan_Abdulbari_CV.pdf`
 
 ### Method 2: Direct Access
-1. Open `Sawsan_Abdulbari_CV_Print_Ready.html` in your browser
+1. Open `Sawsan_Abdulbari_CV_Print_Ready.html` in the browser
 2. Press `Ctrl+P` to open print dialog
 3. Select "Save as PDF"
 4. Save with desired filename
 
 ## ✅ Features
 
-- **Optimized Layout**: Proper A4 margins and spacing
+- **Layout**: Proper A4 margins and spacing
 - **Complete Content**: All experience, projects, and skills included
 - **Professional Format**: Clean, scannable design
 - **No Text Overflow**: All content fits properly on pages
-- **Print-Ready**: Optimized specifically for PDF generation
+- **Print-Ready**: Formatted for PDF generation
 
 ## 📁 File Structure
 
@@ -36,7 +36,7 @@ CV_PDF_Generator.html                 # PDF generation tool
 
 - Executive Summary with key differentiators
 - Complete Professional Experience (10 positions)
-- All 11 Projects with descriptions and technologies
+- All 14 projects with descriptions and technologies
 - Core Competencies (4 skill categories)
 - Education background
 - Languages (Arabic, English, Finnish)

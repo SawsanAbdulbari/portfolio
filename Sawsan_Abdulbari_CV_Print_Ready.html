@@ -316,16 +316,71 @@
         .no-break {
             page-break-inside: avoid;
         }
+
+        /* Expertise Mapping (radar-style, print-safe SVG) */
+        .expertise-mapping {
+            margin-top: 6px;
+            page-break-inside: avoid;
+        }
+
+        .expertise-mapping-inner {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .expertise-radar-wrap {
+            width: 100%;
+            max-width: 260px;
+        }
+
+        .expertise-radar-wrap svg {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .expertise-legend {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4px 12px;
+            width: 100%;
+            max-width: 320px;
+            font-size: 8px;
+            color: #555;
+            margin-top: 4px;
+        }
+
+        .expertise-legend span {
+            display: flex;
+            justify-content: space-between;
+            gap: 6px;
+            border-bottom: 1px dotted #ccc;
+            padding-bottom: 2px;
+        }
+
+        .expertise-legend strong {
+            color: #2c3e50;
+        }
+
+        .expertise-note {
+            font-size: 8px;
+            color: #777;
+            text-align: center;
+            font-style: italic;
+            margin-top: 2px;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
             <div class="name">SAWSAN ABDULBARI</div>
-            <div class="title">Junior Data Scientist & Machine Learning Engineer | AI Innovation Leader</div>
+            <div class="title">Junior Data Scientist & Machine Learning Engineer | AI Innovation</div>
             <div class="contact-info">
                 📧 sawsan.abdulbari@gmail.com | 💼 linkedin.com/in/sawsanabdulbari | 💻 github.com/sawsanabdulbari<br>
-                📍 Finland | 📱 +358 40 5110 5012 | 🌐 Available for Relocation
+                📍 Helsinki, Finland | 📱 +358 40 5110 5012 | 🌐 Available for Relocation
             </div>
         </div>
 
@@ -376,12 +431,59 @@
                     <h4>Business</h4>
                     <ul>
                         <li>Strategic Planning</li>
+                        <li>Data Analysis</li>
                         <li>Process Optimization</li>
                         <li>Financial Management</li>
                         <li>Business Development</li>
                         <li>Operations Management</li>
                     </ul>
                 </div>
+            </div>
+        </div>
+
+        <div class="section expertise-mapping no-break">
+            <div class="section-title">Expertise Mapping</div>
+            <div class="expertise-mapping-inner">
+                <div class="expertise-radar-wrap" aria-hidden="true">
+                    <!-- Relative expertise (same axes as portfolio radar); SVG prints reliably to PDF -->
+                    <svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Expertise radar: ML 80%, Data Science 85%, Leadership 80%, Business 90%">
+                        <defs>
+                            <linearGradient id="radarFill" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#f39c12;stop-opacity:0.35" />
+                                <stop offset="100%" style="stop-color:#f39c12;stop-opacity:0.12" />
+                            </linearGradient>
+                        </defs>
+                        <!-- Grid diamonds R=85 from center (120,120): 100%, 66%, 33% -->
+                        <polygon points="120,35 205,120 120,205 35,120" fill="none" stroke="#e0e0e0" stroke-width="1" />
+                        <polygon points="120,63.9 176.1,120 120,176.1 63.9,120" fill="none" stroke="#e0e0e0" stroke-width="1" />
+                        <polygon points="120,92 147.45,120 120,147.45 92.55,120" fill="none" stroke="#e0e0e0" stroke-width="1" />
+                        <!-- Axes -->
+                        <line x1="120" y1="120" x2="120" y2="35" stroke="#bdc3c7" stroke-width="1" />
+                        <line x1="120" y1="120" x2="205" y2="120" stroke="#bdc3c7" stroke-width="1" />
+                        <line x1="120" y1="120" x2="120" y2="205" stroke="#bdc3c7" stroke-width="1" />
+                        <line x1="120" y1="120" x2="35" y2="120" stroke="#bdc3c7" stroke-width="1" />
+                        <!-- Data: R=85 × (0.8, 0.85, 0.8, 0.9) on top, right, bottom, left -->
+                        <polygon points="120,52 192.25,120 120,188 43.5,120"
+                            fill="url(#radarFill)" stroke="#f39c12" stroke-width="1.8" stroke-linejoin="round" />
+                        <circle cx="120" cy="52" r="3" fill="#f39c12" />
+                        <circle cx="192.25" cy="120" r="3" fill="#f39c12" />
+                        <circle cx="120" cy="188" r="3" fill="#f39c12" />
+                        <circle cx="43.5" cy="120" r="3" fill="#f39c12" />
+                        <!-- Labels -->
+                        <text x="120" y="22" text-anchor="middle" font-size="9" font-family="Arial, sans-serif" fill="#2c3e50" font-weight="bold">Machine Learning</text>
+                        <text x="234" y="124" text-anchor="end" font-size="9" font-family="Arial, sans-serif" fill="#2c3e50" font-weight="bold">Data Science</text>
+                        <text x="120" y="234" text-anchor="middle" font-size="9" font-family="Arial, sans-serif" fill="#2c3e50" font-weight="bold">Leadership</text>
+                        <text x="26" y="124" text-anchor="end" font-size="9" font-family="Arial, sans-serif" fill="#2c3e50" font-weight="bold">Business</text>
+                        <text x="120" y="116" text-anchor="middle" font-size="7" fill="#888">Expertise level</text>
+                    </svg>
+                </div>
+                <div class="expertise-legend">
+                    <span><strong>Machine Learning</strong> 80%</span>
+                    <span><strong>Data Science</strong> 85%</span>
+                    <span><strong>Leadership</strong> 80%</span>
+                    <span><strong>Business</strong> 90%</span>
+                </div>
+                <p class="expertise-note">Relative scale aligned with portfolio skills visualization (self-assessment).</p>
             </div>
         </div>
 
@@ -580,10 +682,18 @@
             <div class="section-title">Education</div>
             
             <div class="education-item">
-                <div class="degree">Bachelor of Business Information Technology (Data Science)</div>
+                <div class="degree">Bachelor of Business Information Technology (Data Science) — Grade 4.7</div>
                 <div class="university">Häme University of Applied Sciences (HAMK), Finland</div>
                 <div class="education-date">2023 - 2026</div>
                 <div class="education-description">Specialization in Data Science and Business Intelligence. Focus on machine learning, data analytics, and business applications.</div>
+                <div class="education-description" style="margin-top: 0.35rem;"><strong>Thesis:</strong> BITCA (bachelor thesis; PDF available for download on the portfolio website).</div>
+            </div>
+            
+            <div class="education-item">
+                <div class="degree">Climate Change AI (CCAI) Summer School</div>
+                <div class="university">Climate Change AI (CCAI)</div>
+                <div class="education-date">2024</div>
+                <div class="education-description">Intensive program on machine learning and AI for climate change mitigation, adaptation, and environmental decision-making.</div>
             </div>
             
             <div class="education-item">
@@ -662,6 +772,23 @@
                     <div class="project-tech">Python, FastAPI, Google Cloud, Vertex AI, PostgreSQL, Redis</div>
                     <div class="project-description">Advanced AI-powered system for detecting carbon fraud using personality-based consensus agents and multi-source data integration. Features real-time fraud detection, adversarial AI agents, and comprehensive emission validation through CLIMATIQ API, OpenWeather, and satellite data integration.</div>
                 </div>
+
+                <div class="project">
+                    <div class="project-title">🍳 AI Recipe Finder</div>
+                    <div class="project-tech">Python, Whisper, Groq, Gradio</div>
+                    <div class="project-description">Voice-powered recipe app: say ingredients aloud and get AI-generated recipes. Uses Whisper for speech-to-text and Groq (or local FLAN-T5) for generation, built with Gradio and deployed on Hugging Face Spaces.</div>
+                </div>
+
+                <div class="project">
+                    <div class="project-title">🏥 PIRHA Pre-Procedure Rehabilitation Guide</div>
+                    <div class="project-tech">Vercel, Web, Healthcare UX</div>
+                    <div class="project-description">Web guide for pre-procedure rehabilitation for the Pirkanmaa wellbeing region (PIRHA). Supports patients and families before medical procedures. Live at ict-project-pirha.vercel.app.</div>
+                </div>
+                <div class="project">
+                    <div class="project-title">🌳 Tree Classifier</div>
+                    <div class="project-tech">Python, Machine Learning, Vercel, Web, Mobile</div>
+                    <div class="project-description">Interactive web and mobile app for tree species classification using machine learning. Live demo on Vercel.</div>
+                </div>
             </div>
         </div>
 
@@ -674,11 +801,11 @@
                 </div>
                 <div class="language-item">
                     <div class="language-name">English</div>
-                    <div class="language-level">Fluent</div>
+                    <div class="language-level">Professional proficiency</div>
                 </div>
                 <div class="language-item">
                     <div class="language-name">Finnish</div>
-                    <div class="language-level">Fluent</div>
+                    <div class="language-level">Professional proficiency</div>
                 </div>
             </div>
         </div>

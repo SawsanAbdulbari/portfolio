@@ -4,7 +4,7 @@ A modern, responsive portfolio website showcasing my expertise as a Data Scienti
 
 ## 🚀 Live Demo
 
-Visit the live website: [Your Portfolio URL]
+Visit the live website: [Link](https://sawsanabdulbari.github.io/portfolio/)]
 
 ## 📋 About
 
@@ -141,7 +141,7 @@ The website includes an ATS-optimized PDF resume:
 2. Go to repository Settings
 3. Scroll to Pages section
 4. Select source branch (usually `main`)
-5. Your site will be available at `https://username.github.io/portfolio`
+5. Your site will be available at `[https://sawsanabdulbari.github.io/portfolio](https://sawsanabdulbari.github.io/portfolio/)`
 
 ### Other Hosting Options
 - **Netlify**: Drag and drop deployment

@@ -425,7 +425,7 @@ body {
     align-items: center;
     gap: 0.8rem;
     color: var(--primary-500);
-    font-weight: 600;
+    font-weight: 700;
     font-size: 1rem;
     padding: 12px 20px;
     background: var(--secondary-50);
@@ -433,6 +433,12 @@ body {
     backdrop-filter: blur(10px);
     border: 1px solid var(--secondary-200);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: pulse-soft 3s infinite ease-in-out;
+}
+
+@keyframes pulse-soft {
+    0%, 100% { transform: translateY(0); box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); }
+    50% { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(243, 156, 18, 0.2); }
 }
 
 .highlight-item:hover {
@@ -1958,6 +1964,12 @@ html[dir="rtl"] .skills-expertise-legend-row {
     line-height: 1.7;
     font-size: 1rem;
     transition: color 0.3s ease;
+}
+
+.education-content p.education-courses {
+    margin-top: 0.65rem;
+    font-size: 0.95rem;
+    line-height: 1.65;
 }
 
 .education-item:hover .education-content p {

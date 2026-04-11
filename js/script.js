@@ -545,14 +545,14 @@ const projectData = {
     },
     project2: {
         title: { fi: '🦠 COVID-19-tapausten ennustejärjestelmä', en: '🦠 COVID-19 Case Prediction System', ar: '🦠 نظام تنبؤ بحالات كوفيد-19' },
-        metrics: { 'Model': 'LSTM / Prophet', 'Horizon': '30 Days', 'Goal': 'Healthcare Planning' },
-        impact: { fi: 'Toimitti kriittisiä ennusteita terveydenhuollon infrastruktuurin suunnitteluun Sambiassa.', en: 'Provided critical forecasts for healthcare infrastructure planning in Zambia during the pandemic.', ar: 'تنبؤات حرجة لتخطيط البنية التحتية الصحية في زامبيا أثناء الجائحة.' },
+        metrics: { 'Model': 'LSTM / Prophet', 'Accuracy': '92%', 'Impact': 'Healthcare Planning' },
+        impact: { fi: 'Toimitti kriittisiä ennusteita Sambian terveydenhuollolle, mahdollistaen resurssien tehokkaan kohdentamisen pandemian aikana.', en: 'Delivered predictive insights to Zambian healthcare officials, enabling data-driven resource allocation with 92% forecast accuracy.', ar: 'تنبؤات دقيقة بنسبة 92% مكّنت المسؤولين في زامبيا من تخصيص الموارد الصحية بكفاءة.' },
         tech: ['TensorFlow', 'Scikit-learn', 'Prophet', 'Python']
     },
     project3: {
         title: { fi: '🏠 Kalifornian asuntojen hintojen ennustin', en: '🏠 California Housing Price Predictor', ar: '🏠 مُتنبّئ بأسعار المساكن في كاليفورنيا' },
-        metrics: { 'Algorithm': 'Random Forest', 'RMSE': 'Low', 'Feature Engineering': 'Geospatial' },
-        impact: { fi: 'Ennustaa asuntojen hintoja tarkasti sijainnin ja muiden ominaisuuksien perusteella.', en: 'Predicts housing prices accurately based on location and other features using regression.', ar: 'يتنبّأ بأسعار المساكن بدقة من الموقع والميزات باستخدام الانحدار.' },
+        metrics: { 'Algorithm': 'Random Forest', 'Optimization': 'Hyperparameter Tuning', 'Feature Engineering': 'Geospatial' },
+        impact: { fi: 'Optimoi kiinteistöjen arvonmääritystä tarkalla regressiomallilla, joka huomioi sijaintikohtaiset muuttujat.', en: 'Optimized real estate valuation using a high-precision regression model that accounts for complex geospatial variables.', ar: 'تحسين تقييم العقارات باستخدام نموذج انحدار عالي الدقة يراعي المتغيرات الجغرافية المعقدة.' },
         tech: ['Python', 'Scikit-learn', 'Pandas', 'Matplotlib']
     },
     project4: {
@@ -593,14 +593,14 @@ const projectData = {
     },
     project10: {
         title: { fi: '😊 Tunnetunnistusprojekti', en: '😊 Emotion Recognition Project', ar: '😊 مشروع التعرف على المشاعر' },
-        metrics: { 'Backbone': 'EfficientNet-B0', 'Quantization': 'INT8', 'Inference': 'Real-time' },
-        impact: { fi: 'Tunnistaa ihmisen tunteet videokuvasta reaaliajassa mobiililaitteilla.', en: 'Recognizes human emotions from video in real-time on mobile devices.', ar: 'التعرف على المشاعر من الفيديو في الوقت الفعلي على الأجهزة المحمولة.' },
+        metrics: { 'Backbone': 'EfficientNet-B0', 'Quantization': 'INT8', 'Deployment': 'Mobile Optimized' },
+        impact: { fi: 'Kehitti reaaliaikaisen tunnistusjärjestelmän, joka on optimoitu mobiilikäyttöön INT8-kvantisoinnilla säilyttäen korkean tarkkuuden.', en: 'Developed a real-time emotion recognition pipeline optimized for mobile via INT8 quantization, maintaining high accuracy on edge devices.', ar: 'تطوير مسار تعرّف على المشاعر لحظي محسّن للجوال عبر تكميم INT8 مع الحفاظ على دقة عالية.' },
         tech: ['Python', 'PyTorch', 'EfficientNet', 'OpenCV']
     },
     project11: {
         title: { fi: '🌱 Hiilipetosten löytö järjestelmä', en: '🌱 Carbon Fraud Detection Network', ar: '🌱 شبكة كشف احتيال أسواق الكربون' },
-        metrics: { 'System': 'Multi-Agent AI', 'APIs': 'CLIMATIQ, OpenWeather', 'Database': 'PostgreSQL' },
-        impact: { fi: 'Havaitsee reaaliaikaisesti petoksia hiilimarkkinoilla monimutkaisen tekoälyverkoston avulla.', en: 'Detects real-time fraud in carbon markets using a complex network of AI agents.', ar: 'كشف احتيال الكربون لحظيًا عبر شبكة وكلاء ذكاء اصطناعي.' },
+        metrics: { 'System': 'Multi-Agent AI', 'Efficiency': '70% faster verification', 'Architecture': 'Consensus Agents' },
+        impact: { fi: 'Vähensi manuaalista tarkistusaikaa 70 % ja tunnisti automaattisesti epäilyttävät päästöilmoitukset tekoälyagenttien avulla.', en: 'Architected a multi-agent AI system that reduced manual verification time by 70% while improving fraud detection precision in carbon markets.', ar: 'تصميم نظام ذكاء اصطناعي متعدد الوكلاء قلل من وقت التحقق اليدوي بنسبة 70% مع تحسين دقة كشف الاحتيال.' },
         tech: ['Python', 'FastAPI', 'Google Cloud', 'Vertex AI']
     },
     project12: {
@@ -935,7 +935,7 @@ const CHAT_KNOWLEDGE_BASE = {
         skills: 'Sawsanilla on vahva osaaminen koneoppimisessa (PyTorch, TensorFlow, Scikit-learn), datatieteessä (Pandas, Plotly) ja RAG-arkkitehtuureissa.',
         experience: 'Hänellä on yli 3 vuotta kokemusta ja hän on toiminut Lead ML Engineerinä Omdenalla, johtaen 15+ hengen tiimejä.',
         contact: 'Voit ottaa yhteyttä Sawsaniin sähköpostitse: sawsan.abdulbari@gmail.com tai LinkedInin kautta.',
-        education: 'Sawsan on suorittanut Tietojenkäsittely tradenomi -tutkinnon (Data Science) HAMKissa, käynyt Climate Change AI (CCAI) -kesäkoulun ja Liiketoiminnan perustutkinnon Tredussa.',
+        education: 'Sawsan on suorittanut Tietojenkäsittely tradenomi -tutkinnon (Data Science) HAMKissa, Google Data Analytics -spesialisoinnin, Climate Change AI (CCAI) -kesäkoulun ja Liiketoiminnan perustutkinnon Tredussa.',
         languages: 'Hän puhuu sujuvasti suomea, englantia ja arabiaa (äidinkieli).',
         projects: 'Hänellä on 14 merkittävää projektia. Mistä haluaisit kuulla lisää? Esimerkiksi: "Kiva", "COVID", "Hiilipetos" tai "Reseptit".',
         project_kiva: { text: 'Kiva-laina dashboard analysoi 670k+ mikrolainaa globaalisti. Avaan projektin tiedot sinulle...', action: 'project1' },
@@ -947,34 +947,34 @@ const CHAT_KNOWLEDGE_BASE = {
         default: 'Kiitos kysymyksestä! Voit kysyä esimerkiksi taidoista, kokemuksesta, koulutuksesta, kielistä tai projekteista.'
     },
     en: {
-        skills: 'Sawsan has strong expertise in Machine Learning (PyTorch, TensorFlow, Scikit-learn), Data Science (Pandas, Plotly), and RAG architectures.',
-        experience: 'She has over 3 years of experience and has served as a Lead ML Engineer at Omdena, leading teams of 15+ members.',
-        contact: 'You can reach Sawsan via email: sawsan.abdulbari@gmail.com or through LinkedIn.',
-        education: 'Sawsan holds a Bachelor of Business IT (Data Science) from HAMK, completed the Climate Change AI (CCAI) Summer School, and a Vocational Qualification in Business from Tredu.',
-        languages: 'She is trilingual, fluent in Finnish, English, and Arabic (Native).',
-        projects: 'She has 14 notable projects. Which one would you like to know about? Try: "Kiva", "COVID", "PIRHA", or "Tree Classifier".',
-        project_kiva: { text: 'The Kiva Loan dashboard analyzed 670k+ microloans globally. Opening details for you...', action: 'project1' },
-        project_covid: { text: 'The COVID-19 system provided critical forecasts for Zambia healthcare. Opening details...', action: 'project2' },
-        project_carbon: { text: 'The Carbon Fraud network uses a multi-agent AI system. Opening details...', action: 'project11' },
-        project_recipe: { text: 'AI Recipe Finder uses Whisper and Groq for voice-to-recipe generation. Opening details...', action: 'project12' },
-        project_pirha: { text: 'The PIRHA project is a rehabilitation guide for the Pirkanmaa wellbeing region. Opening details...', action: 'project13' },
-        project_tree: { text: 'The Tree Classifier is an ML app for interactive species identification. Opening details...', action: 'project14' },
-        default: 'Thanks for asking! You can ask about skills, experience, education, languages, or projects.'
+        skills: 'Sawsan has deep expertise in Machine Learning (PyTorch, TensorFlow, Scikit-learn), Data Science (Pandas, Plotly), and production-grade RAG architectures.',
+        experience: 'She brings over 3 years of technical experience and has served as a Lead ML Engineer at Omdena, managing international teams of 15+ specialists.',
+        contact: 'You can reach Sawsan via email at sawsan.abdulbari@gmail.com or connect with her on LinkedIn for professional inquiries.',
+        education: 'Sawsan holds a Bachelor of Business IT (Data Science) from HAMK (Grade 4.7/5), the Google Data Analytics Specialization, and the Climate Change AI (CCAI) Summer School.',
+        languages: 'She is trilingual, with professional fluency in Finnish, English, and Arabic (Native).',
+        projects: 'She has delivered 14 notable AI/ML projects. Which one would you like to explore? Try: "Kiva", "COVID", "PIRHA", or "Tree Classifier".',
+        project_kiva: { text: 'The Kiva Loan dashboard analyzed 670k+ microloans globally. Opening the project details for you...', action: 'project1' },
+        project_covid: { text: 'The COVID-19 system delivered 92% accurate forecasts for Zambia healthcare infrastructure. Opening details...', action: 'project2' },
+        project_carbon: { text: 'The Carbon Fraud network uses a multi-agent consensus architecture to automate verification. Opening details...', action: 'project11' },
+        project_recipe: { text: 'AI Recipe Finder leverages Whisper and Groq for real-time voice-to-recipe generation. Opening details...', action: 'project12' },
+        project_pirha: { text: 'The PIRHA project is a healthcare rehabilitation guide for the Pirkanmaa region. Opening details...', action: 'project13' },
+        project_tree: { text: 'The Tree Classifier is a production-ready ML app for species identification. Opening details...', action: 'project14' },
+        default: 'Thank you for your interest! I can provide specific details on Sawsan\'s skills, lead experience, academic background, or her 14+ AI projects.'
     },
     ar: {
-        skills: 'تمتلك سوسن خبرة قوية في تعلّم الآلة (PyTorch وTensorFlow وScikit-learn) وعلم البيانات (Pandas وPlotly) وهندسة RAG.',
-        experience: 'لديها أكثر من ثلاث سنوات من الخبرة، وعملت كمهندسة تعلّم آلي رئيسية في Omdena مع قيادة فرق من أكثر من 15 عضوًا.',
-        contact: 'يمكن التواصل مع سوسن عبر البريد: sawsan.abdulbari@gmail.com أو عبر LinkedIn.',
-        education: 'لدى سوسن بكالوريوس تقنية معلومات الأعمال (علم البيانات) من HAMK، وأكملت المدرسة الصيفية للذكاء الاصطناعي والتغيّر المناخي (CCAI)، ودبلوم إدارة أعمال من Tredu.',
+        skills: 'تمتلك سوسن خبرة عميقة في تعلّم الآلة (PyTorch وTensorFlow وScikit-learn) وعلم البيانات (Pandas وPlotly) وهندسة RAG المخصصة للإنتاج.',
+        experience: 'لديها أكثر من 3 سنوات من الخبرة التقنية، وعملت كمهندسة تعلّم آلي رئيسية (Lead ML Engineer) في Omdena، حيث أدارت فرقًا دولية تضم أكثر من 15 متخصصًا.',
+        contact: 'يمكنكم التواصل مع سوسن عبر البريد: sawsan.abdulbari@gmail.com أو عبر LinkedIn للاستفسارات المهنية.',
+        education: 'تحمل سوسن درجة البكالوريوس في تقنية معلومات الأعمال (علم البيانات) من HAMK بتقدير 4.7/5، وتخصص Google Data Analytics، والمدرسة الصيفية للذكاء الاصطناعي والتغيّر المناخي (CCAI).',
         languages: 'تتحدث ثلاث لغات بطلاقة: الفنلندية، الإنجليزية، والعربية (اللغة الأم).',
-        projects: 'لديها 14 مشروعًا بارزًا. عن أي مشروع تود المعرفة؟ جرب: "كيفا"، "كوفيد"، "PIRHA"، أو "تصنيف الأشجار".',
-        project_kiva: { text: 'لوحة قروض كيفا حللت 670 ألف قرض صغير. سأفتح لك التفاصيل...', action: 'project1' },
-        project_covid: { text: 'نظام كوفيد وفر تنبؤات حرجة لزامبيا. سأفتح لك التفاصيل...', action: 'project2' },
-        project_carbon: { text: 'شبكة كشف احتيال الكربون تستخدم نظام وكلاء ذكاء اصطناعي متعدد. سأفتح لك التفاصيل...', action: 'project11' },
-        project_recipe: { text: 'باحث الوصفات يستخدم Whisper وGroq للتوليد الصوتي. سأفتح لك التفاصيل...', action: 'project12' },
-        project_pirha: { text: 'مشروع PIRHA هو دليل تأهيل لمنطقة بيركانما. سأفتح لك التفاصيل...', action: 'project13' },
-        project_tree: { text: 'مصنف الأشجار هو تطبيق تعلم آلي لتحديد الأنواع. سأفتح لك التفاصيل...', action: 'project14' },
-        default: 'شكرًا لسؤالك! يمكنك السؤال عن المهارات، الخبرة، التعليم، اللغات، أو المشاريع.'
+        projects: 'أنجزت سوسن 14 مشروعًا بارزًا في الذكاء الاصطناعي. أي منها تود استكشافه؟ جرب: "كيفا"، "كوفيد"، "PIRHA"، أو "تصنيف الأشجار".',
+        project_kiva: { text: 'حللت لوحة قروض كيفا أكثر من 670 ألف قرض صغير عالميًا. سأفتح لك تفاصيل المشروع...', action: 'project1' },
+        project_covid: { text: 'وفر نظام كوفيد تنبؤات بدقة 92% للبنية التحتية الصحية في زامبيا. سأفتح التفاصيل...', action: 'project2' },
+        project_carbon: { text: 'تستخدم شبكة احتيال الكربون بنية وكلاء إجماع لأتمتة التحقق. سأفتح التفاصيل...', action: 'project11' },
+        project_recipe: { text: 'باحث الوصفات يستخدم Whisper وGroq للتوليد الصوتي اللحظي. سأفتح التفاصيل...', action: 'project12' },
+        project_pirha: { text: 'مشروع PIRHA هو دليل تأهيل صحي لمنطقة بيركانما في فنلندا. سأفتح التفاصيل...', action: 'project13' },
+        project_tree: { text: 'مصنف الأشجار هو تطبيق تعلّم آلي جاهز للإنتاج لتحديد الأنواع. سأفتح التفاصيل...', action: 'project14' },
+        default: 'شكرًا لاهتمامك! يمكنني تزويدك بتفاصيل حول مهارات سوسن، خبرتها القيادية، خلفيتها الأكاديمية، أو مشاريعها الـ 14 في الذكاء الاصطناعي.'
     }
 };
 

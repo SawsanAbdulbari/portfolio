@@ -776,6 +776,19 @@ section.hero,
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
 }
 
+.about-text .about-subtitle {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--primary-500);
+    margin: 1.5rem 0 0.5rem 0;
+    line-height: 1.35;
+    letter-spacing: -0.02em;
+}
+
+.about-text > p:first-of-type + .about-subtitle {
+    margin-top: 1.35rem;
+}
+
 .about-stats {
     display: grid;
     grid-template-columns: 1fr 1fr;

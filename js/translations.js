@@ -85,6 +85,10 @@ const translations = {
         // About Section
         'about-title': 'Tietoa minusta',
         'about-description': 'Data Scientist & ML Engineer, jolla on yli kolmen vuoden kokemus tekoälyratkaisujen rakentamisesta, joilla on positiivinen liiketoimintavaikutus ja jotka voidaan skaalata liiketoiminnan kasvun mukana. Työskennellyt osana globaalia 15+ hengen tiimiä, tehnyt yhteistyötä maailmanlaajuisesti jakautuneissa tiimeissä, ja toimittanut tuotantovalmiita ML-malleja terveydenhuoltoon, kestävyyteen ja teknologia-aloille.',
+        'about-overview-title': 'Ammatillinen yleiskuva',
+        'about-overview': 'Olen tukenut ympäristökestävyyttä muuttamalla muovijätteen arvokkaiksi resursseiksi. Olen urani aikana hallinnut toimitusketjuja ja uusia liiketoimintahankkeita sekä kehittänyt ympäristöystävällisiä ratkaisuja, jotka tukevat ilmastonmuutoksen torjuntaa.',
+        'about-climate-title': 'Sitoutuminen ilmastonmuutokseen',
+        'about-climate': 'Olen sitoutunut tuomaan ilmastonmuutoksen tietoisuuden osaksi liiketoimintaa ja arkea. Kannatan käytäntöjä, jotka pienentävät ympäristöjalanjälkeä, vahvistavat kiertotaloutta ja edistävät kestävämpää maapalloa siten, että liiketoiminnan kasvu ja ympäristönsuojelu etenevät yhdessä.',
         'stat-scientists': 'Globaalin tiimin osallistujat',
         'stat-countries': 'Verkoston laajuus (globaali)',
         'stat-years': 'Vuotta yrittäjyyttä',
@@ -349,6 +353,10 @@ const translations = {
         // About Section
         'about-title': 'About',
         'about-description': 'Data Scientist & ML Engineer with 3+ years of proven expertise in building AI solutions that have positive business impact and can be scaled with the growth of the business. Worked in a global team of 15+ contributors, collaborated in globally distributed teams, and delivered production-ready ML models for healthcare, sustainability, and technology challenges.',
+        'about-overview-title': 'Professional overview',
+        'about-overview': 'I have contributed to environmental sustainability by transforming plastic waste into valuable resources. Throughout my career, I managed supply operations and spearheaded new business initiatives, and focused on developing eco-friendly solutions that align with climate change mitigation efforts.',
+        'about-climate-title': 'Commitment to climate change',
+        'about-climate': 'I am passionate about incorporating climate change awareness into every aspect of business operations and life. My ongoing commitment involves adopting and advocating for practices that minimize environmental footprints, enhance recycling processes, and drive progress toward a more sustainable planet. My approach ensures that business growth and environmental health go hand in hand.',
         'stat-scientists': 'Global team contributors',
         'stat-countries': 'Network reach (global)',
         'stat-years': 'Years entrepreneurship',

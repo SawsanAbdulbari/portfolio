@@ -512,6 +512,9 @@ function initializeScrollAnimations() {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
+                if (entry.target.closest && entry.target.closest('[data-experience-details]')) {
+                    return;
+                }
                 entry.target.classList.add('animate-in');
                 
                 // Add staggered animation for children
@@ -1969,22 +1972,38 @@ function initializeExperienceEarlierDetails() {
     const prefersReduce =
         typeof window.matchMedia === 'function' &&
         window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const pendingOpenTimeoutIds = new WeakMap();
+
+    const clearOpenTimeouts = (el) => {
+        const ids = pendingOpenTimeoutIds.get(el);
+        if (ids && ids.length) {
+            ids.forEach(clearTimeout);
+        }
+        pendingOpenTimeoutIds.delete(el);
+    };
 
     document.querySelectorAll('[data-experience-details]').forEach((el) => {
         el.addEventListener('toggle', () => {
             const items = el.querySelectorAll('.experience-earlier-inner .experience-item');
             if (!el.open) {
+                clearOpenTimeouts(el);
                 items.forEach((item) => item.classList.remove('animate-in'));
                 return;
             }
+            clearOpenTimeouts(el);
             if (prefersReduce) {
                 items.forEach((item) => item.classList.add('animate-in'));
                 return;
             }
+            const ids = [];
+            pendingOpenTimeoutIds.set(el, ids);
             items.forEach((item, index) => {
-                setTimeout(() => {
-                    item.classList.add('animate-in');
-                }, index * 70);
+                ids.push(
+                    setTimeout(() => {
+                        if (!el.open) return;
+                        item.classList.add('animate-in');
+                    }, index * 70)
+                );
             });
         });
     });

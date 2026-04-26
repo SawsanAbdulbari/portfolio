@@ -1962,6 +1962,19 @@ function initializeScrollSpy() {
 }
 
 // Initialize all functionality when DOM is loaded
+function initializeExperienceEarlierDetails() {
+    document.querySelectorAll('[data-experience-details]').forEach((el) => {
+        el.addEventListener('toggle', () => {
+            if (!el.open) return;
+            el.querySelectorAll('.experience-item').forEach((item) => {
+                item.classList.add('animate-in');
+                item.style.opacity = '1';
+                item.style.transform = 'translateY(0)';
+            });
+        });
+    });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     initializeTheme();
     initializeHeroParticles();
@@ -1970,6 +1983,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeLanguageDropdown();
     initializeLanguage();
     initializeProjectImageFallbacks();
+    initializeExperienceEarlierDetails();
     initializeNavigation();
     initializeSkillsChartWhenVisible();
     initializeModals();

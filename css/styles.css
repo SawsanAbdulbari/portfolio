@@ -459,6 +459,64 @@ body {
     color: var(--neutral-400);
 }
 
+/* Outcome + metrics (short proof points, not a second paragraph of buzzwords) */
+.hero-impact {
+    max-width: 40rem;
+    margin: 0 auto 1.75rem;
+    padding: 0.85rem 1.1rem;
+    border-radius: 14px;
+    border: 1px solid var(--border-color);
+    background: rgba(var(--neutral-50-rgb), 0.65);
+    text-align: start;
+}
+
+[data-theme="dark"] .hero-impact {
+    background: rgba(0, 0, 0, 0.2);
+    border-color: rgba(232, 244, 253, 0.12);
+}
+
+.hero-impact-line {
+    display: flex;
+    gap: 0.65rem;
+    align-items: flex-start;
+    font-size: clamp(0.82rem, 1.75vw, 0.9rem);
+    line-height: 1.5;
+    color: var(--neutral-600);
+    font-weight: 500;
+}
+
+.hero-impact-line + .hero-impact-line {
+    margin-top: 0.55rem;
+    padding-top: 0.55rem;
+    border-top: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] .hero-impact-line {
+    color: var(--neutral-300);
+}
+
+.hero-impact-line i {
+    color: var(--secondary-500);
+    margin-top: 0.15rem;
+    flex-shrink: 0;
+}
+
+.experience-metric {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: var(--neutral-600);
+    margin: 0.75rem 0 0 0;
+    padding: 0.5rem 0.65rem 0.5rem 0.75rem;
+    border-left: 3px solid var(--secondary-500);
+    background: linear-gradient(90deg, rgba(243, 156, 18, 0.08), transparent 60%);
+    border-radius: 0 8px 8px 0;
+}
+
+[data-theme="dark"] .experience-metric {
+    color: var(--neutral-300);
+    background: linear-gradient(90deg, rgba(243, 156, 18, 0.12), transparent 70%);
+}
+
 .hero-highlights {
     display: flex;
     gap: 2.5rem;
@@ -1013,11 +1071,12 @@ html[dir="rtl"] .skills-expertise-legend-row {
     transform: translateY(0);
 }
 
-.experience-item:nth-child(odd) {
+/* Alternating layout (wrappers + <details> break :nth-child; use explicit classes) */
+.experience-item--odd {
     flex-direction: row;
 }
 
-.experience-item:nth-child(even) {
+.experience-item--even {
     flex-direction: row-reverse;
 }
 
@@ -1112,6 +1171,117 @@ html[dir="rtl"] .skills-expertise-legend-row {
 /* Experience section title styling */
 .experience .section-title {
     color: var(--primary-500);
+}
+
+/* Core vs earlier experience (collapsible) */
+.experience-core-label {
+    text-align: center;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--primary-500);
+    margin: 0 auto 1.75rem;
+    max-width: 40rem;
+    line-height: 1.4;
+}
+
+.experience-earlier {
+    margin-top: 0.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    background: var(--card-bg);
+    overflow: hidden;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.experience-earlier summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 1rem 1.25rem 1rem 1.5rem;
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--neutral-800);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    background: linear-gradient(135deg, rgba(243, 156, 18, 0.1), rgba(44, 62, 80, 0.06));
+    transition: background 0.2s ease;
+}
+
+.experience-earlier summary::-webkit-details-marker {
+    display: none;
+}
+
+.experience-earlier summary::after {
+    content: '▾';
+    font-size: 0.9rem;
+    opacity: 0.8;
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+}
+
+.experience-earlier[open] summary::after {
+    transform: rotate(-180deg);
+}
+
+.experience-earlier summary:hover,
+.experience-earlier summary:focus-visible {
+    background: linear-gradient(135deg, rgba(243, 156, 18, 0.18), rgba(44, 62, 80, 0.08));
+    outline: none;
+}
+
+.experience-earlier summary:focus-visible {
+    box-shadow: 0 0 0 3px rgba(243, 156, 18, 0.45);
+}
+
+.experience-earlier-inner {
+    padding: 0 0 0.5rem 0;
+}
+
+.experience-earlier .experience-item:last-child {
+    margin-bottom: 0;
+}
+
+[data-theme="dark"] .experience-earlier {
+    border-color: rgba(232, 244, 253, 0.22);
+    background: var(--card-bg);
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.45);
+}
+
+/* In this theme, dark mode maps light *text* to --neutral-800/900 (not --neutral-100, which is #212529). */
+[data-theme="dark"] .experience-earlier summary {
+    color: var(--neutral-900);
+    background: linear-gradient(135deg, rgba(243, 156, 18, 0.2), rgba(15, 22, 32, 0.85));
+}
+
+[data-theme="dark"] .experience-earlier summary span {
+    color: var(--neutral-900);
+    font-weight: 600;
+    line-height: 1.45;
+}
+
+[data-theme="dark"] .experience-earlier summary::after {
+    color: var(--secondary-400);
+    opacity: 1;
+    text-shadow: none;
+}
+
+[data-theme="dark"] .experience-earlier summary:hover,
+[data-theme="dark"] .experience-earlier summary:focus-visible {
+    background: linear-gradient(135deg, rgba(243, 156, 18, 0.3), rgba(20, 30, 42, 0.95));
+    color: #fff;
+}
+
+[data-theme="dark"] .experience-earlier summary:hover span,
+[data-theme="dark"] .experience-earlier summary:focus-visible span {
+    color: #fff;
+}
+
+[dir="rtl"] .experience-earlier summary {
+    flex-direction: row-reverse;
+    text-align: start;
 }
 
 .experience .section-title::after {
@@ -2022,6 +2192,18 @@ html[dir="rtl"] .skills-expertise-legend-row {
 
 .education-item:hover .education-content p {
     color: var(--neutral-700);
+}
+
+.education-thesis-topic {
+    margin: 0.75rem 0 0;
+    font-size: 0.95rem;
+    line-height: 1.55;
+    color: var(--neutral-600);
+    font-weight: 500;
+}
+
+[data-theme="dark"] .education-thesis-topic {
+    color: var(--neutral-400);
 }
 
 .education-thesis {

@@ -1,0 +1,8 @@
+{
+  "name": "sawsan-cv-website",
+  "private": true,
+  "description": "Static portfolio / CV site (no bundler). Use npm test before push.",
+  "scripts": {
+    "test": "node --check js/script.js && node --check js/translations.js && node --check js/translations-ar.js && node --check js/contact-config.js && node --check js/contact-config.example.js"
+  }
+}

@@ -11,7 +11,7 @@ Visit the live website: [Link](https://sawsanabdulbari.github.io/portfolio/)
 This portfolio website features:
 
 - **Responsive Design**: Optimized for all devices
-- **Multilingual UI**: Finnish, English, and Arabic (RTL) with localStorage persistence
+- **Multilingual UI**: Finnish, English, and Arabic (RTL) with localStorage persistence; skip link to main content
 - **Modern UI/UX**: Clean, professional design with smooth animations
 - **PDF CV**: Downloadable resume (print to PDF)
 - **Interactive Elements**: Smooth scrolling, hover effects, and animations
@@ -39,7 +39,8 @@ portfolio/
 │   └── styles.css          # Main stylesheet
 ├── js/
 │   ├── script.js           # Main JavaScript functionality
-│   ├── contact-config.js   # Web3Forms access key (see README)
+│   ├── contact-config.js   # Web3Forms public access key + domain allowlist in dashboard
+│   ├── contact-config.example.js
 │   ├── translations.js     # Finnish & English strings
 │   └── translations-ar.js  # Arabic locale (extends translations)
 ├── images/                 # Project images and assets
@@ -109,15 +110,21 @@ portfolio/
    - Modify `css/styles.css` for styling
    - Update `js/translations.js` for language content
 
+4. **Check JavaScript before push** (Node.js required)
+   ```bash
+   npm test
+   ```
+   Runs `node --check` on all main `js/*.js` files to catch syntax errors. This does not replace a browser smoke test.
+
 ## ✉️ Contact form and social previews
 
 ### Web3Forms (recommended)
 
-1. Create a free access key at [web3forms.com](https://web3forms.com).
+1. Create a free access key at [web3forms.com](https://web3forms.com) (keys are **public** client-side identifiers—protection is the **domain allowlist** in the dashboard, not hiding the key).
 2. In the Web3Forms dashboard, add the deployed domain (for example `sawsanabdulbari.github.io`).
-3. Set the key in `js/contact-config.js` as `window.__WEB3FORMS_ACCESS_KEY__ = '…';` and deploy.
+3. The key is set in `js/contact-config.js` as `window.__WEB3FORMS_ACCESS_KEY__ = '…';` (see `contact-config.example.js` to start a fresh file).
 
-The `data-web3forms-access-key` attribute on `#contact-form` in `index.html`, if non-empty, overrides `contact-config.js`.
+The `data-web3forms-access-key` attribute on `#contact-form` in `index.html`, if non-empty, overrides `contact-config.js`. If both are empty, the form uses the **mailto** fallback.
 
 ### Formspree (alternative)
 
@@ -125,7 +132,7 @@ Set `data-formspree` on the contact form to the Formspree form id. If Web3Forms 
 
 ### Link previews (Open Graph / X)
 
-`og:image` and `twitter:image` in `index.html` use **absolute** URLs under `https://sawsanabdulbari.github.io/portfolio/` so previews resolve on LinkedIn, X, Slack, and similar apps.
+`og:image` and `twitter:image` in `index.html` use **absolute** URLs under `https://sawsanabdulbari.github.io/portfolio/` (currently `images/datadiwan-hero.png`, a file that exists in the repo) so previews resolve on LinkedIn, X, Slack, and similar apps. Project cards fall back to `images/placeholder.svg` if a screenshot file is missing.
 
 ## 📝 Customization
 

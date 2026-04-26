@@ -517,6 +517,9 @@ function initializeScrollAnimations() {
                 // Add staggered animation for children
                 const children = entry.target.querySelectorAll('.skill-item, .stat-item, .project-card, .experience-item, .highlight-item, .interest-item, .education-item');
                 children.forEach((child, index) => {
+                    if (child.closest && child.closest('[data-experience-details]')) {
+                        return;
+                    }
                     setTimeout(() => {
                         child.style.opacity = '1';
                         child.style.transform = 'translateY(0)';
@@ -1963,13 +1966,25 @@ function initializeScrollSpy() {
 
 // Initialize all functionality when DOM is loaded
 function initializeExperienceEarlierDetails() {
+    const prefersReduce =
+        typeof window.matchMedia === 'function' &&
+        window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
     document.querySelectorAll('[data-experience-details]').forEach((el) => {
         el.addEventListener('toggle', () => {
-            if (!el.open) return;
-            el.querySelectorAll('.experience-item').forEach((item) => {
-                item.classList.add('animate-in');
-                item.style.opacity = '1';
-                item.style.transform = 'translateY(0)';
+            const items = el.querySelectorAll('.experience-earlier-inner .experience-item');
+            if (!el.open) {
+                items.forEach((item) => item.classList.remove('animate-in'));
+                return;
+            }
+            if (prefersReduce) {
+                items.forEach((item) => item.classList.add('animate-in'));
+                return;
+            }
+            items.forEach((item, index) => {
+                setTimeout(() => {
+                    item.classList.add('animate-in');
+                }, index * 70);
             });
         });
     });

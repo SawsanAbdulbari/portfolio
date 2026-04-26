@@ -1244,6 +1244,27 @@ html[dir="rtl"] .skills-expertise-legend-row {
     margin-bottom: 0;
 }
 
+/* Collapsed "earlier" rows: start hidden so opening <details> can run a real transition
+   (scroll-observer must not set inline opacity on these — see script.js). */
+.experience-earlier-inner .experience-item {
+    opacity: 0;
+    transform: translateY(1.1rem);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.experience-earlier-inner .experience-item.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .experience-earlier-inner .experience-item {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
+
 [data-theme="dark"] .experience-earlier {
     border-color: rgba(232, 244, 253, 0.22);
     background: var(--card-bg);
@@ -3390,5 +3411,4 @@ html[dir="rtl"] .chat-window {
         left: 15px;
     }
 }
-
 

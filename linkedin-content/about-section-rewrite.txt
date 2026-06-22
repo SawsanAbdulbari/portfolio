@@ -1,0 +1,16 @@
+=== LINKEDIN ABOUT SECTION — COPY THIS ===
+
+I help organizations ship production ML systems where outcomes are measured — in healthcare, climate, and finance.
+
+Currently building at Dashtera while leading global AI teams at Omdena (15+ contributors across 6+ countries). Previously founded and ran a plastic recycling company for 7 years — giving me a rare blend of business execution and technical depth that most ML engineers don't have.
+
+Selected impact:
+• Led COVID-19 prediction system for Zambian public health — XGBoost model evaluated on MAE, RMSE, R², deployed via Streamlit
+• Designed RAG architecture for enterprise document retrieval (FAISS + sentence embeddings + open LLM)
+• Built emotion recognition system deployed on mobile devices (EfficientNet-B0, INT8 quantization)
+• Developed carbon fraud detection using multi-agent AI with adversarial consensus
+• Created 15+ data products across healthcare, climate tech, e-commerce, and fintech
+
+3 languages. Based in Helsinki. Global mindset.
+
+Tech: Python, PyTorch, XGBoost, scikit-learn, Streamlit, FAISS, FastAPI, TypeScript, React, Docker, Google Cloud

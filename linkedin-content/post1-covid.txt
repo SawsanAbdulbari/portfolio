@@ -1,0 +1,24 @@
+=== LINKEDIN POST 1: COVID-19 Prediction (Healthcare AI + Global Team) ===
+
+I led a team of 15+ contributors across 6 countries to build a COVID-19 prediction system for Zambia.
+
+Here's what we did and what I learned:
+
+The problem: Developing countries lacked the infrastructure to forecast COVID-19 cases and deaths — making resource allocation nearly impossible for already strained healthcare systems.
+
+The approach: We built an XGBoost model on imputed case/death data, evaluated on MAE, RMSE, and R². I led model evaluation and deployment while coordinating a fully remote, cross-cultural team.
+
+The result: A live Streamlit dashboard serving public health forecasts, with all code open-sourced.
+
+Three lessons I'd share from leading a global ML team:
+
+1. Async communication is a superpower — when your team spans 8 time zones, written clarity beats meetings
+2. Simple models with good features beat complex models with bad data — XGBoost won because it handled missingness gracefully
+3. Deploy early, iterate often — the Streamlit prototype went live in week 2, not week 8
+
+Full project: https://omdenakitwecovid19.streamlit.app/
+Code: https://github.com/SawsanAbdulbari/Omdena_KitweChapter_ForecastingCOVID19Dynamics
+
+What's the most challenging distributed team project you've worked on?
+
+#MachineLearning #HealthcareAI #GlobalHealth #DataScience #Omdena #XGBoost

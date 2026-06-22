@@ -1,0 +1,24 @@
+=== LINKEDIN POST 3: Emotion Recognition (Mobile Deployment + Edge AI) ===
+
+I built an emotion recognition system that runs on a phone.
+
+No cloud API. No GPU. Just a 4.2 MB model on a mobile device.
+
+Here's the pipeline:
+
+Step 1 — Model selection on FER-2013 (35,887 images, 7 emotions)
+Compared ResNet, MobileNet, and EfficientNet. EfficientNet-B0 won on accuracy/size tradeoff.
+
+Step 2 — Fine-tuning on RAF-DB (real-world, imbalanced)
+Used weighted loss and augmentation to handle the class imbalance (happy is overrepresented, disgust is scarce).
+
+Step 3 — INT8 quantization for mobile deployment
+Dynamic quantization shrank the model from 16 MB to 4.2 MB with only 0.7% accuracy drop. That's the difference between "app concept" and "app that users actually download."
+
+The full project includes the training pipeline, evaluation suite, and the quantized mobile model.
+
+Code: https://github.com/SawsanAbdulbari/emotion_recognition_mobile_app
+
+If you've deployed a model to production — especially on edge devices — what was your biggest surprise?
+
+#ComputerVision #EdgeAI #DeepLearning #EfficientNet #MobileML #PyTorch

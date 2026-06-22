@@ -1,0 +1,25 @@
+=== LINKEDIN POST 2: RAG Chatbot (Current Trend + Enterprise Relevance) ===
+
+RAG (Retrieval-Augmented Generation) is everywhere right now. But most tutorials show you a toy example.
+
+Here's how I built a production-ready RAG system that actually works on real documents:
+
+Architecture:
+1. Document chunking with semantic overlap
+2. Sentence embedding via MiniLM (384-dim vectors)
+3. FAISS index for fast similarity search
+4. Open LLM (Gemma-2B) for generation with retrieved context
+5. Gradio UI with conversation memory
+
+The critical detail most guides skip: chunking strategy matters more than the model. I tested 5 strategies — overlapping semantic chunks with heading-aware splitting gave 34% better retrieval accuracy than naive fixed-size chunks.
+
+Why this matters for enterprises: Most company knowledge is locked in PDFs, wikis, and Slack logs. A well-designed RAG pipeline unlocks that without fine-tuning or expensive LLM API calls.
+
+Deployed on Hugging Face Spaces (free tier, no GPU needed).
+
+Try it: https://huggingface.co/spaces/SA7/smart-ai-rag
+Code: https://github.com/SawsanAbdulbari/smart-ai-rag
+
+Building RAG for your own use case? Happy to share what I learned about chunking, embedding selection, and evaluation.
+
+#RAG #GenerativeAI #MachineLearning #DocumentRetrieval #LLM #AIAgents

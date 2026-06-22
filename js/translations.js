@@ -48,10 +48,10 @@ const translations = {
         'filter-vision': 'Computer Vision',
         'chat-bot-name': 'Sawsanin avustaja',
         'chat-bot-online': 'Paikalla',
-        'chat-greeting': 'Hei! Vastaukseni ovat lyhyitä, sivustolta valittuja viestejä (en ole generoiva kielimalli). Käytä painikkeita tai nimeä projekti—Data Diwan, Kiva, RAG, PIRHA jne.',
+        'chat-greeting': 'Hei! Vastaukseni ovat lyhyitä, sivustolta valittuja viestejä (en ole generoiva kielimalli). Käytä painikkeita tai nimeä projekti—Trading Companion, Kiva, RAG, PIRHA jne.',
         'chat-placeholder': 'Kysy jotain...',
         'chat-chip-help': 'Miten tämä toimii',
-        'chat-chip-datadiwan': 'Data Diwan',
+        'chat-chip-datadiwan': 'Trading Companion',
         'chat-chip-skills': 'Taidot',
         'chat-chip-experience': 'Kokemus',
         'chat-chip-education': 'Koulutus',
@@ -69,7 +69,7 @@ const translations = {
         // Hero Section
         'hero-name': 'Sawsan Abdulbari',
         'hero-title': 'Data Scientist & Koneoppimisen Insinööri',
-        'hero-tagline': 'Autan tiimejä viemään tuotantovalmista koneoppimista ja data-tuotteita terveydenhuoltoon, ilmastoon ja rahoitukseen—siellä missä lopputulosta voi testata ja mitata.',
+        'hero-tagline': 'Autan tiimejä viemään tuotantovalmista koneoppimista ja data-tuotteita terveydenhuoltoon ja ilmastoon—siellä missä lopputulosta voi testata ja mitata.',
         'hero-metric-1': 'Omdena (Kitwe): XGBoost + Streamlit; MAE, RMSE ja R² julkisessa COVID-19-ennusterepositoriossa',
         'hero-metric-2': 'PIRHA: esitoimenpiteen kuntoutusopas potilaille ja perheille Pirkanmaalla—julkaistu Vercelissä, julkinen terveydenhuollon käyttökokemus',
         'hero-impact-aria': 'Esimerkkejä mitattavasta tai tuotantoon viety vaikutuksesta',
@@ -84,15 +84,15 @@ const translations = {
 
         // About Section
         'about-title': 'Tietoa minusta',
-        'about-description': 'Data Scientist & ML Engineer, jolla on yli kolmen vuoden kokemus tekoälyratkaisujen rakentamisesta, joilla on positiivinen liiketoimintavaikutus ja jotka voidaan skaalata liiketoiminnan kasvun mukana. Työskennellyt osana globaalia 15+ hengen tiimiä, tehnyt yhteistyötä maailmanlaajuisesti jakautuneissa tiimeissä, ja toimittanut tuotantovalmiita ML-malleja terveydenhuoltoon, kestävyyteen ja teknologia-aloille.',
+        'about-description': 'Data Scientist & ML Engineer ja DataDiwanin perustaja, jolla on yli kolmen vuoden kokemus tekoälyratkaisujen rakentamisesta, joilla on positiivinen liiketoimintavaikutus ja jotka voidaan skaalata liiketoiminnan kasvun mukana. Työskennellyt osana globaalia 15+ hengen tiimiä, tehnyt yhteistyötä maailmanlaajuisesti jakautuneissa tiimeissä, ja toimittanut tuotantovalmiita ML-malleja terveydenhuoltoon, kestävyyteen ja teknologia-aloille.',
         'about-overview-title': 'Ammatillinen yleiskuva',
-        'about-overview': 'Olen tukenut ympäristökestävyyttä muuttamalla muovijätteen arvokkaiksi resursseiksi. Olen urani aikana hallinnut toimitusketjuja ja uusia liiketoimintahankkeita sekä kehittänyt ympäristöystävällisiä ratkaisuja, jotka tukevat ilmastonmuutoksen torjuntaa.',
+        'about-overview': 'Olen tukenut ympäristökestävyyttä muuttamalla muovijätteen arvokkaiksi resursseiksi. Olen urani aikana hallinnut toimitusketjuja ja uusia liiketoimintahankkeita sekä kehittänyt ympäristöystävällisiä ratkaisuja, jotka tukevat ilmastonmuutoksen torjuntaa. Minulla on myös 7+ vuotta perustaja- ja monipuolista kokemusta toimitusketjun hallinnasta uusien hankkeiden käynnistämiseen.',
         'about-climate-title': 'Sitoutuminen ilmastonmuutokseen',
         'about-climate': 'Olen sitoutunut tuomaan ilmastonmuutoksen tietoisuuden osaksi liiketoimintaa ja arkea. Kannatan käytäntöjä, jotka pienentävät ympäristöjalanjälkeä, vahvistavat kiertotaloutta ja edistävät kestävämpää maapalloa siten, että liiketoiminnan kasvu ja ympäristönsuojelu etenevät yhdessä.',
         'stat-scientists': 'Globaalin tiimin osallistujat',
-        'stat-countries': 'Verkoston laajuus (globaali)',
+        'stat-countries': 'Julkaistuja sovelluksia',
         'stat-years': 'Vuotta yrittäjyyttä',
-        'stat-languages': 'Kieltä',
+        'stat-languages': 'Opiskelijoita ohjattu',
 
         // Skills Section
         'skills-title': 'Ydinosaamiset',
@@ -200,8 +200,8 @@ const translations = {
 
         // Projects Section
         'projects-title': 'Merkittävät projektit',
-        'project-dd-title': '📊 Data Diwan — treidauspäätökset, ei signaaleja',
-        'project-dd-description': 'Treidausjärjestelmä (Vite, React, TypeScript, Supabase): position sizing, riski- ja kurinalaisuustyökalut, suunnittelu ja strategiat, historia, Stripe, PWA, testit ja seuranta. datadiwan.com',
+        'project-dd-title': '📊 Trading Companion — kurinalaisuus treidaajille',
+        'project-dd-description': 'Treidausjärjestelmä (Vite, React, TypeScript, Supabase): position sizing, riski- ja kurinalaisuustyökalut, suunnittelu ja strategiat, historia, Stripe, PWA, testit ja seuranta. data-diwan-trading.vercel.app',
         'project1-title': '🏦 Kiva-laina EDA Dashboard',
         'project1-description': 'Interaktiivinen dashboard Kiva-mikrolainojen analysointiin kattavilla EDA-ominaisuuksilla. Sisältää lainajakauman analyysin, maiden tason oivalluksia ja lainanottajien demografian.',
         'project2-title': '🦠 COVID-19-tapausten ennustejärjestelmä',
@@ -316,10 +316,10 @@ const translations = {
         'filter-vision': 'Computer Vision',
         'chat-bot-name': "Sawsan's Assistant",
         'chat-bot-online': 'Online',
-        'chat-greeting': 'Hi! I answer from this site with short, fixed messages (not a generative model). Use the chips or name a project—Data Diwan, Kiva, RAG, PIRHA, and more.',
+        'chat-greeting': 'Hi! I answer from this site with short, fixed messages (not a generative model). Use the chips or name a project—Trading Companion, Kiva, RAG, PIRHA, and more.',
         'chat-placeholder': 'Ask something...',
         'chat-chip-help': 'How it works',
-        'chat-chip-datadiwan': 'Data Diwan',
+        'chat-chip-datadiwan': 'Trading Companion',
         'chat-chip-skills': 'Skills',
         'chat-chip-experience': 'Experience',
         'chat-chip-education': 'Education',
@@ -337,7 +337,7 @@ const translations = {
         // Hero Section
         'hero-name': 'Sawsan Abdulbari',
         'hero-title': 'Data Scientist & Machine Learning Engineer',
-        'hero-tagline': 'I help teams ship production ML and data products for health, climate, and finance—where outcomes can be tested and measured.',
+        'hero-tagline': 'I help teams ship production ML and data products for health and climate—where outcomes can be tested and measured.',
         'hero-metric-1': 'Omdena (Kitwe chapter): XGBoost + Streamlit; MAE, RMSE, and R² published with the public COVID-19 forecast repo',
         'hero-metric-2': 'PIRHA: pre-procedure rehabilitation guide for Pirkanmaa patients and families—live on Vercel with a public healthcare UX focus',
         'hero-impact-aria': 'Examples of measured or shipped impact',
@@ -352,15 +352,15 @@ const translations = {
 
         // About Section
         'about-title': 'About',
-        'about-description': 'Data Scientist & ML Engineer with 3+ years of proven expertise in building AI solutions that have positive business impact and can be scaled with the growth of the business. Worked in a global team of 15+ contributors, collaborated in globally distributed teams, and delivered production-ready ML models for healthcare, sustainability, and technology challenges.',
+        'about-description': 'Data Scientist & ML Engineer and Founder of DataDiwan with 3+ years of proven expertise in building AI solutions that have positive business impact and can be scaled with the growth of the business. Worked in a global team of 15+ contributors, collaborated in globally distributed teams, and delivered production-ready ML models for healthcare, sustainability, and technology challenges.',
         'about-overview-title': 'Professional overview',
-        'about-overview': 'I have contributed to environmental sustainability by transforming plastic waste into valuable resources. Throughout my career, I managed supply operations and spearheaded new business initiatives, and focused on developing eco-friendly solutions that align with climate change mitigation efforts.',
+        'about-overview': 'I have contributed to environmental sustainability by transforming plastic waste into valuable resources. Throughout my career, I managed supply operations and spearheaded new business initiatives, and focused on developing eco-friendly solutions that align with climate change mitigation efforts. I also bring 7+ years of founder and cross-functional experience, from managing supply operations to launching new ventures.',
         'about-climate-title': 'Commitment to climate change',
         'about-climate': 'I am passionate about incorporating climate change awareness into every aspect of business operations and life. My ongoing commitment involves adopting and advocating for practices that minimize environmental footprints, enhance recycling processes, and drive progress toward a more sustainable planet. My approach ensures that business growth and environmental health go hand in hand.',
         'stat-scientists': 'Global team contributors',
-        'stat-countries': 'Network reach (global)',
+        'stat-countries': 'Live apps deployed',
         'stat-years': 'Years entrepreneurship',
-        'stat-languages': 'Languages',
+        'stat-languages': 'Students mentored',
 
         // Skills Section
         'skills-title': 'Core Competencies',
@@ -467,8 +467,8 @@ const translations = {
 
         // Projects Section
         'projects-title': 'Notable Projects',
-        'project-dd-title': '📊 Data Diwan — trade decisions, not trade signals',
-        'project-dd-description': 'Trading app (Vite, React, TypeScript, Supabase): position sizing, risk and discipline tools, plans and strategies, trade history, Stripe, PWA, automated tests and monitoring. https://datadiwan.com',
+        'project-dd-title': '📊 Trading Companion — discipline system for traders',
+        'project-dd-description': 'Trading app (Vite, React, TypeScript, Supabase): position sizing, risk and discipline tools, plans and strategies, trade history, Stripe, PWA, automated tests and monitoring. https://data-diwan-trading.vercel.app',
         'project1-title': '🏦 Kiva Loan EDA Dashboard',
         'project1-description': 'Interactive dashboard analyzing Kiva microloan data with comprehensive EDA features. Includes loan distribution analysis, country-wise insights, and borrower demographics.',
         'project2-title': '🦠 COVID-19 Case Prediction System',

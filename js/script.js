@@ -107,7 +107,7 @@ function initializeSkillsChart() {
         ],
         datasets: [{
             label: L['skills-chart-level'] || 'Expertise Level',
-            data: [80, 85, 80, 90],
+            data: [88, 85, 78, 72],
             fill: true,
             backgroundColor: isDark ? 'rgba(243, 156, 18, 0.22)' : 'rgba(243, 156, 18, 0.2)',
             borderColor: '#f39c12',
@@ -572,23 +572,23 @@ function downloadCV() {
 const projectData = {
     'project-dd': {
         title: {
-            fi: '📊 Data Diwan — treidauspäätökset, ei signaaleja',
-            en: '📊 Data Diwan — trade decisions, not trade signals',
-            ar: '📊 داتا ديوان — قرارات تداول، لا إشارات'
+            fi: '📊 Trading Companion — kurinalaisuus treidaajille',
+            en: '📊 Trading Companion — discipline system for traders',
+            ar: '📊 رفيق التداول — نظام انضباط للمتداولين'
         },
         image: 'images/datadiwan-hero.png',
-        demo: 'https://datadiwan.com/',
+        demo: 'https://data-diwan-trading.vercel.app/',
         repo: null,
         category: 'data',
         metrics: {
-            Product: 'Data Diwan (trading)',
+            Product: 'Trading Companion',
             Stack: 'Vite, React, Supabase',
-            Live: 'datadiwan.com'
+            Live: 'data-diwan-trading.vercel.app'
         },
         impact: {
-            fi: 'Verkkopohjainen treidausjärjestelmä, joka tukee riskitietoista päätöksentekoa: positoinnit, säännöt ja käyttäytyminen ennen oikeaa pääomaa—ei myytyjä “signaaleja”, vaan työkaluja hallintaan.',
-            en: 'A web-based trading system that supports risk-aware decisions: sizing, self-defined rules, and behaviour before real capital—tools for control, not packaged “signals.”',
-            ar: 'نظام تداول ويب يركّز على القرار الواعي بالمخاطر: أحجام، قواعد، وسلوك قبل المال الحقيقي—أدوات للتحكّم لا «إشارات» جاهزة.'
+            fi: 'Kurinalaisuuspohjainen treidausjärjestelmä: positoinnit, itse määritellyt säännöt ja käyttäytymisanalyysi ennen oikeaa pääomaa—työkaluja itsehillintään, ei valmiita “signaaleja”.',
+            en: 'A discipline-first trading system: position sizing, self-defined rules, and behaviour analysis before real capital—tools for self-control, not packaged “signals.”',
+            ar: 'نظام تداول قائم على الانضباط: أحجام، قواعد شخصية، وتحليل سلوكي قبل المال الحقيقي—أدوات لضبط النفس لا «إشارات» جاهزة.'
         },
         features: {
             en: [
@@ -624,9 +624,9 @@ const projectData = {
                 ar: 'يُسرِع كثير من المتداولين وراء الإشارات والعواطف؛ والحاجة الحقيقية فحص منضبط قبل الصفقة: حجم العقد، حالة المخاطرة، وتوافق قواعدك قبل ربط رأس المال.'
             },
             data: {
-                en: 'The live product at datadiwan.com is a full trading workspace—position sizing, behavioural guardrails, and history—rather than a single marketing landing page alone.',
-                fi: 'Julkinen palvelu datadiwan.com on täysi treidaustyötila—positiointi, käyttäytymisen rajat ja historia—ei pelkkä yksisivuinen myyntisivu.',
-                ar: 'المنتج الحي على datadiwan.com مساحة تداول كاملة—أحجام، ضوابط سلوكية، وسجلات—وليست صفحة تسويق بسيطة وحدها.'
+            en: 'The live product at data-diwan-trading.vercel.app is a full trading workspace—position sizing, behavioural guardrails, and history—rather than a single marketing landing page.',
+            fi: 'Julkinen palvelu data-diwan-trading.vercel.app on täysi treidaustyötila—positiointi, käyttäytymisen rajat ja historia—ei pelkkä yksisivuinen myyntisivu.',
+            ar: 'المنتج الحي على data-diwan-trading.vercel.app مساحة تداول كاملة—أحجام، ضوابط سلوكية، وسجلات—وليست صفحة تسويق بسيطة.'
             },
             approach: {
                 en: 'Vite, React, and TypeScript front end with Tailwind; Supabase for authentication and data; Stripe for paid tiers; English and Arabic in the interface; PWA; charts (including Recharts) and heavier analytics (e.g. Monte Carlo) in dedicated modules. Vitest, Playwright, and Sentry support reliable releases.',
@@ -634,9 +634,9 @@ const projectData = {
                 ar: 'واجهة بـVite وReact وTypeScript وTailwind؛ Supabase للمصادقة والبيانات؛ Stripe للمستويات المدفوعة؛ عربي وإنجليزي في الواجهة؛ PWA؛ مخططات (منها Recharts) وتحليلات أثقل في وحدات مخصصة. Vitest وPlaywright وSentry لدعم الإصدارات بثقة.'
             },
             results: {
-                en: 'In production at https://datadiwan.com, traders use calculator-based sizing, rule-aware checks, a readable trade history, and planning tools—underpinned by automated tests and monitoring.',
-                fi: 'Tuotannossa (https://datadiwan.com) käytössä laskentapohjainen koko, sääntöpohjaiset tarkistukset, selkeä historia ja suunnittelutyökalut—pohjalla automaattiset testit ja seuranta.',
-                ar: 'على https://datadiwan.com: حجوم من الحاسبة، وفحوص تلائم القواعد، وتاريخ صفقات واضح، وأدوات تخطيط—مدعومة باختبارات ومراقبة تلقائية.'
+                en: 'In production at data-diwan-trading.vercel.app, traders use calculator-based sizing, rule-aware checks, a readable trade history, and planning tools—underpinned by automated tests and monitoring.',
+                fi: 'Tuotannossa (data-diwan-trading.vercel.app) käytössä laskentapohjainen koko, sääntöpohjaiset tarkistukset, selkeä historia ja suunnittelutyökalut—pohjalla automaattiset testit ja seuranta.',
+                ar: 'على data-diwan-trading.vercel.app: حجوم من الحاسبة، وفحوص تلائم القواعد، وتاريخ صفقات واضح، وأدوات تخطيط—مدعومة باختبارات ومراقبة تلقائية.'
             }
         }
     },

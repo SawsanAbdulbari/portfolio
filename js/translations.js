@@ -84,7 +84,7 @@ const translations = {
 
         // About Section
         'about-title': 'Tietoa minusta',
-        'about-description': 'Data Scientist & ML Engineer ja DataDiwanin perustaja, jolla on yli kolmen vuoden kokemus tekoälyratkaisujen rakentamisesta, joilla on positiivinen liiketoimintavaikutus ja jotka voidaan skaalata liiketoiminnan kasvun mukana. Työskennellyt osana globaalia 15+ hengen tiimiä, tehnyt yhteistyötä maailmanlaajuisesti jakautuneissa tiimeissä, ja toimittanut tuotantovalmiita ML-malleja terveydenhuoltoon, kestävyyteen ja teknologia-aloille.',
+        'about-description': 'Rakennan kokonaisvaltaisia (full-stack) tekoäly- ja koneoppimisjärjestelmiä, jotka vievät tuotantoon koneoppimista, generatiivista tekoälyä ja dataohjelmistoja. Oikeat tiimit käyttävät näitä ratkaisuja mitattavien liiketoimintatulosten ja automaation saavuttamiseen. Ennen siirtymistäni suunnittelun pariin vietin yli vuosikymmenen operatiivisissa rooleissa, joista 7 vuotta perustajana sekä ylemmässä johdossa ja laadunvalvonnassa. Tämä kokemus muovaa tapaani rakentaa tekoälyä tänään: keskityn todelliseen vaikutukseen, käyttöönottoon ja auditointivalmiiseen hallintomalliin pelkän erillisen tarkkuuden sijaan.',
         'about-overview-title': 'Ammatillinen yleiskuva',
         'about-overview': 'Olen tukenut ympäristökestävyyttä muuttamalla muovijätteen arvokkaiksi resursseiksi. Olen urani aikana hallinnut toimitusketjuja ja uusia liiketoimintahankkeita sekä kehittänyt ympäristöystävällisiä ratkaisuja, jotka tukevat ilmastonmuutoksen torjuntaa. Minulla on myös 7+ vuotta perustaja- ja monipuolista kokemusta toimitusketjun hallinnasta uusien hankkeiden käynnistämiseen.',
         'about-climate-title': 'Sitoutuminen ilmastonmuutokseen',
@@ -352,7 +352,7 @@ const translations = {
 
         // About Section
         'about-title': 'About',
-        'about-description': 'Data Scientist & ML Engineer and Founder of DataDiwan with 3+ years of proven expertise in building AI solutions that have positive business impact and can be scaled with the growth of the business. Worked in a global team of 15+ contributors, collaborated in globally distributed teams, and delivered production-ready ML models for healthcare, sustainability, and technology challenges.',
+        'about-description': 'I build full-stack AI and ML systems that ship production machine learning, generative AI, and data software used by real teams to drive measurable business outcomes and automation.\n\nBefore moving into engineering, I spent over a decade as an operator including 7 years as a founder, plus senior management and quality control roles. That experience shapes how I build AI today: focused on real-world impact, adoption, and audit-ready governance rather than accuracy in isolation.',
         'about-overview-title': 'Professional overview',
         'about-overview': 'I have contributed to environmental sustainability by transforming plastic waste into valuable resources. Throughout my career, I managed supply operations and spearheaded new business initiatives, and focused on developing eco-friendly solutions that align with climate change mitigation efforts. I also bring 7+ years of founder and cross-functional experience, from managing supply operations to launching new ventures.',
         'about-climate-title': 'Commitment to climate change',

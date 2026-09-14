@@ -31,7 +31,7 @@
         
         .header {
             text-align: center;
-            border-bottom: 3px solid #2c3e50;
+            border-bottom: 3px solid #0a1018;
             padding-bottom: 15px;
             margin-bottom: 20px;
         }
@@ -39,14 +39,14 @@
         .name {
             font-size: 24px;
             font-weight: bold;
-            color: #2c3e50;
+            color: #0a1018;
             margin-bottom: 8px;
             letter-spacing: 1px;
         }
         
         .title {
             font-size: 14px;
-            color: #f39c12;
+            color: #c8890a;
             margin-bottom: 10px;
             font-weight: 600;
         }
@@ -64,8 +64,8 @@
         
         .section-title {
             font-size: 13px;
-            color: #2c3e50;
-            border-bottom: 2px solid #f39c12;
+            color: #0a1018;
+            border-bottom: 2px solid #c8890a;
             padding-bottom: 3px;
             margin-bottom: 10px;
             font-weight: bold;
@@ -80,7 +80,17 @@
         }
         
         .summary strong {
-            color: #2c3e50;
+            color: #0a1018;
+        }
+        
+        .expertise-topics {
+            font-size: 10px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+        
+        .expertise-topics strong {
+            color: #0a1018;
         }
         
         .skills-grid {
@@ -93,11 +103,11 @@
         .skill-category {
             background: #f8f9fa;
             padding: 8px;
-            border-left: 3px solid #f39c12;
+            border-left: 3px solid #c8890a;
         }
         
         .skill-category h4 {
-            color: #2c3e50;
+            color: #0a1018;
             margin-bottom: 5px;
             font-size: 10px;
             font-weight: bold;
@@ -118,7 +128,7 @@
         
         .skill-category li::before {
             content: "•";
-            color: #f39c12;
+            color: #c8890a;
             position: absolute;
             left: 0;
             font-weight: bold;
@@ -138,12 +148,12 @@
         
         .job-title {
             font-weight: bold;
-            color: #2c3e50;
+            color: #0a1018;
             font-size: 11px;
         }
         
         .company {
-            color: #f39c12;
+            color: #c8890a;
             font-weight: bold;
             font-size: 10px;
         }
@@ -180,7 +190,7 @@
         
         .tech-tag {
             background: #e8f4fd;
-            color: #2c3e50;
+            color: #0a1018;
             padding: 2px 6px;
             border-radius: 8px;
             font-size: 8px;
@@ -192,17 +202,17 @@
             margin-bottom: 10px;
             padding: 8px;
             background: #f8f9fa;
-            border-left: 3px solid #2c3e50;
+            border-left: 3px solid #0a1018;
         }
         
         .degree {
             font-weight: bold;
-            color: #2c3e50;
+            color: #0a1018;
             font-size: 10px;
         }
         
         .university {
-            color: #f39c12;
+            color: #c8890a;
             font-weight: bold;
             font-size: 9px;
         }
@@ -236,13 +246,13 @@
         
         .project-title {
             font-weight: bold;
-            color: #2c3e50;
+            color: #0a1018;
             margin-bottom: 3px;
             font-size: 10px;
         }
         
         .project-tech {
-            color: #f39c12;
+            color: #c8890a;
             font-size: 8px;
             margin-bottom: 5px;
         }
@@ -266,7 +276,7 @@
         
         .language-name {
             font-weight: bold;
-            color: #2c3e50;
+            color: #0a1018;
         }
         
         .language-level {
@@ -290,6 +300,15 @@
         .interests li {
             margin-bottom: 2px;
             line-height: 1.3;
+        }
+        
+        .cv-note {
+            margin-top: 24px;
+            padding-top: 8px;
+            border-top: 1px solid #ddd;
+            font-size: 8px;
+            color: #777;
+            text-align: center;
         }
         
         /* Print optimizations */
@@ -361,7 +380,7 @@
         }
 
         .expertise-legend strong {
-            color: #2c3e50;
+            color: #0a1018;
         }
 
         .expertise-note {
@@ -385,7 +404,7 @@
         </div>
 
         <div class="section">
-            <div class="section-title">About</div>
+            <div class="section-title">Biography</div>
             <div class="summary">
                 <strong>I build full-stack AI and ML systems</strong> that ship production machine learning, generative AI, and data software used by real teams to drive measurable business outcomes and automation. Before moving into engineering, I spent over a decade as an operator including 7 years as a founder, plus senior management and quality control roles. That experience shapes how I build AI today: focused on real-world impact, adoption, and audit-ready governance rather than accuracy in isolation. <strong>Trilingual professional</strong> (Arabic, English, Finnish) with <strong>entrepreneurial background</strong> and <strong>passion for climate change solutions</strong>.
             </div>
@@ -396,67 +415,20 @@
                 <strong>Commitment to climate change:</strong> I am passionate about incorporating climate change awareness into every aspect of business operations and life. My ongoing commitment involves adopting and advocating for practices that minimize environmental footprints, enhance recycling processes, and drive progress toward a more sustainable planet. My approach ensures that business growth and environmental health go hand in hand.
             </div>
             <div class="summary">
-                <strong>Key Differentiators:</strong> Global collaboration (distributed teams, 15+ contributor projects), Production Expertise (deployed ML models), Business Knowledge (7-year entrepreneurial experience), Climate Focus (environmental sustainability advocate), Academic Excellence (student mentor & curriculum developer).
-            </div>
-        </div>
-
-        <div class="section">
-            <div class="section-title">Core Competencies</div>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h4>Machine Learning</h4>
-                    <ul>
-                        <li>Predictive Modeling</li>
-                        <li>Time Series Analysis</li>
-                        <li>RAG Architecture</li>
-                        <li>Model Deployment</li>
-                        <li>Prompt Engineering</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h4>Data Science</h4>
-                    <ul>
-                        <li>Data Mining & Analytics</li>
-                        <li>EDA & Visualization</li>
-                        <li>Feature Engineering</li>
-                        <li>Statistical Analysis</li>
-                        <li>Dashboard Creation</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h4>Leadership</h4>
-                    <ul>
-                        <li>Team collaboration (15+ people)</li>
-                        <li>Cross-cultural Collaboration</li>
-                        <li>Mentoring & Training</li>
-                        <li>Project Management</li>
-                        <li>Stakeholder Communication</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h4>Business</h4>
-                    <ul>
-                        <li>Strategic Planning</li>
-                        <li>Data Analysis</li>
-                        <li>Process Optimization</li>
-                        <li>Financial Management</li>
-                        <li>Business Development</li>
-                        <li>Operations Management</li>
-                    </ul>
-                </div>
+                <strong>Key Differentiators:</strong> Global collaboration (distributed teams in global contributor projects), Production Expertise (deployed ML models), Business Knowledge (7-year entrepreneurial experience), Climate Focus (environmental sustainability advocate), Academic Excellence (student mentor & curriculum developer).
             </div>
         </div>
 
         <div class="section expertise-mapping no-break">
-            <div class="section-title">Expertise Mapping</div>
+            <div class="section-title">Expertise and Topics</div>
             <div class="expertise-mapping-inner">
                 <div class="expertise-radar-wrap" aria-hidden="true">
                     <!-- Relative expertise (same axes as portfolio radar); SVG prints reliably to PDF -->
                     <svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Expertise radar: ML 88%, Data Science 85%, Leadership 78%, Business 72%">
                         <defs>
                             <linearGradient id="radarFill" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" style="stop-color:#f39c12;stop-opacity:0.35" />
-                                <stop offset="100%" style="stop-color:#f39c12;stop-opacity:0.12" />
+                                <stop offset="0%" style="stop-color:#c8890a;stop-opacity:0.35" />
+                                <stop offset="100%" style="stop-color:#c8890a;stop-opacity:0.12" />
                             </linearGradient>
                         </defs>
                         <!-- Grid diamonds R=85 from center (120,120): 100%, 66%, 33% -->
@@ -470,16 +442,16 @@
                         <line x1="120" y1="120" x2="35" y2="120" stroke="#bdc3c7" stroke-width="1" />
                         <!-- Data: R=85 × (0.88, 0.85, 0.78, 0.72) on top, right, bottom, left -->
                         <polygon points="120,45.2 192.25,120 120,186.3 58.8,120"
-                            fill="url(#radarFill)" stroke="#f39c12" stroke-width="1.8" stroke-linejoin="round" />
-                        <circle cx="120" cy="45.2" r="3" fill="#f39c12" />
-                        <circle cx="192.25" cy="120" r="3" fill="#f39c12" />
-                        <circle cx="120" cy="186.3" r="3" fill="#f39c12" />
-                        <circle cx="58.8" cy="120" r="3" fill="#f39c12" />
+                            fill="url(#radarFill)" stroke="#c8890a" stroke-width="1.8" stroke-linejoin="round" />
+                        <circle cx="120" cy="45.2" r="3" fill="#c8890a" />
+                        <circle cx="192.25" cy="120" r="3" fill="#c8890a" />
+                        <circle cx="120" cy="186.3" r="3" fill="#c8890a" />
+                        <circle cx="58.8" cy="120" r="3" fill="#c8890a" />
                         <!-- Labels -->
-                        <text x="120" y="22" text-anchor="middle" font-size="9" font-family="Arial, sans-serif" fill="#2c3e50" font-weight="bold">Machine Learning</text>
-                        <text x="234" y="124" text-anchor="end" font-size="9" font-family="Arial, sans-serif" fill="#2c3e50" font-weight="bold">Data Science</text>
-                        <text x="120" y="234" text-anchor="middle" font-size="9" font-family="Arial, sans-serif" fill="#2c3e50" font-weight="bold">Leadership</text>
-                        <text x="26" y="124" text-anchor="end" font-size="9" font-family="Arial, sans-serif" fill="#2c3e50" font-weight="bold">Business</text>
+                        <text x="120" y="22" text-anchor="middle" font-size="9" font-family="Arial, sans-serif" fill="#0a1018" font-weight="bold">Machine Learning</text>
+                        <text x="234" y="124" text-anchor="end" font-size="9" font-family="Arial, sans-serif" fill="#0a1018" font-weight="bold">Data Science</text>
+                        <text x="120" y="234" text-anchor="middle" font-size="9" font-family="Arial, sans-serif" fill="#0a1018" font-weight="bold">Leadership</text>
+                        <text x="26" y="124" text-anchor="end" font-size="9" font-family="Arial, sans-serif" fill="#0a1018" font-weight="bold">Business</text>
                         <text x="120" y="116" text-anchor="middle" font-size="7" fill="#888">Expertise level</text>
                     </svg>
                 </div>
@@ -491,16 +463,19 @@
                 </div>
                 <p class="expertise-note">Relative scale aligned with portfolio skills visualization (self-assessment).</p>
             </div>
+            <p class="expertise-topics">
+                <strong>Topics:</strong> Artificial intelligence, machine learning, data science, generative AI, RAG systems, data analytics, business intelligence, climate change AI.
+            </p>
         </div>
 
         <div class="section">
-            <div class="section-title">Professional Experience</div>
+            <div class="section-title">Work Experience</div>
             
             <div class="experience-item">
                 <div class="job-header">
                     <div>
                         <div class="job-title">Data Scientist and Machine Learning Engineer</div>
-                        <div class="company">Helsinki uni | Helsinki, Finland</div>
+                        <div class="company">University of Helsinki | Helsinki, Finland</div>
                     </div>
                     <div class="date">Anticipated Start Date: Dec, 2026</div>
                 </div>
@@ -523,12 +498,12 @@
                     <div class="date">Aug 2026 - Present</div>
                 </div>
                 <div class="job-description">
-                    Applying AI expertise to Demos Helsinki's research and innovation projects, contributing to the development and delivery of AI-powered knowledge solutions.
+                    Applying AI expertise to Demos Helsinki: Connected Knowledge System (CKS), contributing to the development and delivery of AI-powered knowledge solutions.
                 </div>
                 <div class="tech-tags">
                     <span class="tech-tag">Artificial Intelligence</span>
                     <span class="tech-tag">Machine Learning</span>
-                    <span class="tech-tag">AI Research</span>
+                    <span class="tech-tag">Connected Knowledge System</span>
                 </div>
             </div>
 
@@ -772,8 +747,47 @@
         </div>
 
         <div class="section">
-            <div class="section-title">Key Projects</div>
+            <div class="section-title">Languages</div>
+            <div class="languages">
+                <div class="language-item">
+                    <div class="language-name">Arabic</div>
+                    <div class="language-level">Native</div>
+                </div>
+                <div class="language-item">
+                    <div class="language-name">English</div>
+                    <div class="language-level">Professional proficiency</div>
+                </div>
+                <div class="language-item">
+                    <div class="language-name">Finnish</div>
+                    <div class="language-level">Professional proficiency</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Positions of Trust</div>
+            <div class="experience-item">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Student mentor & curriculum developer</div>
+                        <div class="company">Häme University of Applied Sciences (HAMK) | Finland</div>
+                    </div>
+                    <div class="date">2024 - 2025</div>
+                </div>
+                <div class="job-description">
+                    Personalized guidance and technical mentoring for 50+ students, plus curriculum development, in the role of student assistant.
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Project References</div>
             <div class="projects-grid">
+                <div class="project">
+                    <div class="project-title">🏛️ Demos Helsinki: Connected Knowledge System (CKS)</div>
+                    <div class="project-tech">Artificial Intelligence, Machine Learning, AI Research</div>
+                    <div class="project-description">AI-powered knowledge system for Demos Helsinki research and innovation, supporting the development and delivery of AI-powered knowledge solutions.</div>
+                </div>
                 <div class="project">
                     <div class="project-title">📊 Trading Companion — discipline system for traders</div>
                     <div class="project-tech">Vite, React, TypeScript, Supabase, Tailwind, Stripe, i18next, Vitest, Playwright</div>
@@ -865,21 +879,57 @@
         </div>
 
         <div class="section">
-            <div class="section-title">Languages</div>
-            <div class="languages">
-                <div class="language-item">
-                    <div class="language-name">Arabic</div>
-                    <div class="language-level">Native</div>
+            <div class="section-title">Skills</div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4>Machine Learning</h4>
+                    <ul>
+                        <li>Predictive Modeling</li>
+                        <li>Time Series Analysis</li>
+                        <li>RAG Architecture</li>
+                        <li>Model Deployment</li>
+                        <li>Prompt Engineering</li>
+                    </ul>
                 </div>
-                <div class="language-item">
-                    <div class="language-name">English</div>
-                    <div class="language-level">Professional proficiency</div>
+                <div class="skill-category">
+                    <h4>Data Science</h4>
+                    <ul>
+                        <li>Data Mining & Analytics</li>
+                        <li>EDA & Visualization</li>
+                        <li>Feature Engineering</li>
+                        <li>Statistical Analysis</li>
+                        <li>Dashboard Creation</li>
+                    </ul>
                 </div>
-                <div class="language-item">
-                    <div class="language-name">Finnish</div>
-                    <div class="language-level">Professional proficiency</div>
+                <div class="skill-category">
+                    <h4>Leadership</h4>
+                    <ul>
+                        <li>Team collaboration (15+ people)</li>
+                        <li>Cross-cultural Collaboration</li>
+                        <li>Mentoring & Training</li>
+                        <li>Project Management</li>
+                        <li>Stakeholder Communication</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h4>Business</h4>
+                    <ul>
+                        <li>Strategic Planning</li>
+                        <li>Data Analysis</li>
+                        <li>Process Optimization</li>
+                        <li>Financial Management</li>
+                        <li>Business Development</li>
+                        <li>Operations Management</li>
+                    </ul>
                 </div>
             </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Selected Publications</div>
+            <ul class="certifications">
+                <li><strong>Microsoft-based Performance Goal Management System for Strategy Implementation</strong> — Bachelor's thesis, Häme University of Applied Sciences (2026). Catalogue: <a href="https://hamk.finna.fi/Record/vanaicat.144542" style="color: inherit;">HAMK Finna (vanaicat.144542)</a>. PDF on the portfolio site.</li>
+            </ul>
         </div>
 
         <div class="section">
@@ -891,6 +941,10 @@
                 <li>🎓 <strong>Continuous Learning</strong> - Technology trends, professional development</li>
                 <li>🌱 <strong>Environmental Protection</strong> - Green initiatives, environmentally friendly practices</li>
             </ul>
+        </div>
+
+        <div class="cv-note">
+            Portfolio CV, compiled from the live site at sawsanabdulbari.github.io/portfolio. Links and claims are self-declared.
         </div>
     </div>
 </body>

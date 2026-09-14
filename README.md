@@ -27,7 +27,7 @@ The hero uses **tsParticles** (linked nodes preset) for a subtle, interactive ne
 - **Frontend**: HTML5, CSS3, JavaScript (ES6+)
 - **Styling**: Custom CSS with CSS Variables
 - **Icons**: Font Awesome
-- **Fonts**: Google Fonts (Inter)
+- **Fonts**: Google Fonts — Bricolage Grotesque (display), Inter (body), JetBrains Mono (labels), IBM Plex Sans Arabic (Arabic)
 - **Animations**: CSS Transitions & JavaScript
 - **Responsive**: Mobile-first design approach
 
@@ -143,11 +143,11 @@ Set `data-formspree` on the contact form to the Formspree form id. If Web3Forms 
 4. Update navigation links
 
 ### Changing Colors
-The website uses CSS custom properties for easy color customization:
+The website uses CSS custom properties for easy color customization (DataDiwan brand):
 ```css
 :root {
-    --primary-500: #2c3e50;    /* Deep Blue */
-    --secondary-500: #f39c12;  /* Warm Gold */
+    --primary-500: #4568e8;    /* Azure */
+    --secondary-500: #c8890a;  /* Warm Gold */
     /* ... other color variables */
 }
 ```
@@ -199,7 +199,7 @@ This project is open source and available under the [MIT License](LICENSE).
 ## 🙏 Acknowledgments
 
 - Font Awesome for icons
-- Google Fonts for typography
+- Google Fonts for typography (Bricolage Grotesque, Inter, JetBrains Mono, IBM Plex Sans Arabic)
 - Inspiration from modern portfolio designs
 - Open source community for tools and resources
 

@@ -97,12 +97,12 @@ function initializeSkillsChart() {
     const prefersReducedMotion =
         typeof window.matchMedia === 'function' && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     
-    const textColor = isDark ? '#e8f4fd' : '#2c3e50';
-    const gridColor = isDark ? 'rgba(232, 244, 253, 0.1)' : 'rgba(44, 62, 80, 0.1)';
+    const textColor = isDark ? '#eaeff7' : '#0a1018';
+    const gridColor = isDark ? 'rgba(234, 239, 247, 0.1)' : 'rgba(10, 16, 24, 0.1)';
     
     const L = translations[currentLanguage] || translations.en;
     const isRtl = document.documentElement.dir === 'rtl';
-    const labelFontFamily = isRtl ? "'Noto Sans Arabic', sans-serif" : 'Inter';
+    const labelFontFamily = isRtl ? "'IBM Plex Sans Arabic', sans-serif" : 'Inter';
     const data = {
         labels: [
             L['skills-ml'] || 'Machine Learning',
@@ -114,16 +114,16 @@ function initializeSkillsChart() {
             label: L['skills-chart-level'] || 'Expertise Level',
             data: [88, 85, 78, 72],
             fill: true,
-            backgroundColor: isDark ? 'rgba(243, 156, 18, 0.22)' : 'rgba(243, 156, 18, 0.2)',
-            borderColor: '#f39c12',
+            backgroundColor: isDark ? 'rgba(245, 179, 66, 0.22)' : 'rgba(200, 137, 10, 0.2)',
+            borderColor: isDark ? '#f5b342' : '#c8890a',
             borderWidth: 2,
             pointRadius: 4,
             pointHoverRadius: 7,
-            pointBackgroundColor: '#f39c12',
+            pointBackgroundColor: isDark ? '#f5b342' : '#c8890a',
             pointBorderColor: '#fff',
             pointBorderWidth: 2,
             pointHoverBackgroundColor: '#fff',
-            pointHoverBorderColor: '#f39c12'
+            pointHoverBorderColor: isDark ? '#f5b342' : '#c8890a'
         }]
     };
 
@@ -162,7 +162,7 @@ function initializeSkillsChart() {
             plugins: {
                 legend: { display: false },
                 tooltip: {
-                    backgroundColor: isDark ? 'rgba(26, 26, 26, 0.95)' : 'rgba(44, 62, 80, 0.95)',
+                    backgroundColor: isDark ? 'rgba(8, 11, 18, 0.95)' : 'rgba(10, 16, 24, 0.95)',
                     titleColor: '#fff',
                     bodyColor: '#fff',
                     padding: 12,
@@ -221,7 +221,7 @@ async function initializeHeroParticles() {
     if (typeof tsParticles === 'undefined' || !document.getElementById('hero-particles')) return;
     
     const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-    const color = isDark ? '#ffffff' : '#2c3e50';
+    const color = isDark ? '#ffffff' : '#0a1018';
     
     await tsParticles.load("hero-particles", {
         fpsLimit: 60,

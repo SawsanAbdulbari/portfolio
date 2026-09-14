@@ -34,12 +34,15 @@ CV_PDF_Generator.html                 # PDF generation tool
 
 ## 🎯 Content Included
 
-- Executive Summary with key differentiators
-- Complete Professional Experience (10 positions)
-- All 15 projects with descriptions and technologies
-- Core Competencies (4 skill categories)
+- Biography with key differentiators
+- Expertise and Topics (radar aligned with portfolio skills)
+- Complete Work Experience (all roles)
 - Education background
 - Languages (Arabic, English, Finnish)
+- Positions of Trust (mentoring)
+- All projects as Project References with descriptions and technologies
+- Skills (4 categories)
+- Selected Publications (thesis)
 - Personal Interests
 
-The CV now perfectly matches the website content and generates professional PDFs suitable for job applications.
+The CV follows the structure of the Demos Helsinki Knowledge System people-layer CV and matches the website content, generating professional PDFs suitable for job applications.

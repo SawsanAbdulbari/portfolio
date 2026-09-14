@@ -18,6 +18,11 @@ function switchLanguage(lang) {
         return;
     }
 
+    // Arabic UI is intentionally hidden for now; fall back to English.
+    if (lang !== 'fi' && lang !== 'en') {
+        lang = 'en';
+    }
+
     currentLanguage = lang;
 
     const langLabel = document.getElementById('lang-current-label');
@@ -2124,44 +2129,5 @@ function initializeMicroInteractions() {
 
 
 
-// Add CSS animations dynamically
-function addDynamicStyles() {
-    const style = document.createElement('style');
-    style.textContent = `
-        @keyframes ripple {
-            to {
-                transform: scale(4);
-                opacity: 0;
-            }
-        }
-        
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-            100% { transform: scale(1); }
-        }
-        
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-        }
-        
-        .skill-item, .stat-item, .project-card {
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        
-        .navbar {
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        
-        .highlight-item {
-            animation: float 3s ease-in-out infinite;
-        }
-        
-        .hero-title {
-            animation: fadeInUp 1.2s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-    `;
-    document.head.appendChild(style);
-}
+// Animations (ripple, pulse, float, fadeInUp) are defined in css/styles.css
 

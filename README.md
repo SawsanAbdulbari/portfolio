@@ -11,7 +11,7 @@ Visit the live website: [Link](https://sawsanabdulbari.github.io/portfolio/)
 This portfolio website features:
 
 - **Responsive Design**: Optimized for all devices
-- **Multilingual UI**: Finnish, English, and Arabic (RTL) with localStorage persistence; skip link to main content
+- **Multilingual UI**: Finnish and English with localStorage persistence; skip link to main content
 - **Modern UI/UX**: Clean, professional design with smooth animations
 - **PDF CV**: Downloadable resume (print to PDF)
 - **Interactive Elements**: Smooth scrolling, hover effects, and animations
@@ -53,7 +53,7 @@ portfolio/
 ## 🎨 Features
 
 ### 🌐 Language & theme defaults
-- **Default language**: English (first visit). Finnish and Arabic available from the language menu; choice is saved in `localStorage` under `preferred-language`.
+- **Default language**: English (first visit). Finnish and English available from the language menu; choice is saved in `localStorage` under `preferred-language`. The Arabic locale remains in `js/translations-ar.js` (kept for future enablement) but the language button is not displayed.
 - **Default theme**: Dark. Toggle saves `theme` as `dark` or `light` in `localStorage`.
 
 ### 📱 Responsive Design

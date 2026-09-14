@@ -30,10 +30,27 @@
         }
         
         .header {
-            text-align: center;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            text-align: left;
             border-bottom: 3px solid #0a1018;
             padding-bottom: 15px;
             margin-bottom: 20px;
+        }
+        
+        .header-main {
+            flex: 1;
+        }
+        
+        .header-photo {
+            width: 110px;
+            height: 110px;
+            object-fit: cover;
+            border: 2px solid #c8890a;
+            flex-shrink: 0;
+            print-color-adjust: exact;
+            -webkit-print-color-adjust: exact;
         }
         
         .name {
@@ -395,12 +412,15 @@
 <body>
     <div class="container">
         <div class="header">
-            <div class="name">SAWSAN ABDULBARI</div>
-            <div class="title">Data Scientist & Machine Learning Engineer | AI Innovation</div>
-            <div class="contact-info">
-                📧 sawsan.abdulbari@gmail.com | 💼 linkedin.com/in/sawsanabdulbari | 💻 github.com/sawsanabdulbari<br>
-                📍 Helsinki, Finland | 📱 +358 40 5110 5012 | 🌐 Available for Relocation
+            <div class="header-main">
+                <div class="name">SAWSAN ABDULBARI</div>
+                <div class="title">Data Scientist & Machine Learning Engineer | AI Innovation</div>
+                <div class="contact-info">
+                    📧 sawsan.abdulbari@gmail.com | 💼 linkedin.com/in/sawsanabdulbari | 💻 github.com/sawsanabdulbari<br>
+                    📍 Helsinki, Finland | 📱 +358 40 5110 5012
+                </div>
             </div>
+            <img class="header-photo" src="images/SawsanAbdulbari_cv.jpg" alt="Sawsan Abdulbari portrait" width="420" height="420">
         </div>
 
         <div class="section">
@@ -477,7 +497,7 @@
                         <div class="job-title">Data Scientist and Machine Learning Engineer</div>
                         <div class="company">University of Helsinki | Helsinki, Finland</div>
                     </div>
-                    <div class="date">Anticipated Start Date: Dec, 2026</div>
+                    <div class="date">Anticipated Start: Dec, 2026</div>
                 </div>
                 <div class="job-description">
                     Anticipated role: data science and machine learning engineering at the University of Helsinki.
@@ -621,81 +641,6 @@
             <div class="experience-item">
                 <div class="job-header">
                     <div>
-                        <div class="job-title">Accounting</div>
-                        <div class="company">foodora Finland | Tampere</div>
-                    </div>
-                    <div class="date">2022</div>
-                </div>
-                <div class="job-description">
-                    Gained experience in financial accounting and supply operations. Worked with Microsoft Excel for data management and participated in financial reporting processes.
-                </div>
-                <div class="tech-tags">
-                    <span class="tech-tag">Supply Operations</span>
-                    <span class="tech-tag">Financial Accounting</span>
-                    <span class="tech-tag">Microsoft Excel</span>
-                </div>
-            </div>
-
-            <div class="experience-item">
-                <div class="job-header">
-                    <div>
-                        <div class="job-title">Social Media Representative</div>
-                        <div class="company">Foody Allen | Tampere</div>
-                    </div>
-                    <div class="date">2022</div>
-                </div>
-                <div class="job-description">
-                    Acted as main content creator for food producer Njunno during Block festival weekend. Focused primarily on creating photography and video content from the event for marketing and post-marketing purposes.
-                </div>
-                <div class="tech-tags">
-                    <span class="tech-tag">Multi-Channel Marketing</span>
-                    <span class="tech-tag">Graphic Design</span>
-                    <span class="tech-tag">Event Photography</span>
-                    <span class="tech-tag">Video Editing</span>
-                </div>
-            </div>
-
-            <div class="experience-item">
-                <div class="job-header">
-                    <div>
-                        <div class="job-title">Marketing Communications and Content Production</div>
-                        <div class="company">BSB Fashion | Paphos, Cyprus</div>
-                    </div>
-                    <div class="date">2022</div>
-                </div>
-                <div class="job-description">
-                    Developed marketing strategies and content production. Managed e-commerce platforms and multi-channel marketing and created graphic designs and video content.
-                </div>
-                <div class="tech-tags">
-                    <span class="tech-tag">Sales</span>
-                    <span class="tech-tag">E-Commerce</span>
-                    <span class="tech-tag">Multi-Channel Marketing</span>
-                    <span class="tech-tag">Graphic Design</span>
-                </div>
-            </div>
-
-            <div class="experience-item">
-                <div class="job-header">
-                    <div>
-                        <div class="job-title">Sales Associate</div>
-                        <div class="company">Keinuipuiston kukka Oy | Tampere, Finland</div>
-                    </div>
-                    <div class="date">2021 - 2022</div>
-                </div>
-                <div class="job-description">
-                    Main responsibility was customer service and sales. Managed the store's e-commerce and delivery platforms Foodora and Wolt and developed business-to-business relationships.
-                </div>
-                <div class="tech-tags">
-                    <span class="tech-tag">Business-to-Business (B2B)</span>
-                    <span class="tech-tag">Sales</span>
-                    <span class="tech-tag">E-Commerce</span>
-                    <span class="tech-tag">Multi-channel Retail</span>
-                </div>
-            </div>
-
-            <div class="experience-item">
-                <div class="job-header">
-                    <div>
                         <div class="job-title">Founder</div>
                         <div class="company">Plastic Recycling for Sustainable Solutions | Hybrid</div>
                     </div>
@@ -760,22 +705,6 @@
                 <div class="language-item">
                     <div class="language-name">Finnish</div>
                     <div class="language-level">Professional proficiency</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="section">
-            <div class="section-title">Positions of Trust</div>
-            <div class="experience-item">
-                <div class="job-header">
-                    <div>
-                        <div class="job-title">Student mentor & curriculum developer</div>
-                        <div class="company">Häme University of Applied Sciences (HAMK) | Finland</div>
-                    </div>
-                    <div class="date">2024 - 2025</div>
-                </div>
-                <div class="job-description">
-                    Personalized guidance and technical mentoring for 50+ students, plus curriculum development, in the role of student assistant.
                 </div>
             </div>
         </div>

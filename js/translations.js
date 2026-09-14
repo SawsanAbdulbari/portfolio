@@ -81,7 +81,6 @@ const translations = {
         'hero-projects': 'Katso projektit',
         'hero-download-text': 'Lataa CV',
         'hero-download-cv': 'Lataa CV',
-        'hero-pdf-help': 'Miten tallennat PDF:n?',
 
         // About Section
         'about-title': 'Tietoa minusta',
@@ -157,7 +156,7 @@ const translations = {
         'experience-core-heading': 'Keskeinen työkokemus',
         'experience-earlier-toggle': 'Aikaisempi työkokemus (vähittäismyynti, markkinointi, talous, yrittäjyys)',
         'exp-helsinki-title': 'Data Scientist ja Machine Learning -insinööri',
-        'exp-helsinki-date': 'Suunniteltu aloituspäivä: joulukuu 2026',
+        'exp-helsinki-date': 'Suunniteltu aloitus: joulukuu 2026',
         'exp-helsinki-company': 'Helsingin yliopisto | Helsinki, Suomi',
         'exp-helsinki-description': 'Tuleva rooli data science- ja koneoppimistehtävissä Helsingin yliopistossa.',
         'exp-demos-title': 'Junior Expert, erikoistunut tekoälyyn',
@@ -245,6 +244,10 @@ const translations = {
         'project13-description': 'Verkossa julkaistu opas Pirkanmaan hyvinvointialueelle (PIRHA). Tukee potilaita ja läheisiä toimenpidettä edeltävässä kuntoutumisessa. ICT-projekti Vercelissä.',
         'project14-title': '🌳 Puun lajitunnistin',
         'project14-description': 'Interaktiivinen verkko- ja mobiilisovellus puulajien luokitteluun koneoppimisella. Julkaistu Vercelissä.',
+        'project-dd-company-title': '🏢 DataDiwan — tekoäly- ja datayritys',
+        'project-dd-company-description': 'Täyspalveluinen tekoäly- ja datayritys: data science, koneoppiminen, generatiivinen tekoäly ja automaatiostartupille, pk-yrityksille ja suurille organisaatioille maailmanlaajuisesti. Etätyö ensin Helsingistä, syvä EU- ja MENA-asiantuntemus. Englanti, arabia ja suomi.',
+        'project-dd-os-title': '⚡ DataDiwan OS — täyttävä käyttöjärjestelmä',
+        'project-dd-os-description': 'Hallittu tekoälykäyttöjärjestelmä: viisi nimettyä tekoälyjohtajaa (myynti, markkinointi, rahoitus, toimitus, BD) koordinoituina päällikön toimesta, jaettu Company Memory, ihmisen hyväksyntä joka päätöksestä, muuttumaton audittrail ja EU AI Act -mukainen dokumentointi.',
 
         // Project Links
         'project-demo-text': 'Demo',
@@ -362,7 +365,6 @@ const translations = {
         'hero-projects': 'View projects',
         'hero-download-text': 'Download CV',
         'hero-download-cv': 'Download CV',
-        'hero-pdf-help': 'How to save as PDF',
 
         // About Section
         'about-title': 'About',
@@ -437,7 +439,7 @@ const translations = {
         'experience-core-heading': 'Core experience',
         'experience-earlier-toggle': 'Earlier experience (retail, marketing, operations, founder)',
         'exp-helsinki-title': 'Data Scientist and Machine Learning Engineer',
-        'exp-helsinki-date': 'Anticipated Start Date: Dec, 2026',
+        'exp-helsinki-date': 'Anticipated Start: Dec, 2026',
         'exp-helsinki-company': 'University of Helsinki | Helsinki, Finland',
         'exp-helsinki-description': 'Anticipated role: data science and machine learning engineering at the University of Helsinki.',
         'exp-demos-title': 'Junior Expert specializing in AI',
@@ -523,6 +525,10 @@ const translations = {
         'project13-description': 'Web guide for pre-procedure rehabilitation for the Pirkanmaa wellbeing region (PIRHA). Supports patients and families before medical procedures. Deployed on Vercel.',
         'project14-title': '🌳 Tree Classifier',
         'project14-description': 'Interactive web and mobile app for tree species classification using machine learning. Deployed on Vercel.',
+        'project-dd-company-title': '🏢 DataDiwan — AI & data company',
+        'project-dd-company-description': 'Full-stack AI and data company: data science, machine learning, generative AI, and automation for startups, SMBs, and enterprises worldwide. Remote-first from Helsinki with deep EU and MENA expertise. Works in English, Arabic, and Finnish.',
+        'project-dd-os-title': '⚡ DataDiwan OS — Executive Operating System',
+        'project-dd-os-description': 'Governed AI operating system: five named AI directors (Sales, Marketing, Finance, Delivery, BD) coordinated by a Chief of Staff, sharing one Company Memory. Human approval on every decision, immutable audit trail, and EU AI Act-aligned documentation.',
 
         // Project Links
         'project-demo-text': 'Demo',

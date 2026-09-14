@@ -551,27 +551,15 @@ function initializeTypingAnimation() {
     }
 }
 
-// CV Download functionality
+// CV Download functionality — same as CKS: a plain link with the download
+// attribute, so the browser saves the PDF immediately.
 function downloadCV() {
-    const cvWindow = window.open('Sawsan_Abdulbari_CV_Print_Ready.html', '_blank');
-    if (!cvWindow) {
-        window.location.href = 'Sawsan_Abdulbari_CV_Print_Ready.html';
-        return;
-    }
-    cvWindow.addEventListener(
-        'load',
-        function onCvLoad() {
-            cvWindow.removeEventListener('load', onCvLoad);
-            setTimeout(() => {
-                try {
-                    cvWindow.print();
-                } catch (err) {
-                    /* print may fail if window closed */
-                }
-            }, 500);
-        },
-        { once: true }
-    );
+    const link = document.createElement('a');
+    link.href = 'Sawsan_Abdulbari_CV.pdf';
+    link.download = 'Sawsan_Abdulbari_CV.pdf';
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
 }
 
 const projectData = {
@@ -642,6 +630,146 @@ const projectData = {
                 en: 'In production at data-diwan-trading.vercel.app, traders use calculator-based sizing, rule-aware checks, a readable trade history, and planning tools—underpinned by automated tests and monitoring.',
                 fi: 'Tuotannossa (data-diwan-trading.vercel.app) käytössä laskentapohjainen koko, sääntöpohjaiset tarkistukset, selkeä historia ja suunnittelutyökalut—pohjalla automaattiset testit ja seuranta.',
                 ar: 'على data-diwan-trading.vercel.app: حجوم من الحاسبة، وفحوص تلائم القواعد، وتاريخ صفقات واضح، وأدوات تخطيط—مدعومة باختبارات ومراقبة تلقائية.'
+            }
+        }
+    },
+    'project-dd-company': {
+        title: {
+            fi: '🏢 DataDiwan — tekoäly- ja datayritys',
+            en: '🏢 DataDiwan — AI & data company',
+            ar: '🏢 DataDiwan — شركة ذكاء اصطناعي وبيانات'
+        },
+        image: 'images/datadiwan.png',
+        demo: 'https://www.datadiwan.com',
+        repo: null,
+        category: 'data',
+        metrics: {
+            Company: 'DataDiwan',
+            Focus: 'AI, ML, GenAI, Automation',
+            HQ: 'Helsinki, Finland'
+        },
+        impact: {
+            fi: 'Täyspalveluinen tekoäly- ja datayritys: data science, koneoppiminen, generatiivinen tekoäly ja automaatiostartupille, pk-yrityksille ja suurille organisaatioille maailmanlaajuisesti.',
+            en: 'Full-stack AI and data company: data science, machine learning, generative AI, and automation for startups, SMBs, and enterprises worldwide. Remote-first from Helsinki with deep EU and MENA expertise.',
+            ar: 'شركة ذكاء اصطناعي وبيانات شاملة: علم البيانات والتعلم الآلي والذكاء الاصطناعي التوليدي والأتمتة للشركات الناشئة والمتوسطة والكبيرة حول العالم. operates from Helsinki بخبرة عميقة في الاتحاد الأوروبي والشرق الأوسط وشمال أفريقيا.'
+        },
+        features: {
+            en: [
+                'Data science and analytics: dashboards, EDA, statistical modelling, and decision-support',
+                'Machine learning and deep learning: supervised and unsupervised models, MLOps',
+                'Generative AI: RAG pipelines, fine-tuning, LLM integration, and conversational agents',
+                'Intelligent automation: workflow orchestration, document processing, and end-to-end pipeline delivery',
+                'Multilingual expertise: English, Arabic, and Finnish across EU and MENA markets',
+                'GDPR compliance, ISO-style documentation, and cloud-native delivery (AWS / Azure / GCP)'
+            ],
+            fi: [
+                'Data science ja analytiikka: dashboardit, EDA, tilastollinen mallinnus ja päätäntätuki',
+                'Koneoppiminen ja syväoppiminen: ohjatut ja ohjaamattomat mallit, MLOps',
+                'Generatiivinen tekoäly: RAG-putket, hienosäädöt, LLM-integraatio ja keskusteluagentit',
+                'Älykäs automaatiointi: työvuo-orkiestrointi, dokumenttikäsittely ja loppuun asti toimitetut putket',
+                'Monikielinen asiantuntemus: englanti, arabia ja suomi EU- ja MENA-markkinoilla',
+                'GDPR-spike, ISO-tyyppiset dokumentit ja pilviperustainen toimitus (AWS / Azure / GCP)'
+            ],
+            ar: [
+                'علم البيانات والتحليلات: لوحات معلومات، تحليل استكشافي، نمذجة إحصائية ودعم قرارات',
+                'التعلم الآلي والتعلم العميق: نماذج خاضعة وغير خاضعة للإشراف، MLOps',
+                'الذكاء الاصطناعي التوليدي: خطوط RAG، ضبط دقيق، تكامل LLM، ووكلاء محادثة',
+                'الأتمتة الذكية: تنسيق سير العمل، معالجة المستندات، وتسليم خطوط أنابيب متكاملة',
+                'خبرة متعددة اللغات: الإنجليزية والعربية والفنلندية في أسواق الاتحاد الأوروبي والشرق الأوسط',
+                'امتثال GDPR، توثيق بنمط ISO، وتسليم سحابي الأصل (AWS / Azure / GCP)'
+            ]
+        },
+        tech: ['Python', 'TensorFlow', 'PyTorch', 'scikit-learn', 'Hugging Face', 'LangChain', 'AWS', 'Azure', 'GCP', 'Docker', 'GDPR'],
+        story: {
+            problem: {
+                en: 'Organisations across EU and MENA need end-to-end AI capability—from data readiness to production deployment—but most lack the in-house depth to move beyond pilots.',
+                fi: 'EU- ja MENA-organisaatiot tarvitsevat kokonaisvaltaisen tekoälykyvykkyyden datavalmiudesta tuotantoon, mutta monilla ei ole sisäistä syvyyttä pilottien yli.',
+                ar: 'تحتاج منظمات الاتحاد الأوروبي والشرق الأوسط قدرة ذكاء اصطناعي شاملة من جاهزية البيانات إلى النشر في الإنتاج، لكن معظمها يفتقر للعمق الداخلي لتجاوز التجارب.'
+            },
+            data: {
+                en: 'Production projects across trading, microfinance, health, energy, agriculture, and public-sector domains with measurable impact.',
+                fi: 'Tuotantoprojekteja treidauksen, mikrorahoituksen, terveyden, energian, maatalouden ja julkisen sektorin aloilla mitattavilla tuloksilla.',
+                ar: 'مشاريع إنتاجية عبر التداول والتمويل الأصغر والطاقة والزراعة والقطاع العام بأثر قابل للقياس.'
+            },
+            approach: {
+                en: 'Remote-first delivery from Helsinki: scoping, prototyping, iterative development, and production handover with documentation, testing, and compliance baked in from day one.',
+                fi: 'Etätyö ensin Helsingistä: rajaus, prototyypitys, iteratiivinen kehitys ja tuotantosiirto dokumentoinnin, testauksen ja sääntöjenmukaisuuden kanssa heti alusta.',
+                ar: 'العمل عن بُعد من هلسنكي: تحديد النطاق، النماذج الأولية، التطوير التكراري، والتسليم مع التوثيق والاختبارات والامتثال من اليوم الأول.'
+            },
+            results: {
+                en: 'Deployed solutions across multiple industries with repeatable patterns for RAG, EDA dashboards, classification, and workflow automation.',
+                fi: 'Julkistettuja ratkaisuja useilla aloilla toistettavilla malleilla RAG:lle, EDA-dasheille, luokittelulle ja työvuo-automatiointiin.',
+                ar: 'حلول مُ 배포 عبر صناعات متعددة بأنماط قابلة للتكرار لـ RAG ولوحات EDA والتصنيف وأتمتة سير العمل.'
+            }
+        }
+    },
+    'project-dd-os': {
+        title: {
+            fi: '⚡ DataDiwan OS — täyttävä käyttöjärjestelmä',
+            en: '⚡ DataDiwan OS — Executive Operating System',
+            ar: '⚡ DataDiwan OS — نظام التشغيل التنفيذي'
+        },
+        image: 'images/datadiwanos.png',
+        demo: 'https://www.datadiwanos.com',
+        repo: null,
+        category: 'data',
+        metrics: {
+            Product: 'DataDiwan OS',
+            Directors: '5 AI directors + Chief of Staff',
+            Governance: 'Human approval, audit trail'
+        },
+        impact: {
+            fi: 'Hallittu tekoälykäyttöjärjestelmä: viisi nimettyä tekoälyjohtajaa (myynti, markkinointi, rahoitus, toimitus, BD) koordinoituina päällikön toimesta, jaettu Company Memory, ihmisen hyväksyntä joka päätöksestä ja EU AI Act -mukainen dokumentointi.',
+            en: 'Governed AI operating system: five named AI directors (Sales, Marketing, Finance, Delivery, BD) coordinated by a Chief of Staff, sharing one Company Memory. Human approval on every decision, immutable audit trail, and EU AI Act-aligned documentation.',
+            ar: 'نظام تشغيل ذكاء اصطناعي محكوم: خمسة مديرين بالذكاء الاصطناعي (المبيعات والتسويق والمالية والتسليم وتطوير الأعمال) منسقون من مدير عام، يتشاركون ذاكرة شركة واحدة. موافقة بشرية على كل قرار وسجل تدقيق لا يتغير وتوثيق متوافق مع تنظيم الاتحاد الأوروبي للذكاء الاصطناعي.'
+        },
+        features: {
+            en: [
+                'Five named AI directors: Sales, Marketing, Finance, Delivery, and Business Development',
+                'Chief of Staff: coordinates directors, prioritises goals, and routes decisions',
+                'Company Memory: shared, structured knowledge base across all directors',
+                'Human-approval workflow: every external action and budget commitment requires explicit confirmation',
+                'Immutable audit trail: every decision, approval, and override logged and timestamped',
+                'EU AI Act-aligned documentation and tenant isolation for regulated environments'
+            ],
+            fi: [
+                'Viisi nimettyä AI-johtajaa: myynti, markkinointi, rahoitus, toimitus ja liiketoiminnan kehitys',
+                'Päällikkö: koordinoi johtajia, priorisoi tavoitteita ja ohjaa päätöksiä',
+                'Company Memory: jaettu, rakenteinen tietopohja kaikkien johtajien kesken',
+                'Ihmisen vahvistus: jokainen ulkoinen toiminta ja budjettisitoumus vaatii nimenomaisen vahvistuksen',
+                'Muuttumaton audittrail: jokainen päätös, hyväksyntä ja oikaisu aikaleimalla',
+                'EU AI Act -mukainen dokumentointi ja vuokralaisen eristys säännellyissä ympäristöissä'
+            ],
+            ar: [
+                'خمسة مديرين بالذكاء الاصطناعي: المبيعات، التسويق، المالية، التسليم، وتطوير الأعمال',
+                'مدير عام: ينسق المديرين ويحدد أولويات الأهداف ويوجه القرارات',
+                'ذاكرة الشركة: قاعدة معرف مشتركة ومنظمة عبر جميع المديرين',
+                'سير عمل بموافقة بشرية: كل إجراء خارجي والتزام ميزانية يتطلب تأكيدًا صريحًا',
+                'سجل تدقيق لا يتغير: كل قرار وموافقة وتصحيح مُسجَّل بختم زمني',
+                'توثيق متوافق مع تنظيم الاتحاد الأوروبي للذكاء الاصطناعي وعزل المستأجر للبيئات المنظمة'
+            ]
+        },
+        tech: ['AI Agents', 'LLM', 'RAG', 'Company Memory', 'Audit Trail', 'Governance', 'EU AI Act', 'Multi-tenant'],
+        story: {
+            problem: {
+                en: 'Most AI tools operate as isolated copilots; enterprises need a governed system where multiple AI agents collaborate under human oversight, with a shared memory and clear accountability.',
+                fi: 'Useimmat tekoälytyökalut toimivat eristettyinä copilotteina; yritykset tarvitsevat hallitun järjestelmän, jossa useat tekoälyagentit tekevät yhteistyötä ihmisen valvonnalla, jaetun muistin ja selkeän vastuun kanssa.',
+                ar: 'معظم أدوات الذكاء الاصطناعي تعمل كمساعدين معزولين؛ تحتاج المؤسسات نظامًا محكومًا حيث تتعاون وكلاء متعددون تحت إشراف بشري مع ذاكرة مشتركة ومسؤولية واضحة.'
+            },
+            data: {
+                en: 'Five named director roles with defined responsibilities, a Chief of Staff coordinator, Company Memory for shared context, and every action routed through human approval.',
+                fi: 'Viisi nimettyä johtajan roolia määrätyillä vastuualueilla, päällikkökoordinaattori, Company Memory jaetun kontekstin tueksi ja jokainen toiminta ohjataan ihmisen hyväksyttäväksi.',
+                ar: 'خمسة أدوار مديرين مُسمّاة بمسؤوليات محددة، منسق مدير عام، ذاكرة شركة للسياق المشترك، وكل إجراء يمر بموافقة بشرية.'
+            },
+            approach: {
+                en: 'Define each director as an agent with a clear mandate; give them shared Company Memory; enforce human approval on every outbound decision; log everything in an immutable audit trail; align documentation with EU AI Act requirements.',
+                fi: 'Määrittele jokainen johtaja agentiksi selkeällä mandaatilla; anna jaettu Company Memory; pakota ihmisen hyväksyntä jokaisesta lähtevästä päätöksestä; kirjaa muuttumattomaan audittrailiin; ja EU AI Act -vaatimukset.',
+                ar: 'تحديد كل مدير كوكل بمصلحة واضحة؛ منحهم ذاكرة شركة مشتركة؛ فرض موافقة بشرية على كل قرار صادر؛ تسجيل كل شيء في سجل تدقيق لا يتغير؛ مطابقة التوثيق مع متطلبات تنظيم الاتحاد الأوروبي.'
+            },
+            results: {
+                en: 'A production executive OS where AI directors collaborate transparently, every decision is traceable, and human oversight is enforced by design—ready for regulated environments.',
+                fi: 'Tuotantokäyttöinen täyttävä OS, jossa AI-johtajat tekevät yhteistyötä läpinäkyvästi, jokainen päätös on jäljitettävissä ja ihmisen valvonta on suunniteltu pakolliseksi—valmis säännellyille aloille.',
+                ar: 'نظام تنفيذي إنتاجي يتعاون فيه مديرو الذكاء الاصطناعي بشفافية، وycll قرار قابل للتتبع، والإشراف البشري مُصمَّم ليكون إلزاميًا—جاهز للبيئات المنظمة.'
             }
         }
     },

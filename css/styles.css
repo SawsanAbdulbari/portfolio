@@ -664,27 +664,6 @@ h1, h2, h3, h4 {
     gap: 0.45rem;
 }
 
-.hero-pdf-help {
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: var(--primary-600);
-    text-decoration: underline;
-    text-underline-offset: 3px;
-    transition: color 0.2s ease;
-}
-
-.hero-pdf-help:hover {
-    color: var(--secondary-600);
-}
-
-[data-theme="dark"] .hero-pdf-help {
-    color: var(--secondary-400);
-}
-
-[data-theme="dark"] .hero-pdf-help:hover {
-    color: var(--secondary-300);
-}
-
 
 
 /* Section Styles */
@@ -782,6 +761,7 @@ section.hero,
 .about-content {
     display: grid;
     grid-template-columns: 2fr 1fr;
+    grid-template-areas: "text photo" "text stats";
     gap: 3rem;
     align-items: start;
     position: relative;
@@ -789,6 +769,7 @@ section.hero,
 }
 
 .about-text {
+    grid-area: text;
     font-size: 1.2rem;
     line-height: 1.8;
     color: var(--neutral-600);
@@ -798,6 +779,27 @@ section.hero,
     backdrop-filter: blur(20px);
     border: 1px solid var(--border-color);
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+}
+
+.about-photo {
+    grid-area: photo;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(var(--neutral-50-rgb), 0.88);
+    border-radius: 20px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+}
+
+.about-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
 }
 
 .about-text .about-subtitle {
@@ -814,6 +816,7 @@ section.hero,
 }
 
 .about-stats {
+    grid-area: stats;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1.5rem;
@@ -1778,6 +1781,7 @@ html[dir="rtl"] .skills-expertise-legend-row {
 
     .about-content {
         grid-template-columns: 1fr;
+        grid-template-areas: "photo" "text" "stats";
         gap: 2rem;
     }
 

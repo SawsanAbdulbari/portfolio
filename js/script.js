@@ -8,8 +8,6 @@ let refreshProjectModalContent = null;
 
 const THEME_STORAGE_KEY = 'theme';
 
-let skillsChartInstance = null;
-let skillsChartReady = false;
 
 // Language switching function
 function switchLanguage(lang) {
@@ -67,10 +65,6 @@ function switchLanguage(lang) {
     // Store language preference
     localStorage.setItem('preferred-language', lang);
     
-    // Refresh skills chart after first paint (lazy init)
-    if (typeof Chart !== 'undefined' && skillsChartReady) {
-        initializeSkillsChart();
-    }
 
     // Rebuild project modal copy if it is open (stories, labels, demo/repo text)
     if (typeof refreshProjectModalContent === 'function' && projectModalLastDetailsButton) {
@@ -87,133 +81,6 @@ function resolveTheme() {
         return stored;
     }
     return 'dark';
-}
-
-function initializeSkillsChart() {
-    const canvas = document.getElementById('skillsChart');
-    if (!canvas) return;
-    const ctx = canvas.getContext('2d');
-    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-    const prefersReducedMotion =
-        typeof window.matchMedia === 'function' && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    
-    const textColor = isDark ? '#eaeff7' : '#0a1018';
-    const gridColor = isDark ? 'rgba(234, 239, 247, 0.1)' : 'rgba(10, 16, 24, 0.1)';
-    
-    const L = translations[currentLanguage] || translations.en;
-    const isRtl = document.documentElement.dir === 'rtl';
-    const labelFontFamily = isRtl ? "'IBM Plex Sans Arabic', sans-serif" : 'Inter';
-    const data = {
-        labels: [
-            L['skills-ml'] || 'Machine Learning',
-            L['skills-data'] || 'Data Science',
-            L['skills-leadership'] || 'Leadership',
-            L['skills-business'] || 'Business'
-        ],
-        datasets: [{
-            label: L['skills-chart-level'] || 'Expertise Level',
-            data: [88, 85, 78, 72],
-            fill: true,
-            backgroundColor: isDark ? 'rgba(245, 179, 66, 0.22)' : 'rgba(200, 137, 10, 0.2)',
-            borderColor: isDark ? '#f5b342' : '#c8890a',
-            borderWidth: 2,
-            pointRadius: 4,
-            pointHoverRadius: 7,
-            pointBackgroundColor: isDark ? '#f5b342' : '#c8890a',
-            pointBorderColor: '#fff',
-            pointBorderWidth: 2,
-            pointHoverBackgroundColor: '#fff',
-            pointHoverBorderColor: isDark ? '#f5b342' : '#c8890a'
-        }]
-    };
-
-    if (skillsChartInstance) {
-        skillsChartInstance.destroy();
-    }
-
-    skillsChartInstance = new Chart(ctx, {
-        type: 'radar',
-        data: data,
-        options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            interaction: { mode: 'nearest', intersect: false },
-            animation: {
-                duration: prefersReducedMotion ? 0 : 1100,
-                easing: 'easeOutQuart'
-            },
-            scales: {
-                r: {
-                    angleLines: { color: gridColor },
-                    grid: { color: gridColor },
-                    pointLabels: {
-                        color: textColor,
-                        font: { size: 13, weight: '600', family: labelFontFamily },
-                        padding: 8
-                    },
-                    ticks: {
-                        display: false,
-                        stepSize: 20
-                    },
-                    suggestedMin: 0,
-                    suggestedMax: 100
-                }
-            },
-            plugins: {
-                legend: { display: false },
-                tooltip: {
-                    backgroundColor: isDark ? 'rgba(8, 11, 18, 0.95)' : 'rgba(10, 16, 24, 0.95)',
-                    titleColor: '#fff',
-                    bodyColor: '#fff',
-                    padding: 12,
-                    cornerRadius: 10,
-                    displayColors: false,
-                    callbacks: {
-                        title(items) {
-                            return items[0]?.label || '';
-                        },
-                        label(ctx) {
-                            const v = ctx.parsed.r != null ? ctx.parsed.r : ctx.raw;
-                            return `${v}%`;
-                        }
-                    }
-                }
-            }
-        }
-    });
-    skillsChartReady = true;
-}
-
-function initializeSkillsChartWhenVisible() {
-    const viz = document.querySelector('.skills-viz');
-    const canvas = document.getElementById('skillsChart');
-    if (!viz || !canvas) return;
-
-    const run = () => {
-        if (!skillsChartReady) {
-            initializeSkillsChart();
-        }
-    };
-
-    const rect = viz.getBoundingClientRect();
-    const inView = rect.top < window.innerHeight + 120 && rect.bottom > -80;
-    if (inView) {
-        run();
-        return;
-    }
-
-    const observer = new IntersectionObserver(
-        (entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    run();
-                    observer.disconnect();
-                }
-            });
-        },
-        { threshold: 0.08, rootMargin: '0px 0px 100px 0px' }
-    );
-    observer.observe(viz);
 }
 
 // Particle Background for Hero
@@ -286,9 +153,6 @@ function applyTheme(theme) {
             if (icon) icon.className = 'fas fa-moon';
             btn.setAttribute('aria-label', 'Switch to dark mode');
         }
-    }
-    if (typeof Chart !== 'undefined' && skillsChartReady) {
-        initializeSkillsChart();
     }
     // Refresh particles on theme change
     initializeHeroParticles();
@@ -551,15 +415,37 @@ function initializeTypingAnimation() {
     }
 }
 
-// CV Download functionality — same as CKS: a plain link with the download
-// attribute, so the browser saves the PDF immediately.
-function downloadCV() {
-    const link = document.createElement('a');
-    link.href = 'Sawsan_Abdulbari_CV.pdf';
-    link.download = 'Sawsan_Abdulbari_CV.pdf';
-    document.body.appendChild(link);
-    link.click();
-    link.remove();
+// CV Download — force a file download (blob) so browsers do not open the PDF inline.
+async function downloadCV(event) {
+    if (event) event.preventDefault();
+    const href = 'Sawsan_Abdulbari_CV.pdf';
+    const filename = 'Sawsan_Abdulbari_CV.pdf';
+    try {
+        const res = await fetch(href, { cache: 'no-cache' });
+        if (!res.ok) throw new Error('CV fetch failed');
+        const blob = await res.blob();
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = filename;
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+        URL.revokeObjectURL(url);
+    } catch (err) {
+        const link = document.createElement('a');
+        link.href = href;
+        link.download = filename;
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+    }
+}
+
+function initializeDownloadCV() {
+    const btn = document.getElementById('download-cv-btn');
+    if (btn) btn.addEventListener('click', downloadCV);
+    window.downloadCV = downloadCV;
 }
 
 const projectData = {
@@ -1208,8 +1094,8 @@ const projectData = {
             ar: '🌳 مُصنّف أشجار'
         },
         image: 'images/tree_classifier.png',
-        demo: 'https://tree-classifier-rh9k1vmsu-sawsanabdulbaris-projects.vercel.app',
-        repo: null,
+        demo: 'https://tree-classifier.vercel.app',
+        repo: 'https://github.com/SawsanAbdulbari/tree-classifier',
         category: 'ml',
         metrics: { 'Model': 'MobileNetV3', 'Accuracy': '95.92%', 'Platforms': 'Web & Mobile' },
         impact: {
@@ -1627,35 +1513,39 @@ function initializeProjectFilters() {
     const filterBtns = document.querySelectorAll('.filter-btn');
     const projectCards = document.querySelectorAll('.project-card');
 
+    function applyFilter(filter) {
+        projectCards.forEach(card => {
+            const raw = (card.getAttribute('data-category') || '').trim();
+            const categories = raw ? raw.split(/\s+/).filter(Boolean) : [];
+            const featured = card.getAttribute('data-featured') === 'true';
+            const show =
+                filter === 'all' ||
+                (filter === 'featured' && featured) ||
+                categories.includes(filter);
+            if (show) {
+                card.classList.remove('hidden');
+                card.style.display = 'block';
+                card.style.opacity = '1';
+                card.style.transform = 'scale(1)';
+            } else {
+                card.style.opacity = '0';
+                card.style.transform = 'scale(0.8)';
+                card.style.display = 'none';
+                card.classList.add('hidden');
+            }
+        });
+    }
+
     filterBtns.forEach(btn => {
         btn.addEventListener('click', () => {
-            // Update active button
             filterBtns.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
-
-            const filter = btn.getAttribute('data-filter');
-
-            projectCards.forEach(card => {
-                const raw = (card.getAttribute('data-category') || '').trim();
-                const categories = raw ? raw.split(/\s+/).filter(Boolean) : [];
-                if (filter === 'all' || categories.includes(filter)) {
-                    card.classList.remove('hidden');
-                    setTimeout(() => {
-                        card.style.display = 'block';
-                        card.style.opacity = '1';
-                        card.style.transform = 'scale(1)';
-                    }, 10);
-                } else {
-                    card.style.opacity = '0';
-                    card.style.transform = 'scale(0.8)';
-                    setTimeout(() => {
-                        card.style.display = 'none';
-                        card.classList.add('hidden');
-                    }, 500);
-                }
-            });
+            applyFilter(btn.getAttribute('data-filter'));
         });
     });
+
+    const active = document.querySelector('.filter-btn.active');
+    applyFilter(active ? active.getAttribute('data-filter') : 'featured');
 }
 
 // Static FAQ replies (per site language) — matches portfolio content
@@ -1667,7 +1557,7 @@ const CHAT_KNOWLEDGE_BASE = {
         contact: 'Voit ottaa yhteyttä Sawsaniin sähköpostitse: sawsan.abdulbari@gmail.com tai LinkedInin kautta.',
         education: 'Sawsan on suorittanut Tietojenkäsittely tradenomi -tutkinnon (Data Science) HAMKissa, Google Data Analytics -spesialisoinnin, Climate Change AI (CCAI) -kesäkoulun ja Liiketoiminnan perustutkinnon Tredussa.',
         languages: 'Hän puhuu sujuvasti suomea, englantia ja arabiaa (äidinkieli).',
-        projects: 'Hänellä on 15 merkittävää projektia. Kokeile nimiä: Data Diwan, Kiva, COVID, RAG, tunnetunnistus, hiilipetos, PIRHA, resepti, Kalifornia, seteli, NYC-taksi, segmentointi, e-commerce, uutisdashboard, mobiilinen sovellus, puu.',
+        projects: 'Hänellä on 17 projektia (8 nostettua). Kokeile nimiä: Data Diwan, Kiva, COVID, RAG, tunnetunnistus, hiilipetos, PIRHA, resepti, Kalifornia, seteli, NYC-taksi, segmentointi, e-commerce, uutisdashboard, mobiilinen sovellus, puu.',
         project_datadiwan: { text: 'Data Diwan on treidausjärjestelmä (Vite, Supabase) riski- ja sääntötietoiseen päätöksentekoon—ei myytyjä signaaleja. Avaan tiedot...', action: 'project-dd' },
         project_kiva: { text: 'Kiva-laina dashboard analysoi 670k+ mikrolainaa globaalisti. Avaan projektin tiedot sinulle...', action: 'project1' },
         project_covid: { text: 'COVID-19 ennustejärjestelmä toimitti kriittisiä ennusteita Sambian terveydenhuollolle. Avaan tiedot...', action: 'project2' },
@@ -1688,7 +1578,7 @@ const CHAT_KNOWLEDGE_BASE = {
         contact: 'You can reach Sawsan via email at sawsan.abdulbari@gmail.com or connect with her on LinkedIn for professional inquiries.',
         education: 'Sawsan holds a Bachelor of Business IT (Data Science) from HAMK (Grade 4.7/5), the Google Data Analytics Specialization, and the Climate Change AI (CCAI) Summer School.',
         languages: 'She is trilingual, with professional fluency in Finnish, English, and Arabic (Native).',
-        projects: 'She has delivered 15 notable projects (AI/ML, data, and product). Try a name: Data Diwan, Kiva, COVID, California housing, RAG / document chat, bank note, carbon fraud, e-commerce, news sentiment, mobile emotion, recipe, PIRHA, or Tree Classifier.',
+        projects: 'She has delivered 17 projects (8 featured) (AI/ML, data, and product). Try a name: Data Diwan, Kiva, COVID, California housing, RAG / document chat, bank note, carbon fraud, e-commerce, news sentiment, mobile emotion, recipe, PIRHA, or Tree Classifier.',
         project_datadiwan: { text: 'Data Diwan is a trading app (Vite, Supabase) for risk-aware, rule-based decisions—not selling trade signals. Opening details...', action: 'project-dd' },
         project_kiva: { text: 'The Kiva Loan dashboard analyzed 670k+ microloans globally. Opening the project details for you...', action: 'project1' },
         project_covid: { text: 'The COVID-19 project (Kitwe / Zambia, Omdena) uses XGBoost models and a Streamlit app, with MAE, RMSE, and R² in the public repo. Opening details...', action: 'project2' },
@@ -1709,7 +1599,7 @@ const CHAT_KNOWLEDGE_BASE = {
         contact: 'يمكنكم التواصل مع سوسن عبر البريد: sawsan.abdulbari@gmail.com أو عبر LinkedIn للاستفسارات المهنية.',
         education: 'تحمل سوسن درجة البكالوريوس في تقنية معلومات الأعمال (علم البيانات) من HAMK بتقدير 4.7/5، وتخصص Google Data Analytics، والمدرسة الصيفية للذكاء الاصطناعي والتغيّر المناخي (CCAI).',
         languages: 'تتحدث ثلاث لغات بطلاقة: الفنلندية، الإنجليزية، والعربية (اللغة الأم).',
-        projects: '15 مشروعًا بارزًا. جرّب أسماء مثل: Data Diwan، كيفا، كوفيد، مساكن كاليفورنيا، RAG، أوراق نقدية، احتيال كربون، تجارة إلكترونية، مشاعر/هاتف، PIRHA، أشجار…',
+        projects: '17 مشروعًا (8 مميزة). جرّب أسماء مثل: Data Diwan، كيفا، كوفيد، مساكن كاليفورنيا، RAG، أوراق نقدية، احتيال كربون، تجارة إلكترونية، مشاعر/هاتف، PIRHA، أشجار…',
         project_datadiwan: { text: 'داتا ديوان تطبيق تداول (Vite وSupabase) يركّز على المخاطرة والقواعد—لا بيع إشارات جاهزة. سأفتح التفاصيل...', action: 'project-dd' },
         project_kiva: { text: 'حللت لوحة قروض كيفا أكثر من 670 ألف قرض صغير عالميًا. سأفتح لك تفاصيل المشروع...', action: 'project1' },
         project_covid: { text: 'مشروع كوفيد (كيتوي/زامبيا، أومدينا) يستخدم نماذج XGBoost وستريملت، والتحقق بـMAE وRMSE وR² في المستودع. سأفتح التفاصيل...', action: 'project2' },
@@ -2152,7 +2042,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeProjectImageFallbacks();
     initializeExperienceEarlierDetails();
     initializeNavigation();
-    initializeSkillsChartWhenVisible();
+    initializeDownloadCV();
     initializeModals();
     initializeContactForm();
     initializeStatCounters();

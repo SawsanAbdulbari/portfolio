@@ -20,7 +20,7 @@ This portfolio website features:
 
 ### Polish & performance
 
-The hero uses **tsParticles** (linked nodes preset) for a subtle, interactive network-style background—particle colors follow the dark/light theme, with hover interaction. Navbar scroll, back-to-top visibility, and hero parallax use **requestAnimationFrame** throttling to avoid excessive work per scroll event. On small screens, primary controls use at least **~44px** tap height where styled together; the chat panel uses **95vw × 70vh** on very narrow viewports. The site chat is a **rule-based assistant** (keywords and fixed replies, plus project modal shortcuts), not an LLM. The portfolio lists **14** projects with detail modals.
+The hero uses **tsParticles** (linked nodes preset) for a subtle, interactive network-style background—particle colors follow the dark/light theme, with hover interaction. Navbar scroll, back-to-top visibility, and hero parallax use **requestAnimationFrame** throttling to avoid excessive work per scroll event. On small screens, primary controls use at least **~44px** tap height where styled together; the chat panel uses **95vw × 70vh** on very narrow viewports. The site chat is a **rule-based assistant** (keywords and fixed replies, plus project modal shortcuts), not an LLM. The portfolio lists **17** projects (default view: **8 featured**), with detail modals for each.
 
 ## 🛠️ Technologies Used
 
@@ -159,7 +159,7 @@ The website uses CSS custom properties for easy color customization (DataDiwan b
 
 ## 📄 CV/Resume
 
-The site opens a print-optimized HTML CV (`Sawsan_Abdulbari_CV_Print_Ready.html`) from the **Download CV** control; use the browser print dialog and **Save as PDF** to produce `Sawsan_Abdulbari_CV.pdf` (see `docs/PDF_INSTRUCTIONS.md`).
+The **Download CV** control downloads `Sawsan_Abdulbari_CV.pdf` immediately (blob download). To regenerate the PDF after content edits, see `docs/PDF_INSTRUCTIONS.md`.
 
 ## 🌐 Deployment
 

@@ -100,16 +100,6 @@
             color: #0a1018;
         }
         
-        .expertise-topics {
-            font-size: 10px;
-            color: #555;
-            margin-bottom: 10px;
-        }
-        
-        .expertise-topics strong {
-            color: #0a1018;
-        }
-        
         .skills-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -376,60 +366,6 @@
             page-break-inside: avoid;
         }
 
-        /* Expertise Mapping (radar-style, print-safe SVG) */
-        .expertise-mapping {
-            margin-top: 6px;
-            page-break-inside: avoid;
-        }
-
-        .expertise-mapping-inner {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .expertise-radar-wrap {
-            width: 100%;
-            max-width: 260px;
-        }
-
-        .expertise-radar-wrap svg {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .expertise-legend {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4px 12px;
-            width: 100%;
-            max-width: 320px;
-            font-size: 8px;
-            color: #555;
-            margin-top: 4px;
-        }
-
-        .expertise-legend span {
-            display: flex;
-            justify-content: space-between;
-            gap: 6px;
-            border-bottom: 1px dotted #ccc;
-            padding-bottom: 2px;
-        }
-
-        .expertise-legend strong {
-            color: #0a1018;
-        }
-
-        .expertise-note {
-            font-size: 8px;
-            color: #777;
-            text-align: center;
-            font-style: italic;
-            margin-top: 2px;
-        }
     </style>
 </head>
 <body>
@@ -462,75 +398,8 @@
             </div>
         </div>
 
-        <div class="section expertise-mapping no-break">
-            <div class="section-title">Expertise and Topics</div>
-            <div class="expertise-mapping-inner">
-                <div class="expertise-radar-wrap" aria-hidden="true">
-                    <!-- Relative expertise (same axes as portfolio radar); SVG prints reliably to PDF -->
-                    <svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Expertise radar: ML 88%, Data Science 85%, Leadership 78%, Business 72%">
-                        <defs>
-                            <linearGradient id="radarFill" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" style="stop-color:#c8890a;stop-opacity:0.35" />
-                                <stop offset="100%" style="stop-color:#c8890a;stop-opacity:0.12" />
-                            </linearGradient>
-                        </defs>
-                        <!-- Grid diamonds R=85 from center (120,120): 100%, 66%, 33% -->
-                        <polygon points="120,35 205,120 120,205 35,120" fill="none" stroke="#e0e0e0" stroke-width="1" />
-                        <polygon points="120,63.9 176.1,120 120,176.1 63.9,120" fill="none" stroke="#e0e0e0" stroke-width="1" />
-                        <polygon points="120,92 147.45,120 120,147.45 92.55,120" fill="none" stroke="#e0e0e0" stroke-width="1" />
-                        <!-- Axes -->
-                        <line x1="120" y1="120" x2="120" y2="35" stroke="#bdc3c7" stroke-width="1" />
-                        <line x1="120" y1="120" x2="205" y2="120" stroke="#bdc3c7" stroke-width="1" />
-                        <line x1="120" y1="120" x2="120" y2="205" stroke="#bdc3c7" stroke-width="1" />
-                        <line x1="120" y1="120" x2="35" y2="120" stroke="#bdc3c7" stroke-width="1" />
-                        <!-- Data: R=85 × (0.88, 0.85, 0.78, 0.72) on top, right, bottom, left -->
-                        <polygon points="120,45.2 192.25,120 120,186.3 58.8,120"
-                            fill="url(#radarFill)" stroke="#c8890a" stroke-width="1.8" stroke-linejoin="round" />
-                        <circle cx="120" cy="45.2" r="3" fill="#c8890a" />
-                        <circle cx="192.25" cy="120" r="3" fill="#c8890a" />
-                        <circle cx="120" cy="186.3" r="3" fill="#c8890a" />
-                        <circle cx="58.8" cy="120" r="3" fill="#c8890a" />
-                        <!-- Labels -->
-                        <text x="120" y="22" text-anchor="middle" font-size="9" font-family="Arial, sans-serif" fill="#0a1018" font-weight="bold">Machine Learning</text>
-                        <text x="234" y="124" text-anchor="end" font-size="9" font-family="Arial, sans-serif" fill="#0a1018" font-weight="bold">Data Science</text>
-                        <text x="120" y="234" text-anchor="middle" font-size="9" font-family="Arial, sans-serif" fill="#0a1018" font-weight="bold">Leadership</text>
-                        <text x="26" y="124" text-anchor="end" font-size="9" font-family="Arial, sans-serif" fill="#0a1018" font-weight="bold">Business</text>
-                        <text x="120" y="116" text-anchor="middle" font-size="7" fill="#888">Expertise level</text>
-                    </svg>
-                </div>
-                <div class="expertise-legend">
-                    <span><strong>Machine Learning</strong> 88%</span>
-                    <span><strong>Data Science</strong> 85%</span>
-                    <span><strong>Leadership</strong> 78%</span>
-                    <span><strong>Business</strong> 72%</span>
-                </div>
-                <p class="expertise-note">Relative scale aligned with portfolio skills visualization (self-assessment).</p>
-            </div>
-            <p class="expertise-topics">
-                <strong>Topics:</strong> Artificial intelligence, machine learning, data science, generative AI, RAG systems, data analytics, business intelligence, climate change AI.
-            </p>
-        </div>
-
         <div class="section">
             <div class="section-title">Work Experience</div>
-            
-            <div class="experience-item">
-                <div class="job-header">
-                    <div>
-                        <div class="job-title">Data Scientist and Machine Learning Engineer</div>
-                        <div class="company">University of Helsinki | Helsinki, Finland</div>
-                    </div>
-                    <div class="date">Anticipated Start: Dec, 2026</div>
-                </div>
-                <div class="job-description">
-                    Anticipated role: data science and machine learning engineering at the University of Helsinki.
-                </div>
-                <div class="tech-tags">
-                    <span class="tech-tag">Data Science</span>
-                    <span class="tech-tag">Machine Learning</span>
-                    <span class="tech-tag">Python</span>
-                </div>
-            </div>
 
             <div class="experience-item">
                 <div class="job-header">
@@ -547,6 +416,24 @@
                     <span class="tech-tag">Artificial Intelligence</span>
                     <span class="tech-tag">Machine Learning</span>
                     <span class="tech-tag">Connected Knowledge System</span>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Data Scientist and Machine Learning Engineer</div>
+                        <div class="company">University of Helsinki | Helsinki, Finland</div>
+                    </div>
+                    <div class="date">Incoming — anticipated Dec 2026</div>
+                </div>
+                <div class="job-description">
+                    Incoming role (not yet started): data science and machine learning engineering at the University of Helsinki.
+                </div>
+                <div class="tech-tags">
+                    <span class="tech-tag">Data Science</span>
+                    <span class="tech-tag">Machine Learning</span>
+                    <span class="tech-tag">Python</span>
                 </div>
             </div>
 

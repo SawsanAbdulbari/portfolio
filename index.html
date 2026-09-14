@@ -80,8 +80,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=IBM+Plex+Sans+Arabic:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- Chart.js -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Chart.js removed: skills radar retired in favor of skill category lists -->
     <!-- tsParticles -->
     <script src="https://cdn.jsdelivr.net/npm/tsparticles-confetti@2.12.0/tsparticles.confetti.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tsparticles/preset-links@2.12.0/tsparticles.preset.links.bundle.min.js"></script>
@@ -154,16 +153,16 @@
                     </p>
                     <div class="hero-highlights">
                         <div class="highlight-item">
-                            <i class="fas fa-globe"></i>
-                            <span data-key="hero-global">Collaborated in globally distributed teams</span>
+                            <i class="fas fa-sitemap"></i>
+                            <span data-key="hero-global">Demos Helsinki · Connected Knowledge System</span>
                         </div>
                         <div class="highlight-item">
-                            <i class="fas fa-users"></i>
-                            <span data-key="hero-team">Worked in a global team of contributors</span>
+                            <i class="fas fa-chart-line"></i>
+                            <span data-key="hero-team">Omdena Kitwe · COVID forecasts with published metrics</span>
                         </div>
                         <div class="highlight-item">
-                            <i class="fas fa-rocket"></i>
-                            <span data-key="hero-experience">Years of experience</span>
+                            <i class="fas fa-industry"></i>
+                            <span data-key="hero-experience">7 years as founder · plastic recycling operations</span>
                         </div>
                     </div>
                     <div class="hero-impact" role="group" data-aria-key="hero-impact-aria">
@@ -184,7 +183,7 @@
                         <a href="#contact" class="btn btn-primary" data-key="hero-contact">Get in touch</a>
                         <a href="#projects" class="btn btn-secondary" data-key="hero-projects">View projects</a>
                         <div class="hero-download-group">
-                            <a href="#" onclick="downloadCV(); return false;" class="btn btn-download" data-key="hero-download-cv">
+                            <a href="Sawsan_Abdulbari_CV.pdf" download="Sawsan_Abdulbari_CV.pdf" class="btn btn-download" data-key="hero-download-cv" id="download-cv-btn">
                                 <i class="fas fa-download" aria-hidden="true"></i>
                                 <span data-key="hero-download-text">Download CV</span>
                             </a>
@@ -289,38 +288,6 @@ Before moving into engineering, I spent over a decade as an operator including 7
                     </ul>
                 </div>
             </div>
-            <div class="skills-viz">
-                <h3 class="viz-title" data-key="skills-viz-title">Expertise Mapping</h3>
-                <div class="skills-viz-inner">
-                    <div class="skills-viz-chart-wrap">
-                        <div class="chart-container">
-                            <canvas id="skillsChart" data-aria-key="skills-chart-aria" role="img"></canvas>
-                        </div>
-                    </div>
-                    <aside class="skills-expertise-legend-wrap" aria-labelledby="skills-viz-legend-heading">
-                        <p id="skills-viz-legend-heading" class="skills-expertise-legend-heading visually-hidden" data-key="skills-legend-heading">Expertise levels</p>
-                        <ul class="skills-expertise-legend" role="list">
-                            <li class="skills-expertise-legend-row">
-                                <span data-key="skills-ml">Machine Learning</span>
-                                <span class="skills-legend-pct">88%</span>
-                            </li>
-                            <li class="skills-expertise-legend-row">
-                                <span data-key="skills-data">Data Science</span>
-                                <span class="skills-legend-pct">85%</span>
-                            </li>
-                            <li class="skills-expertise-legend-row">
-                                <span data-key="skills-leadership">Leadership</span>
-                                <span class="skills-legend-pct">78%</span>
-                            </li>
-                            <li class="skills-expertise-legend-row">
-                                <span data-key="skills-business">Business</span>
-                                <span class="skills-legend-pct">72%</span>
-                            </li>
-                        </ul>
-                        <p class="skills-expertise-note" data-key="skills-legend-note">Relative scale aligned with portfolio skills visualization (self-assessment).</p>
-                    </aside>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -411,23 +378,6 @@ Before moving into engineering, I spent over a decade as an operator including 7
             <div class="experience-timeline">
                 <div class="experience-item experience-item--odd">
                     <div class="experience-date">
-                        <span data-key="exp-helsinki-date">Anticipated Start: Dec, 2026</span>
-                    </div>
-                    <div class="experience-content">
-                        <h3 data-key="exp-helsinki-title">Data Scientist and Machine Learning Engineer</h3>
-                        <h4 data-key="exp-helsinki-company">University of Helsinki | Helsinki, Finland</h4>
-                        <p data-key="exp-helsinki-description">
-                            Anticipated role: data science and machine learning engineering at the University of Helsinki.
-                        </p>
-                        <div class="tech-tags">
-                            <span class="tech-tag">Data Science</span>
-                            <span class="tech-tag">Machine Learning</span>
-                            <span class="tech-tag">Python</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="experience-item experience-item--even">
-                    <div class="experience-date">
                         <span data-key="exp-demos-date">Aug 2026 - Present</span>
                     </div>
                     <div class="experience-content">
@@ -440,6 +390,23 @@ Before moving into engineering, I spent over a decade as an operator including 7
                             <span class="tech-tag">Artificial Intelligence</span>
                             <span class="tech-tag">Machine Learning</span>
                             <span class="tech-tag">AI Research</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="experience-item experience-item--even">
+                    <div class="experience-date">
+                        <span data-key="exp-helsinki-date">Incoming — anticipated Dec 2026</span>
+                    </div>
+                    <div class="experience-content">
+                        <h3 data-key="exp-helsinki-title">Data Scientist and Machine Learning Engineer</h3>
+                        <h4 data-key="exp-helsinki-company">University of Helsinki | Helsinki, Finland</h4>
+                        <p data-key="exp-helsinki-description">
+                            Incoming role (not yet started): data science and machine learning engineering at the University of Helsinki.
+                        </p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Data Science</span>
+                            <span class="tech-tag">Machine Learning</span>
+                            <span class="tech-tag">Python</span>
                         </div>
                     </div>
                 </div>
@@ -655,14 +622,15 @@ Before moving into engineering, I spent over a decade as an operator including 7
         <div class="container">
             <h2 class="section-title" data-key="projects-title">Notable Projects</h2>
             <div class="project-filters">
-                <button class="filter-btn active" data-filter="all" data-key="filter-all">All</button>
+                <button class="filter-btn active" data-filter="featured" data-key="filter-featured">Featured</button>
+                <button class="filter-btn" data-filter="all" data-key="filter-all">All</button>
                 <button class="filter-btn" data-filter="ml" data-key="filter-ml">Machine Learning</button>
                 <button class="filter-btn" data-filter="data" data-key="filter-data">Data Science</button>
                 <button class="filter-btn" data-filter="nlp" data-key="filter-nlp">NLP & Chatbots</button>
                 <button class="filter-btn" data-filter="vision" data-key="filter-vision">Computer Vision</button>
             </div>
             <div class="projects-grid">
-                <div class="project-card" data-category="data">
+                <div class="project-card" data-category="data" data-featured="true">
                     <div class="project-image">
                         <picture><source srcset="images/datadiwan-hero.webp" type="image/webp"><img loading="lazy" width="1600" height="900" src="images/datadiwan-hero.png" alt="Trading Companion — discipline system for traders"></picture>
                     </div>
@@ -689,9 +657,9 @@ Before moving into engineering, I spent over a decade as an operator including 7
                         </div>
                     </div>
                 </div>
-                <div class="project-card" data-category="data">
+                <div class="project-card" data-category="data" data-featured="true">
                     <div class="project-image">
-                        <img loading="lazy" width="1600" height="900" src="images/datadiwan.png" alt="DataDiwan — AI and data company">
+                        <picture><source srcset="images/datadiwan.webp" type="image/webp"><img loading="lazy" width="1600" height="900" src="images/datadiwan.png" alt="DataDiwan — AI and data company"></picture>
                     </div>
                     <div class="project-content">
                         <h3 data-key="project-dd-company-title">🏢 DataDiwan — AI & data company</h3>
@@ -718,9 +686,9 @@ Before moving into engineering, I spent over a decade as an operator including 7
                         </div>
                     </div>
                 </div>
-                <div class="project-card" data-category="data">
+                <div class="project-card" data-category="data" data-featured="true">
                     <div class="project-image">
-                        <img loading="lazy" width="1600" height="900" src="images/datadiwanos.png" alt="DataDiwan OS — Executive Operating System">
+                        <picture><source srcset="images/datadiwanos.webp" type="image/webp"><img loading="lazy" width="1600" height="900" src="images/datadiwanos.png" alt="DataDiwan OS — Executive Operating System"></picture>
                     </div>
                     <div class="project-content">
                         <h3 data-key="project-dd-os-title">⚡ DataDiwan OS — Executive Operating System</h3>
@@ -773,7 +741,7 @@ Before moving into engineering, I spent over a decade as an operator including 7
                         </div>
                     </div>
                 </div>
-                <div class="project-card" data-category="ml">
+                <div class="project-card" data-category="ml" data-featured="true">
                     <div class="project-image">
                         <picture><source srcset="images/covid_prediction.webp" type="image/webp"><img loading="lazy" width="1873" height="1085" src="images/covid_prediction.png" alt="COVID-19 Case Prediction System"></picture>
                     </div>
@@ -955,7 +923,7 @@ Before moving into engineering, I spent over a decade as an operator including 7
                         </div>
                     </div>
                 </div>
-                <div class="project-card" data-category="nlp">
+                <div class="project-card" data-category="nlp" data-featured="true">
                     <div class="project-image">
                         <picture><source srcset="images/chatbot_rag.webp" type="image/webp"><img loading="lazy" width="1598" height="1082" src="images/chatbot_rag.png" alt="Smart AI Document Chatbot with RAG"></picture>
                     </div>
@@ -986,7 +954,7 @@ Before moving into engineering, I spent over a decade as an operator including 7
                         </div>
                     </div>
                 </div>
-                <div class="project-card" data-category="nlp">
+                <div class="project-card" data-category="nlp" data-featured="true">
                     <div class="project-image">
                         <picture><source srcset="images/recipe_finder.webp" type="image/webp"><img loading="lazy" width="1579" height="1034" src="images/recipe_finder.png" alt="AI Recipe Finder"></picture>
                     </div>
@@ -1049,7 +1017,7 @@ Before moving into engineering, I spent over a decade as an operator including 7
                         </div>
                     </div>
                 </div>
-                <div class="project-card" data-category="ml vision">
+                <div class="project-card" data-category="ml vision" data-featured="true">
                     <div class="project-image">
                         <picture><source srcset="images/ml_pipeline.webp" type="image/webp"><img loading="lazy" width="2304" height="1792" src="images/ml_pipeline.png" alt="Emotion Recognition Project"></picture>
                     </div>
@@ -1101,7 +1069,7 @@ Before moving into engineering, I spent over a decade as an operator including 7
                         </div>
                     </div>
                 </div>
-                <div class="project-card" data-category="data">
+                <div class="project-card" data-category="data" data-featured="true">
                     <div class="project-image">
                         <picture><source srcset="images/pirha_ict_guide.webp" type="image/webp"><img loading="lazy" width="1727" height="1087" src="images/pirha_ict_guide.png" alt="PIRHA Pre-Procedure Rehabilitation Guide"></picture>
                     </div>
@@ -1149,9 +1117,13 @@ Before moving into engineering, I spent over a decade as an operator including 7
                                 <i class="fas fa-info-circle"></i>
                                 <span data-key="project-details-text">View Details</span>
                             </button>
-                            <a href="https://tree-classifier-rh9k1vmsu-sawsanabdulbaris-projects.vercel.app" target="_blank" rel="noopener noreferrer" class="project-link demo-link" data-key="project-demo">
+                            <a href="https://tree-classifier.vercel.app" target="_blank" rel="noopener noreferrer" class="project-link demo-link" data-key="project-demo">
                                 <i class="fas fa-external-link-alt"></i>
                                 <span data-key="project-demo-text">Demo</span>
+                            </a>
+                            <a href="https://github.com/SawsanAbdulbari/tree-classifier" target="_blank" rel="noopener noreferrer" class="project-link repo-link" data-key="project-repo">
+                                <i class="fab fa-github"></i>
+                                <span data-key="project-repo-text">Repository</span>
                             </a>
                         </div>
                     </div>

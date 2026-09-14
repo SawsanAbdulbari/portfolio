@@ -44,8 +44,8 @@ CV_PDF_Generator.html                # PDF generation tool / fallback page
 
 - Header with portrait (name/contact left, photo right, after CKS)
 - Biography with key differentiators
-- Expertise and Topics (radar aligned with portfolio skills)
-- Complete Work Experience (all roles)
+- Complete Work Experience (all roles; current role first, incoming UH clearly labeled)
+- Education background
 - Education background
 - Languages (Arabic, English, Finnish)
 - Positions of Trust (mentoring)

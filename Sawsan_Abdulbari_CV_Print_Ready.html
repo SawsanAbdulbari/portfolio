@@ -267,6 +267,29 @@
             margin-bottom: 3px;
             font-size: 10px;
         }
+
+        .portfolio-link {
+            background: #f8f9fa;
+            border-left: 3px solid #c8890a;
+            padding: 12px 16px;
+            margin-bottom: 6px;
+        }
+
+        .portfolio-link a {
+            color: #0a1018;
+            text-decoration: none;
+            font-size: 11px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .portfolio-link a::after {
+            content: '↗';
+            color: #c8890a;
+            font-size: 13px;
+        }
         
         .project-tech {
             color: #c8890a;
@@ -711,99 +734,8 @@
 
         <div class="section">
             <div class="section-title">Project References</div>
-            <div class="projects-grid">
-                <div class="project">
-                    <div class="project-title">🏛️ Demos Helsinki: Connected Knowledge System (CKS)</div>
-                    <div class="project-tech">Artificial Intelligence, Machine Learning, AI Research</div>
-                    <div class="project-description">AI-powered knowledge system for Demos Helsinki research and innovation, supporting the development and delivery of AI-powered knowledge solutions.</div>
-                </div>
-                <div class="project">
-                    <div class="project-title">📊 Trading Companion — discipline system for traders</div>
-                    <div class="project-tech">Vite, React, TypeScript, Supabase, Tailwind, Stripe, i18next, Vitest, Playwright</div>
-                    <div class="project-description">Trading app: position sizing, risk and discipline tools, plans and strategies, trade history, Stripe, PWA, automated tests and monitoring. https://data-diwan-trading.vercel.app/</div>
-                </div>
-                <div class="project">
-                    <div class="project-title">🏦 Kiva Loan EDA Dashboard</div>
-                    <div class="project-tech">Python, Pandas, Plotly, Streamlit</div>
-                    <div class="project-description">Interactive dashboard analyzing Kiva microloan data with comprehensive EDA features. Includes loan distribution analysis, country-wise insights, and borrower demographics.</div>
-                </div>
-                
-                <div class="project">
-                    <div class="project-title">🦠 COVID-19 Case Prediction System</div>
-                    <div class="project-tech">Python, XGBoost, scikit-learn, Streamlit, pandas</div>
-                    <div class="project-description">COVID-19 imputed cases and deaths for the Kitwe, Zambia (Omdena) chapter: trained XGBoost models, multi-page Streamlit app, and MAE/RMSE/R² evaluation as documented on GitHub.</div>
-                </div>
-                
-                <div class="project">
-                    <div class="project-title">🏠 California Housing Price Predictor</div>
-                    <div class="project-tech">Python, Scikit-learn, Pandas, Streamlit</div>
-                    <div class="project-description">Machine learning model predicting California housing prices using regression algorithms. Features data preprocessing, feature engineering, and model comparison.</div>
-                </div>
-                
-                <div class="project">
-                    <div class="project-title">👥 Customer Segmentation Dashboard</div>
-                    <div class="project-tech">Python, Scikit-learn, Plotly, Streamlit</div>
-                    <div class="project-description">Advanced customer segmentation using K-means clustering and RFM analysis. Interactive dashboard for business insights with actionable recommendations.</div>
-                </div>
-                
-                <div class="project">
-                    <div class="project-title">🚕 NYC Taxi Trip Duration Prediction</div>
-                    <div class="project-tech">Python, XGBoost, Folium, Streamlit</div>
-                    <div class="project-description">Predicts taxi trip duration in NYC using machine learning algorithms. Incorporates geospatial features, weather data, and traffic patterns.</div>
-                </div>
-                
-                <div class="project">
-                    <div class="project-title">💵 Bank Note Authentication</div>
-                    <div class="project-tech">Python, scikit-learn, Streamlit, pandas</div>
-                    <div class="project-description">UCI banknote (four wavelet features): compared SVM, k-NN, logistic regression, and decision trees, with cross-validation and a Streamlit deployment per the public repository.</div>
-                </div>
-                
-                <div class="project">
-                    <div class="project-title">🛒 E-commerce Analytics Dashboard</div>
-                    <div class="project-tech">Python, Pandas, Plotly, Streamlit</div>
-                    <div class="project-description">Comprehensive e-commerce analytics dashboard providing insights into sales performance, customer behavior, and product trends with interactive visualizations.</div>
-                </div>
-                
-                <div class="project">
-                    <div class="project-title">🤖 Smart AI Document Chatbot with RAG</div>
-                    <div class="project-tech">Python, FAISS, sentence-transformers, PyTorch, Gradio</div>
-                    <div class="project-description">RAG with FAISS retrieval, sentence embeddings, and an open-LLM path (e.g. Gemma-2B) documented in the public README; notebooks and a Hugging Face Space demo. Optional API keys for local experiments.</div>
-                </div>
-                
-                <div class="project">
-                    <div class="project-title">📰 News Sentiment & Keyword Analysis Dashboard</div>
-                    <div class="project-tech">Python, NLTK, Pandas, Streamlit</div>
-                    <div class="project-description">Comprehensive dashboard for analyzing news sentiment and extracting key insights from articles using NLTK VADER sentiment analysis and advanced NLP techniques.</div>
-                </div>
-                
-                <div class="project">
-                    <div class="project-title">😊 Emotion Recognition Project</div>
-                    <div class="project-tech">Python, PyTorch, EfficientNet, OpenCV</div>
-                    <div class="project-description">Advanced emotion recognition system using EfficientNet-B0 with comprehensive model optimization pipeline. Features multi-phase development including model selection on FER-2013 dataset, fine-tuning on RAF-DB dataset, and dynamic INT8 quantization for mobile deployment.</div>
-                </div>
-                
-                <div class="project">
-                    <div class="project-title">🌱 Carbon Fraud Detection Network</div>
-                    <div class="project-tech">Python, FastAPI, Google Cloud, Vertex AI, PostgreSQL, Redis</div>
-                    <div class="project-description">Advanced AI-powered system for detecting carbon fraud using personality-based consensus agents and multi-source data integration. Features real-time fraud detection, adversarial AI agents, and comprehensive emission validation through CLIMATIQ API, OpenWeather, and satellite data integration.</div>
-                </div>
-
-                <div class="project">
-                    <div class="project-title">🍳 AI Recipe Finder</div>
-                    <div class="project-tech">Python, Whisper, Groq, Gradio</div>
-                    <div class="project-description">Voice-powered recipe app: say ingredients aloud and get AI-generated recipes. Uses Whisper for speech-to-text and Groq (or local FLAN-T5) for generation, built with Gradio and deployed on Hugging Face Spaces.</div>
-                </div>
-
-                <div class="project">
-                    <div class="project-title">🏥 PIRHA Pre-Procedure Rehabilitation Guide</div>
-                    <div class="project-tech">Vercel, Web, Healthcare UX</div>
-                    <div class="project-description">Web guide for pre-procedure rehabilitation for the Pirkanmaa wellbeing region (PIRHA). Supports patients and families before medical procedures. Live at ict-project-pirha.vercel.app.</div>
-                </div>
-                <div class="project">
-                    <div class="project-title">🌳 Tree Classifier</div>
-                    <div class="project-tech">Python, Machine Learning, Vercel, Web, Mobile</div>
-                    <div class="project-description">Interactive web and mobile app for tree species classification using machine learning. Live demo on Vercel.</div>
-                </div>
+            <div class="portfolio-link">
+                <a href="https://sawsanabdulbari.github.io/portfolio/#projects">Portfolio — full project collection with live demos</a>
             </div>
         </div>
 

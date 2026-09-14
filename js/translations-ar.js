@@ -154,7 +154,7 @@ translations.ar = {
     'exp-helsinki-title': 'عالِمة بيانات ومهندسة تعلّم آلي',
     'exp-helsinki-date': 'قادم — متوقع ديسمبر 2026',
     'exp-helsinki-company': 'University of Helsinki | هلسنكي، فنلندا',
-    'exp-helsinki-description': 'دور قادم (لم يبدأ بعد): علوم البيانات وتعلّم الآلة في جامعة هلسنكي.',
+    'exp-helsinki-description': 'دور قادم: علوم البيانات وتعلّم الآلة في جامعة هلسنكي.',
     'exp-demos-title': 'خبيرة مبتدئة متخصصة في الذكاء الاصطناعي',
     'exp-demos-date': 'أغسطس 2026 - حتى الآن',
     'exp-demos-company': 'Demos Helsinki | منطقة هلسنكي الكبرى · هجين',

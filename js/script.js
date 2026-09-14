@@ -891,7 +891,7 @@ const projectData = {
     project8: {
         title: { fi: '🤖 Älykäs AI-dokumentti Chatbot RAG:lla', en: '🤖 Smart AI Document Chatbot with RAG', ar: '🤖 روبوت محادثة ذكي للوثائق مع RAG' },
         image: 'images/chatbot_rag.png',
-        demo: 'https://huggingface.co/spaces/SA7/smart-ai-rag',
+        demo: null,
         repo: 'https://github.com/SawsanAbdulbari/smart-ai-rag',
         category: 'nlp',
         metrics: { 'Architecture': 'RAG', 'Vector store': 'FAISS', 'LLM & embeddings': 'Gemma-2B, MiniLM' },

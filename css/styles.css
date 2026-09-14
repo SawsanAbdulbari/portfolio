@@ -762,11 +762,19 @@ section.hero,
 .about-content {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    grid-template-areas: "text aside";
+    grid-template-areas: "main aside";
     gap: 3rem;
     align-items: start;
     position: relative;
     z-index: 1;
+}
+
+.about-main {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    min-width: 0;
 }
 
 .about-aside {
@@ -775,10 +783,11 @@ section.hero,
     flex-direction: column;
     align-items: center;
     gap: 1.25rem;
+    position: sticky;
+    top: 6rem;
 }
 
 .about-text {
-    grid-area: text;
     font-size: 1.2rem;
     line-height: 1.8;
     color: var(--neutral-600);
@@ -791,7 +800,6 @@ section.hero,
 }
 
 .about-photo {
-    grid-area: unset;
     display: block;
     width: min(220px, 72vw);
     aspect-ratio: 1;
@@ -829,7 +837,7 @@ section.hero,
 .about-stats {
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
 }
 
@@ -1792,12 +1800,13 @@ html[dir="rtl"] .skills-expertise-legend-row {
 
     .about-content {
         grid-template-columns: 1fr;
-        grid-template-areas: "aside" "text";
+        grid-template-areas: "aside" "main";
         gap: 2rem;
     }
 
     .about-aside {
         width: 100%;
+        position: static;
     }
 
     .about-stats {

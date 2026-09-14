@@ -80,8 +80,8 @@ const translations = {
         'hero-experience': '7 vuotta perustajana · muovinkierrätys',
         'hero-contact': 'Ota yhteyttä',
         'hero-projects': 'Katso projektit',
-        'hero-download-text': 'Lataa CV',
-        'hero-download-cv': 'Lataa CV',
+        'hero-download-text': 'Lataa CV:ni (PDF)',
+        'hero-download-cv': 'Lataa CV:ni (PDF)',
 
         // About Section
         'about-title': 'Tietoa minusta',
@@ -365,8 +365,8 @@ const translations = {
         'hero-experience': '7 years as founder · plastic recycling operations',
         'hero-contact': 'Get in touch',
         'hero-projects': 'View projects',
-        'hero-download-text': 'Download CV',
-        'hero-download-cv': 'Download CV',
+        'hero-download-text': 'Download my CV (PDF)',
+        'hero-download-cv': 'Download my CV (PDF)',
 
         // About Section
         'about-title': 'About',

@@ -443,8 +443,9 @@ async function downloadCV(event) {
 }
 
 function initializeDownloadCV() {
-    const btn = document.getElementById('download-cv-btn');
-    if (btn) btn.addEventListener('click', downloadCV);
+    document.querySelectorAll('.js-download-cv').forEach((btn) => {
+        btn.addEventListener('click', downloadCV);
+    });
     window.downloadCV = downloadCV;
 }
 

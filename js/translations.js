@@ -208,7 +208,7 @@ const translations = {
         'exp9-company': 'Keinuipuiston kukka Oy | Tampere, Finland',
         'exp9-description': 'Päävastuuni oli asiakaspalvelu ja myynti. Hallinnoin kaupan verkkokauppaa ja toimitusalustoja Foodora ja Wolt sekä kehitin yritysten välistä liiketoimintaa.',
         'exp10-title': 'Founder',
-        'exp10-company': 'Plastic Recycling for Sustainable Solutions | Hybrid',
+        'exp10-company': 'Plastic Recycling for Sustainable Solutions | Yemen · Hybrid',
         'exp10-description': 'Perustin ja hallinnoin muovin kierrätystehdasta, joka keskittyi ympäristönsuojeluun. Kehitin liiketoimintastrategioita ja toimintamenetelmiä sekä hallinnoin työntekijöitä ja tuotantoprosesseja. Toimin ympäristönsuojelun edistämisessä muuttamalla muovijätteestä arvokkaita resursseja.',
 
         // Projects Section
@@ -492,7 +492,7 @@ const translations = {
         'exp9-company': 'Keinuipuiston kukka Oy | Tampere, Finland',
         'exp9-description': 'Main responsibilities were customer service and sales. Managed the store\'s online shop and delivering platforms Foodora and Wolt and developed business-to-business relationships.',
         'exp10-title': 'Founder',
-        'exp10-company': 'Plastic Recycling for Sustainable Solutions | Hybrid',
+        'exp10-company': 'Plastic Recycling for Sustainable Solutions | Yemen · Hybrid',
         'exp10-description': 'Founded and managed a plastic recycling factory focused on environmental sustainability. Developed business strategies and operational procedures and managed team of employees and production processes. Contributed to environmental sustainability by transforming plastic waste into valuable resources.',
 
         // Projects Section

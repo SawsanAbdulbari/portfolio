@@ -5,351 +5,258 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sawsan Abdulbari - CV</title>
     <style>
+        /* CKS people-layer CV look: Arial, magenta headings, hairline rules, 18mm margins */
         @page {
             size: A4;
-            margin: 0.55in;
+            margin: 18mm;
         }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
         body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.4;
-            color: #333;
-            font-size: 10.5px;
-            background: white;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #111;
+            font-size: 10pt;
+            line-height: 1.35;
+            background: #fff;
         }
-        
-        .container {
-            max-width: 100%;
-            margin: 0 auto;
-        }
-        
+
         .header {
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             gap: 14px;
-            text-align: left;
-            border-bottom: 2px solid #0a1018;
-            padding-bottom: 10px;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
+            padding-bottom: 8px;
         }
-        
-        .header-main {
-            flex: 1;
-        }
-        
+
+        .header-main { flex: 1; min-width: 0; }
+
         .header-photo {
-            width: 96px;
-            height: 96px;
+            width: 30mm;
+            height: 30mm;
             object-fit: cover;
             object-position: center 18%;
             border-radius: 50%;
-            border: 2.5px solid #c8890a;
+            border: 1.5px solid #c2185b;
             flex-shrink: 0;
             print-color-adjust: exact;
             -webkit-print-color-adjust: exact;
         }
-        
+
         .name {
-            font-size: 22px;
-            font-weight: bold;
-            color: #0a1018;
-            margin-bottom: 4px;
-            letter-spacing: 0.5px;
+            font-size: 20pt;
+            font-weight: 700;
+            color: #111;
+            line-height: 1.15;
+            margin-bottom: 2px;
         }
-        
+
         .title {
-            font-size: 12px;
-            color: #c8890a;
-            margin-bottom: 6px;
-            font-weight: 600;
+            font-size: 11pt;
+            color: #505050;
+            margin-bottom: 4px;
+            font-weight: 400;
         }
-        
+
         .contact-info {
-            font-size: 9px;
-            color: #666;
+            font-size: 8.5pt;
+            color: #5f5f5f;
             line-height: 1.35;
         }
-        
-        .section {
-            margin-bottom: 13px;
-        }
-        
+
+        .section { margin-top: 8px; }
+
         .section-title {
-            font-size: 11px;
-            color: #0a1018;
-            border-bottom: 1.5px solid #c8890a;
-            padding-bottom: 2px;
-            margin-bottom: 6px;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 0.4px;
+            font-size: 11.5pt;
+            font-weight: 700;
+            color: #c2185b;
+            margin: 0 0 3px;
+            padding: 0;
+            text-transform: none;
+            letter-spacing: 0;
+            border: none;
         }
-        
+
+        .section-title::after {
+            content: "";
+            display: block;
+            height: 0;
+            border-bottom: 1px solid #dcd6da;
+            margin-top: 2px;
+            margin-bottom: 4px;
+        }
+
         .summary {
-            font-size: 9.5px;
+            font-size: 10pt;
             line-height: 1.35;
+            margin-bottom: 4px;
+            color: #111;
+        }
+
+        .summary strong { color: #111; }
+
+        .experience-item,
+        .education-item {
             margin-bottom: 5px;
         }
-        
-        .summary strong {
-            color: #0a1018;
-        }
-        
-        .skills-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 8px;
-            margin-bottom: 6px;
-        }
-        
-        .skill-category {
-            background: #f8f9fa;
-            padding: 6px 8px;
-            border-left: 3px solid #c8890a;
-        }
-        
-        .skill-category h4 {
-            color: #0a1018;
-            margin-bottom: 3px;
-            font-size: 9px;
-            font-weight: bold;
-        }
-        
-        .skill-category ul {
-            list-style: none;
-            padding: 0;
-        }
-        
-        .skill-category li {
-            margin-bottom: 1px;
-            padding-left: 9px;
-            position: relative;
-            font-size: 8px;
-            color: #555;
-        }
-        
-        .skill-category li::before {
-            content: "•";
-            color: #c8890a;
-            position: absolute;
-            left: 0;
-            font-weight: bold;
-        }
-        
-        .experience-item {
-            margin-bottom: 8px;
-        }
-        
+
         .job-header {
             display: flex;
             justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 2px;
-        }
-        
-        .job-title {
-            font-weight: bold;
-            color: #0a1018;
-            font-size: 10px;
-        }
-        
-        .company {
-            color: #c8890a;
-            font-weight: bold;
-            font-size: 9px;
-        }
-        
-        .date {
-            color: #666;
-            font-style: italic;
-            font-size: 8px;
-            white-space: nowrap;
-        }
-        
-        .job-description {
-            font-size: 9px;
-            line-height: 1.3;
-            margin-bottom: 3px;
-        }
-        
-        .achievements {
-            margin-left: 15px;
-            font-size: 9px;
-        }
-        
-        .achievements li {
-            margin-bottom: 2px;
-            line-height: 1.3;
-        }
-        
-        .tech-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 2px;
-            margin-top: 2px;
-        }
-        
-        .tech-tag {
-            background: #e8f4fd;
-            color: #0a1018;
-            padding: 1px 5px;
-            border-radius: 6px;
-            font-size: 7px;
-            font-weight: 500;
-            border: 1px solid #bdc3c7;
-        }
-        
-        .education-item {
-            margin-bottom: 6px;
-            padding: 5px 7px;
-            background: #f8f9fa;
-            border-left: 3px solid #0a1018;
-        }
-        
-        .degree {
-            font-weight: bold;
-            color: #0a1018;
-            font-size: 9px;
-        }
-        
-        .university {
-            color: #c8890a;
-            font-weight: bold;
-            font-size: 8.5px;
-        }
-        
-        .education-date {
-            color: #666;
-            font-style: italic;
-            font-size: 8px;
-        }
-        
-        .education-description {
-            color: #555;
-            font-size: 8px;
-            line-height: 1.25;
-            margin-top: 2px;
-        }
-        
-        .projects-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
+            align-items: baseline;
             gap: 8px;
         }
-        
-        .project {
-            background: #f8f9fa;
-            padding: 6px;
-            border: 1px solid #e9ecef;
-            border-radius: 3px;
-        }
-        
-        .project-title {
-            font-weight: bold;
-            color: #0a1018;
-            margin-bottom: 2px;
-            font-size: 9px;
+
+        .job-title,
+        .degree {
+            font-weight: 700;
+            font-size: 10pt;
+            color: #111;
         }
 
+        .company,
+        .university {
+            font-size: 9pt;
+            color: #5f5f5f;
+            font-weight: 400;
+        }
+
+        .date,
+        .education-date {
+            font-size: 8.5pt;
+            color: #5f5f5f;
+            font-style: normal;
+            white-space: nowrap;
+        }
+
+        .job-description,
+        .education-description {
+            font-size: 9.5pt;
+            line-height: 1.3;
+            color: #111;
+            margin-top: 1px;
+        }
+
+        .tech-tags {
+            display: block;
+            margin-top: 1px;
+            font-size: 8pt;
+            color: #5f5f5f;
+        }
+
+        .tech-tag {
+            background: none;
+            border: none;
+            padding: 0;
+            border-radius: 0;
+            color: inherit;
+            font-size: inherit;
+            font-weight: 400;
+        }
+
+        .tech-tag + .tech-tag::before {
+            content: " · ";
+            color: #5f5f5f;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4px 14px;
+        }
+
+        .skill-category {
+            background: none;
+            border: none;
+            padding: 0;
+        }
+
+        .skill-category h4 {
+            color: #111;
+            font-size: 9.5pt;
+            font-weight: 700;
+            margin-bottom: 1px;
+        }
+
+        .skill-category ul {
+            list-style: none;
+            padding: 0;
+            font-size: 8.5pt;
+            color: #5f5f5f;
+            line-height: 1.3;
+        }
+
+        .skill-category li {
+            display: inline;
+            padding: 0;
+            margin: 0;
+        }
+
+        .skill-category li::before { content: none; }
+
+        .skill-category li + li::before {
+            content: " · ";
+        }
+
+        .languages {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px 18px;
+            font-size: 9.5pt;
+        }
+
+        .language-item { display: flex; gap: 4px; align-items: baseline; }
+        .language-name { font-weight: 700; color: #111; }
+        .language-level { color: #5f5f5f; font-size: 9pt; }
+        .language-level::before { content: "· "; }
+
         .portfolio-link {
-            background: #f8f9fa;
-            border-left: 3px solid #c8890a;
-            padding: 7px 10px;
-            margin-bottom: 4px;
+            background: none;
+            border: none;
+            padding: 0;
+            margin: 0;
         }
 
         .portfolio-link a {
-            color: #0a1018;
-            text-decoration: none;
-            font-size: 9.5px;
+            color: #111;
+            font-size: 9.5pt;
             font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 6px;
+            text-decoration: underline;
+            text-underline-offset: 2px;
         }
 
-        .portfolio-link a::after {
-            content: '↗';
-            color: #c8890a;
-            font-size: 11px;
-        }
-        
-        .project-tech {
-            color: #c8890a;
-            font-size: 8px;
-            margin-bottom: 5px;
-        }
-        
-        .project-description {
-            color: #666;
-            font-size: 8px;
-            line-height: 1.3;
-        }
-        
-        .languages {
-            display: flex;
-            gap: 16px;
-            font-size: 9px;
-        }
-        
-        .language-item {
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .language-name {
-            font-weight: bold;
-            color: #0a1018;
-        }
-        
-        .language-level {
-            color: #666;
-            font-size: 8px;
-        }
-        
+        .portfolio-link a::after { content: none; }
+
         .certifications {
-            font-size: 8px;
+            font-size: 9.5pt;
+            list-style: disc;
+            padding-left: 14px;
+            color: #111;
         }
-        
-        .certifications li {
-            margin-bottom: 2px;
-            line-height: 1.25;
-        }
-        
-        .interests {
-            font-size: 8px;
-            color: #555;
-            line-height: 1.35;
-        }
-        
-        .cv-note {
-            margin-top: 10px;
-            padding-top: 5px;
-            border-top: 1px solid #ddd;
-            font-size: 7px;
-            color: #777;
-            text-align: center;
-        }
-        
-        @media print {
-            body { font-size: 10px; }
-            .name { font-size: 22px; }
-            .section-title { font-size: 11px; }
-            .section { margin-bottom: 10px; }
-        }
-        
-        .page-break {
-            break-before: page;
-            page-break-before: always;
-        }
-        .no-break { page-break-inside: avoid; }
 
+        .certifications li { margin-bottom: 2px; line-height: 1.3; }
+
+        .interests {
+            font-size: 9.5pt;
+            list-style: disc;
+            padding-left: 14px;
+            color: #111;
+        }
+
+        .interests li { margin-bottom: 1px; line-height: 1.3; }
+
+        .cv-note {
+            margin-top: 8px;
+            padding-top: 4px;
+            border-top: 1px solid #dcd6da;
+            font-size: 8pt;
+            color: #6e6e6e;
+            text-align: left;
+        }
+
+        @media print {
+            body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+        }
     </style>
 </head>
 <body>
@@ -369,29 +276,32 @@
         <div class="section">
             <div class="section-title">Biography</div>
             <div class="summary">
-                <strong>I build full-stack AI and ML systems</strong> that ship production machine learning, generative AI, and data software used by real teams to drive measurable business outcomes and automation. Before moving into engineering, I spent over a decade as an operator including 7 years as a founder, plus senior management and quality control roles. That experience shapes how I build AI today: focused on real-world impact, adoption, and audit-ready governance rather than accuracy in isolation. <strong>Trilingual</strong> (Arabic, English, Finnish) with an entrepreneurial background and a focus on climate-aligned solutions.
+                <strong>I build full-stack AI and ML systems</strong> that ship production machine learning, generative AI, and data software used by real teams to drive measurable outcomes and automation. Before moving into engineering, I spent over a decade as an operator including 7 years as a founder, plus senior management and quality control roles. That experience shapes how I build AI today: focused on real-world impact, adoption, and audit-ready governance rather than accuracy in isolation. <strong>Trilingual professional</strong> (Arabic, English, Finnish) with <strong>entrepreneurial background</strong> and <strong>passion for climate change solutions</strong>.
             </div>
             <div class="summary">
-                <strong>Professional overview:</strong> Contributed to environmental sustainability by transforming plastic waste into valuable resources; managed supply operations and new business initiatives aligned with climate mitigation.
+                <strong>Professional overview:</strong> I have contributed to environmental sustainability by transforming plastic waste into valuable resources. Throughout my career, I managed supply operations and spearheaded new business initiatives, and focused on developing eco-friendly solutions that align with climate change mitigation efforts.
             </div>
             <div class="summary">
-                <strong>Differentiators:</strong> global collaboration (15+ contributor teams), production ML deployment, 7-year founder experience, climate sustainability focus, mentoring and curriculum development.
+                <strong>Commitment to climate change:</strong> I am passionate about incorporating climate change awareness into every aspect of business operations and life. My ongoing commitment involves adopting and advocating for practices that minimize environmental footprints, enhance recycling processes, and drive progress toward a more sustainable planet. My approach ensures that business growth and environmental health go hand in hand.
+            </div>
+            <div class="summary">
+                <strong>Key Differentiators:</strong> Global collaboration (distributed teams in global contributor projects), Production Expertise (deployed ML models), Business Knowledge (7-year entrepreneurial experience), Climate Focus (environmental sustainability advocate), Academic Excellence (student mentor & curriculum developer).
             </div>
         </div>
 
         <div class="section">
-            <div class="section-title">Work Experience</div>
+            <div class="section-title">Work experience</div>
 
             <div class="experience-item">
                 <div class="job-header">
                     <div>
                         <div class="job-title">Junior Expert specializing in AI</div>
-                        <div class="company">Demos Helsinki | Helsinki Metropolitan Area · Hybrid</div>
+                        <div class="company">Demos Helsinki · Helsinki Metropolitan Area · Hybrid</div>
                     </div>
-                    <div class="date">Aug 2026 - Present</div>
+                    <div class="date">Aug 2026 to present</div>
                 </div>
                 <div class="job-description">
-                    Applying AI expertise to Connected Knowledge System (CKS), contributing to development and delivery of AI-powered knowledge solutions.
+                    Applying AI expertise to Demos Helsinki: Connected Knowledge System (CKS), contributing to the development and delivery of AI-powered knowledge solutions.
                 </div>
                 <div class="tech-tags">
                     <span class="tech-tag">Artificial Intelligence</span>
@@ -404,12 +314,13 @@
                 <div class="job-header">
                     <div>
                         <div class="job-title">Data Scientist and Machine Learning Engineer</div>
-                        <div class="company">University of Helsinki | Helsinki, Finland</div>
+                        <div class="company">University of Helsinki · Helsinki, Finland</div>
                     </div>
                     <div class="date">Incoming — anticipated Dec 2026</div>
                 </div>
                 <div class="job-description">
-                    Incoming role: data science and machine learning engineering at the University of Helsinki                </div>
+                    Incoming role (not yet started): data science and machine learning engineering at the University of Helsinki.
+                </div>
                 <div class="tech-tags">
                     <span class="tech-tag">Data Science</span>
                     <span class="tech-tag">Machine Learning</span>
@@ -421,12 +332,12 @@
                 <div class="job-header">
                     <div>
                         <div class="job-title">Data Scientist and Machine learning Engineer</div>
-                        <div class="company">Dashtera | Finland</div>
+                        <div class="company">Dashtera · Finland</div>
                     </div>
-                    <div class="date">Jun 2026 - Aug 2026</div>
+                    <div class="date">Jun 2026 to Aug 2026</div>
                 </div>
                 <div class="job-description">
-                    Built and deployed data science and ML solutions with end-to-end workflows for Dashtera products and services.
+                    Built and deployed data science and machine learning solutions, applying end-to-end ML workflows to support Dashtera's products and services.
                 </div>
                 <div class="tech-tags">
                     <span class="tech-tag">Data Science</span>
@@ -439,12 +350,12 @@
                 <div class="job-header">
                     <div>
                         <div class="job-title">Machine Learning Engineer</div>
-                        <div class="company">Omdena | Palo Alto, CA (Remote)</div>
+                        <div class="company">Omdena · Palo Alto, CA (Remote)</div>
                     </div>
-                    <div class="date">2024 - Present</div>
+                    <div class="date">2024 to present</div>
                 </div>
                 <div class="job-description">
-                    Collaborating on AI innovation in globally distributed teams. Researched and implemented RAG architecture for enterprise applications.
+                    Collaborating on AI innovation in globally distributed teams. Researching and implementing RAG architecture for enterprise applications.
                 </div>
                 <div class="tech-tags">
                     <span class="tech-tag">Python</span>
@@ -458,12 +369,12 @@
                 <div class="job-header">
                     <div>
                         <div class="job-title">Student Assistant</div>
-                        <div class="company">Häme University of Applied Sciences (HAMK) | Finland</div>
+                        <div class="company">Häme University of Applied Sciences (HAMK) · Finland</div>
                     </div>
-                    <div class="date">2024 - 2025</div>
+                    <div class="date">2024 to 2025</div>
                 </div>
                 <div class="job-description">
-                    Enhanced outcomes for 50+ students with curriculum support and personalized technical mentoring in Python/data science.
+                    Improved educational outcomes for 50+ students and developed curriculum. Provided personalized guidance and technical mentoring.
                 </div>
                 <div class="tech-tags">
                     <span class="tech-tag">Python</span>
@@ -476,12 +387,12 @@
                 <div class="job-header">
                     <div>
                         <div class="job-title">Lead Machine Learning Engineer</div>
-                        <div class="company">Omdena Kitwe, Zambia | Remote</div>
+                        <div class="company">Omdena Kitwe, Zambia · Remote</div>
                     </div>
                     <div class="date">2024</div>
                 </div>
                 <div class="job-description">
-                    COVID-19 forecasting for the Kitwe, Zambia chapter: XGBoost models, Streamlit app, and MAE/RMSE/R² in the public repository. Global team of 15+ contributors.
+                    Delivered a COVID-19 forecasting system for the Kitwe, Zambia (Omdena) chapter: XGBoost models, Streamlit app, and standard regression metrics (MAE, RMSE, R²) as in the public repository. Worked with a global team of 15+ contributors.
                 </div>
                 <div class="tech-tags">
                     <span class="tech-tag">Team Leadership</span>
@@ -494,12 +405,12 @@
                 <div class="job-header">
                     <div>
                         <div class="job-title">Machine Learning Engineer</div>
-                        <div class="company">Raqameyyah Digital Consultancy | Egypt (Remote)</div>
+                        <div class="company">Raqameyyah Digital Consultancy · Egypt (Remote)</div>
                     </div>
-                    <div class="date">2023 - 2024</div>
+                    <div class="date">2023 to 2024</div>
                 </div>
                 <div class="job-description">
-                    Built and deployed ML models; developed chatbots with prompt engineering and front-end applications for customer reach.
+                    Built and deployed ML models using advanced techniques. Developed chatbots with advanced prompt engineering and created front-end applications to enhance customer experience.
                 </div>
                 <div class="tech-tags">
                     <span class="tech-tag">Machine Learning</span>
@@ -513,12 +424,12 @@
                 <div class="job-header">
                     <div>
                         <div class="job-title">Data Analyst</div>
-                        <div class="company">Raqameyyah Digital Consultancy | Egypt (Remote)</div>
+                        <div class="company">Raqameyyah Digital Consultancy · Egypt (Remote)</div>
                     </div>
                     <div class="date">2023</div>
                 </div>
                 <div class="job-description">
-                    Cleaned and preprocessed datasets; built filtering/visualization apps and automated data processing pipelines (Streamlit).
+                    Cleaned and preprocessed large datasets for analysis. Developed applications for data filtering and visualization and created automated data processing pipelines.
                 </div>
                 <div class="tech-tags">
                     <span class="tech-tag">Data Analysis</span>
@@ -531,13 +442,88 @@
             <div class="experience-item">
                 <div class="job-header">
                     <div>
-                        <div class="job-title">Founder</div>
-                        <div class="company">Plastic Recycling for Sustainable Solutions | Hybrid</div>
+                        <div class="job-title">Accounting Intern</div>
+                        <div class="company">foodora Finland · Tampere</div>
                     </div>
-                    <div class="date">2007 - 2014</div>
+                    <div class="date">2022</div>
                 </div>
                 <div class="job-description">
-                    Founded and managed a plastic recycling factory: business strategy, operations, team leadership, and converting plastic waste into valuable resources.
+                    Gained experience in financial accounting and supply operations. Worked with Microsoft Excel for data management and contributed to financial reporting processes.
+                </div>
+                <div class="tech-tags">
+                    <span class="tech-tag">Supply Operations</span>
+                    <span class="tech-tag">Financial Accounting</span>
+                    <span class="tech-tag">Microsoft Excel</span>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Social Media Representative</div>
+                        <div class="company">Foody Allen · Tampere</div>
+                    </div>
+                    <div class="date">2022</div>
+                </div>
+                <div class="job-description">
+                    Lead content creator for food producer Njunno during Block-festival weekend. Concentrated mainly on creating photo- and videography content from the event for marketing and after-marketing purposes.
+                </div>
+                <div class="tech-tags">
+                    <span class="tech-tag">Multi-Channel Marketing</span>
+                    <span class="tech-tag">Graphic Design</span>
+                    <span class="tech-tag">Event Photography</span>
+                    <span class="tech-tag">Video Editing</span>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Marketing Communications and Content Production</div>
+                        <div class="company">BSB Fashion · Paphos, Cyprus</div>
+                    </div>
+                    <div class="date">2022</div>
+                </div>
+                <div class="job-description">
+                    Developed marketing strategies and content production. Managed e-commerce platforms and multi-channel marketing and created graphic designs and video content.
+                </div>
+                <div class="tech-tags">
+                    <span class="tech-tag">Sales</span>
+                    <span class="tech-tag">E-Commerce</span>
+                    <span class="tech-tag">Multi-Channel Marketing</span>
+                    <span class="tech-tag">Graphic Design</span>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Sales Associate</div>
+                        <div class="company">Keinuipuiston kukka Oy · Tampere, Finland</div>
+                    </div>
+                    <div class="date">2021 to 2022</div>
+                </div>
+                <div class="job-description">
+                    Main responsibilities were customer service and sales. Managed the store's online shop and delivering platforms Foodora and Wolt and developed business-to-business relationships.
+                </div>
+                <div class="tech-tags">
+                    <span class="tech-tag">Business-to-Business (B2B)</span>
+                    <span class="tech-tag">Sales</span>
+                    <span class="tech-tag">E-Commerce</span>
+                    <span class="tech-tag">Multi-channel Retail</span>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Founder</div>
+                        <div class="company">Plastic Recycling for Sustainable Solutions · Hybrid</div>
+                    </div>
+                    <div class="date">2007 to 2014</div>
+                </div>
+                <div class="job-description">
+                    Founded and managed a plastic recycling factory focused on environmental protection. Developed business strategies and operational methods and managed employees and production processes. Promoted environmental protection by transforming plastic waste into valuable resources.
                 </div>
                 <div class="tech-tags">
                     <span class="tech-tag">Business-to-Business (B2B)</span>
@@ -546,49 +532,34 @@
                     <span class="tech-tag">Environmental Sustainability</span>
                 </div>
             </div>
-
-            <div class="experience-item">
-                <div class="job-header">
-                    <div>
-                        <div class="job-title">Earlier roles (Finland / Cyprus)</div>
-                        <div class="company">foodora · Foody Allen · BSB Fashion · Keinuipuiston kukka</div>
-                    </div>
-                    <div class="date">2021 - 2022</div>
-                </div>
-                <div class="job-description">
-                    Accounting internship (foodora); social media and event content; fashion marketing/e-commerce; retail sales and online shop operations including Foodora/Wolt delivery channels.
-                </div>
-                <div class="tech-tags">
-                    <span class="tech-tag">Excel</span>
-                    <span class="tech-tag">E-Commerce</span>
-                    <span class="tech-tag">Marketing</span>
-                    <span class="tech-tag">Customer Service</span>
-                </div>
-            </div>
         </div>
 
-        <div class="section page-break">
+        <div class="section">
             <div class="section-title">Education</div>
-            
+
             <div class="education-item">
                 <div class="degree">Bachelor of Business Information Technology (Data Science and Machine learning) — Grade 4.7</div>
-                <div class="university">Häme University of Applied Sciences (HAMK), Finland · 2023–2026</div>
-                <div class="education-description">Specialization in Data Science, AI and Business Intelligence. <strong>Thesis:</strong> Microsoft-based performance goal management system for strategy implementation. Catalogue: HAMK Finna (vanaicat.144542).</div>
+                <div class="university">Häme University of Applied Sciences (HAMK), Finland · 2023 to 2026</div>
+                <div class="education-description">Specialization in Data Science and Business Intelligence. Focus on machine learning, data analytics, and business applications.</div>
+                <div class="education-description"><strong>Thesis (BITCA):</strong> Microsoft-based performance goal management system for strategy implementation. PDF on the portfolio site. Catalogue: HAMK Finna (vanaicat.144542).</div>
             </div>
-            
+
             <div class="education-item">
-                <div class="degree">Climate Change AI (CCAI) Summer School · 2024</div>
-                <div class="education-description">Intensive program on machine learning and AI for climate change mitigation, adaptation, and environmental decision-making.</div>
+                <div class="degree">Climate Change AI (CCAI) Summer School</div>
+                <div class="university">Climate Change AI (CCAI) · 2024</div>
+                <div class="education-description">Intensive program on machine learning and AI for climate change mitigation, adaptation, and environmental decision-making. Certificate: Climate_Change_AI_Sawsan_Abdulbari.pdf on the portfolio site.</div>
             </div>
-            
+
             <div class="education-item">
-                <div class="degree">Google Data Analytics Specialization · Nov 2023</div>
-                <div class="education-description">Foundations through capstone case study; certificate available on the portfolio site.</div>
+                <div class="degree">Google Data Analytics Specialization</div>
+                <div class="university">Google · Nov 2023</div>
+                <div class="education-description">Courses: Foundations: Data, Data, Everywhere; Ask Questions to Make Data-Driven Decisions; Prepare Data for Exploration; Process Data from Dirty to Clean; Analyze Data to Answer Questions; Share Data Through the Art of Visualization; Google Data Analytics Capstone: Complete a Case Study. Certificate PDF: Google_Data_Analytics.pdf on the portfolio site.</div>
             </div>
-            
+
             <div class="education-item">
-                <div class="degree">Vocational Qualification in Business (Business Administration) · Tredu, Finland · 2020–2022</div>
-                <div class="education-description">Business administration fundamentals, project management, and organizational skills.</div>
+                <div class="degree">Vocational Qualification in Business (Business Administration)</div>
+                <div class="university">Tampere Vocational College (Tredu), Finland · 2020 to 2022</div>
+                <div class="education-description">Business administration and management fundamentals. Project management and organizational skills.</div>
             </div>
         </div>
 
@@ -596,22 +567,19 @@
             <div class="section-title">Languages</div>
             <div class="languages">
                 <div class="language-item"><div class="language-name">Arabic</div><div class="language-level">Native</div></div>
-                <div class="language-item"><div class="language-name">English</div><div class="language-level">Professional</div></div>
-                <div class="language-item"><div class="language-name">Finnish</div><div class="language-level">Professional</div></div>
+                <div class="language-item"><div class="language-name">English</div><div class="language-level">Professional proficiency</div></div>
+                <div class="language-item"><div class="language-name">Finnish</div><div class="language-level">Professional proficiency</div></div>
             </div>
         </div>
 
         <div class="section">
-            <div class="section-title">Project References</div>
+            <div class="section-title">Project references</div>
             <div class="portfolio-link">
-                <a href="https://sawsanabdulbari.github.io/portfolio/#projects">Portfolio — full project collection with live demos</a>
-            </div>
-            <div class="summary" style="margin-top: 6px;">
-                Featured: Trading Companion (Vite/React/Supabase) · DataDiwan / DataDiwan OS · Omdena COVID forecast (XGBoost metrics) · Smart RAG chatbot · AI Recipe Finder · PIRHA rehabilitation guide · Emotion recognition (EfficientNet) · Carbon fraud detection network.
+                <a href="https://sawsanabdulbari.github.io/portfolio/#projects">https://sawsanabdulbari.github.io/portfolio/#projects — full project collection with live demos</a>
             </div>
         </div>
 
-        <div class="section page-break">
+        <div class="section">
             <div class="section-title">Skills</div>
             <div class="skills-grid">
                 <div class="skill-category">
@@ -648,6 +616,7 @@
                     <h4>Business</h4>
                     <ul>
                         <li>Strategic Planning</li>
+                        <li>Data Analysis</li>
                         <li>Process Optimization</li>
                         <li>Financial Management</li>
                         <li>Business Development</li>
@@ -658,19 +627,25 @@
         </div>
 
         <div class="section">
-            <div class="section-title">Selected Publications</div>
+            <div class="section-title">Selected publications</div>
             <ul class="certifications">
                 <li><strong>Microsoft-based Performance Goal Management System for Strategy Implementation</strong> — Bachelor's thesis, Häme University of Applied Sciences (2026). Catalogue: HAMK Finna (vanaicat.144542). PDF on the portfolio site.</li>
             </ul>
         </div>
 
         <div class="section">
-            <div class="section-title">Personal Interests</div>
-            <div class="interests">Hiking · Fitness · Food exploration · Continuous learning · Environmental sustainability</div>
+            <div class="section-title">Personal interests</div>
+            <ul class="interests">
+                <li><strong>Hiking</strong> — Nature exploration, outdoor activities</li>
+                <li><strong>Fitness</strong> — Health and wellness, physical activity</li>
+                <li><strong>Food Exploration</strong> — Culinary experiences, cultural cuisine</li>
+                <li><strong>Continuous Learning</strong> — Technology trends, professional development</li>
+                <li><strong>Environmental Protection</strong> — Green initiatives, environmentally friendly practices</li>
+            </ul>
         </div>
 
         <div class="cv-note">
-            Portfolio CV · sawsanabdulbari.github.io/portfolio · claims are self-declared
+            Portfolio CV, compiled from the live site at sawsanabdulbari.github.io/portfolio. Links and claims are self-declared.
         </div>
     </div>
 </body>
